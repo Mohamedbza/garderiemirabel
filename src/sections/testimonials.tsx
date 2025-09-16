@@ -1,30 +1,32 @@
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Gregory",
-    text: "Une garderie magnifique parfaite pour mes enfants! Je la recommande à tout le monde",
-    avatar: "/parent-father-smiling.jpg",
-  },
-  {
-    id: 2,
-    name: "Sarah",
-    text: "Une garderie très sécuritaire pour mon enfant, il s'amuse toujours là bas. Une équipe de confiance!",
-    avatar: "/parent-mother-happy.jpg",
-  },
-  {
-    id: 3,
-    name: "Mme. Belba",
-    text: "Mon fils a fréquenté la garderie l'académie de Saint Michel pendant 4 ans jusqu'à son départ à la maternelle cette année. On était très satisfait du travail colossal que les éducatrices ont fait et de la bonne ambiance existante entre les parents et le personnel",
-    avatar: "/parent-woman-professional.jpg",
-  },
-]
-
 export default function Testimonials() {
+  const { t } = useTranslation()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
+
+  const testimonials = [
+    {
+      id: 1,
+      name: "Gregory",
+      text: t('testimonials.items.gregory'),
+      avatar: "/parent-father-smiling.jpg",
+    },
+    {
+      id: 2,
+      name: "Sarah",
+      text: t('testimonials.items.sarah'),
+      avatar: "/parent-mother-happy.jpg",
+    },
+    {
+      id: 3,
+      name: "Mme. Belba",
+      text: t('testimonials.items.belba'),
+      avatar: "/parent-woman-professional.jpg",
+    },
+  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -77,7 +79,7 @@ export default function Testimonials() {
           {/* Section label with decorative lines */}
           <div className="flex items-center justify-center mb-8">
             <div className="h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent w-20"></div>
-            <span className="mx-4 text-pink-500 text-xl font-semibold">Témoignages</span>
+            <span className="mx-4 text-pink-500 text-xl font-semibold">{t('testimonials.sectionLabel')}</span>
             <div className="h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent w-20"></div>
           </div>
 
@@ -87,7 +89,7 @@ export default function Testimonials() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            Témoignages des parents
+{t('testimonials.title')}
           </h2>
 
           <p
@@ -95,7 +97,7 @@ export default function Testimonials() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            Découvrez ce que nos parents pensent de notre garderie et des services que nous offrons à leurs enfants.
+{t('testimonials.description')}
           </p>
         </div>
 
@@ -142,7 +144,7 @@ export default function Testimonials() {
                 />
                 <div>
                   <p className="font-semibold text-gray-800">{testimonials[currentIndex].name}</p>
-                  <p className="text-sm text-gray-500">Parent</p>
+                  <p className="text-sm text-gray-500">{t('testimonials.parent')}</p>
                 </div>
               </div>
             </div>

@@ -1,7 +1,0 @@
-{
-  "title": "Bienvenue sur react-i18next",
-  "description": {
-    "part1": "To get started, edit <1>src/App.tsx</1> and save to reload.",
-    "part2": "Switch language between English and French using buttons above."
-  }
-}

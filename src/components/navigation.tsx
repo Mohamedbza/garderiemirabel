@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Menu, X } from 'lucide-react';
+import { Phone, Menu, X } from 'lucide-react';
 import i18n from '../i18n';
 import { useState } from 'react';
 const Navigation = () => {

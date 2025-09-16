@@ -1,39 +1,37 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const Services = () => {
+  const { t } = useTranslation()
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const services = [
     {
       id: 1,
       image: "/children-playing-educational-games.jpg",
-      title: "Educational Programs",
-      content:
-        "Comprehensive learning programs designed to develop cognitive skills, creativity, and critical thinking through interactive activities and play-based learning methods.",
+      title: t('services.items.educational.title'),
+      content: t('services.items.educational.content'),
     },
     {
       id: 2,
       image: "/children-doing-arts-and-crafts.jpg",
-      title: "Creative Arts & Crafts",
-      content:
-        "Hands-on artistic activities that encourage self-expression, fine motor skill development, and imagination through painting, drawing, sculpting, and various craft projects.",
+      title: t('services.items.arts.title'),
+      content: t('services.items.arts.content'),
     },
     {
       id: 3,
       image: "/children-outdoor-sports.png",
-      title: "Physical Activities",
-      content:
-        "Fun physical exercises and sports activities that promote healthy development, coordination, teamwork, and social skills in a safe outdoor environment.",
+      title: t('services.items.physical.title'),
+      content: t('services.items.physical.content'),
     },
     {
       id: 4,
       image: "/children-doing-science-experiments.jpg",
-      title: "Science Discovery",
-      content:
-        "Age-appropriate science experiments and discovery activities that spark curiosity, encourage exploration, and introduce basic scientific concepts through hands-on learning.",
+      title: t('services.items.science.title'),
+      content: t('services.items.science.content'),
     },
   ]
 
@@ -53,21 +51,20 @@ const Services = () => {
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <p className="text-pink-500 text-xl font-semibold tracking-wide flex items-center justify-center gap-2">
             <span className="w-12 h-0.5 bg-pink-500"></span>
-            Services
+            {t('services.sectionLabel')}
             <span className="w-12 h-0.5 bg-pink-500"></span>
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-            Our Amazing
+{t('services.title')}
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Services & Programs
+              {t('services.titleHighlight')}
             </span>
             <br />
-            For Your Little Ones
+            {t('services.titleEnd')}
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Discover our comprehensive range of educational and developmental programs designed to nurture your child's
-            growth in a fun and engaging environment.
+{t('services.description')}
           </p>
         </div>
 
@@ -117,7 +114,7 @@ const Services = () => {
                       {String(currentIndex + 1).padStart(2, "0")}
                     </div>
                     <div className="text-sm text-gray-500">
-                      Service {currentIndex + 1} of {services.length}
+{t('services.serviceCounter', { current: currentIndex + 1, total: services.length })}
                     </div>
                   </div>
                 </div>

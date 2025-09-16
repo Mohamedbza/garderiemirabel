@@ -1,0 +1,159 @@
+{
+  "hero": {
+    "subtitle": "We Care Your Baby",
+    "title": "The Best Play Area",
+    "titleHighlight": "For Your Kids",
+    "description": "Providing a safe, nurturing environment where your children can learn, play, and grow. Our experienced staff creates engaging activities that promote development and creativity.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "about": {
+    "sectionLabel": "About Us",
+    "title": "Welcome to Kindergarten",
+    "titleHighlight": "Build Bright Future",
+    "titleEnd": "For Your Children",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "videoTitle": "A Place to Learn and Grow",
+    "videoDescription": "Our kindergarten provides a nurturing and stimulating environment where children can explore, create, and grow into confident individuals. We focus on play-based learning and holistic development to prepare them for a bright future.",
+    "bestCare": "⭐ Best Care",
+    "safeEnvironment": "💚 Safe Environment",
+    "features": {
+      "sportActivities": {
+        "title": "Sport Activities",
+        "description": "Engaging physical activities that promote healthy development and teamwork skills."
+      },
+      "highlySecured": {
+        "title": "Highly Secured",
+        "description": "Complete safety measures and secure environment for your peace of mind."
+      },
+      "outdoorGames": {
+        "title": "Outdoor Games",
+        "description": "Fun outdoor activities that encourage exploration and connection with nature."
+      }
+    }
+  },
+  "services": {
+    "sectionLabel": "Services",
+    "title": "Our Amazing",
+    "titleHighlight": "Services & Programs",
+    "titleEnd": "For Your Little Ones",
+    "description": "Discover our comprehensive range of educational and developmental programs designed to nurture your child's growth in a fun and engaging environment.",
+    "serviceCounter": "Service {{current}} of {{total}}",
+    "items": {
+      "educational": {
+        "title": "Educational Programs",
+        "content": "Comprehensive learning programs designed to develop cognitive skills, creativity, and critical thinking through interactive activities and play-based learning methods."
+      },
+      "arts": {
+        "title": "Creative Arts & Crafts",
+        "content": "Hands-on artistic activities that encourage self-expression, fine motor skill development, and imagination through painting, drawing, sculpting, and various craft projects."
+      },
+      "physical": {
+        "title": "Physical Activities",
+        "content": "Fun physical exercises and sports activities that promote healthy development, coordination, teamwork, and social skills in a safe outdoor environment."
+      },
+      "science": {
+        "title": "Science Discovery",
+        "content": "Age-appropriate science experiments and discovery activities that spark curiosity, encourage exploration, and introduce basic scientific concepts through hands-on learning."
+      }
+    }
+  },
+  "programs": {
+    "sectionLabel": "Our Programmes",
+    "title": "What We Offer For",
+    "titleHighlight": "Your Little Ones",
+    "description": "Discover our comprehensive range of educational programs and activities designed to nurture your child's growth, creativity, and development in a fun and engaging environment.",
+    "specialPrograms": "Special Programs",
+    "specialDescription": "Unique activities that make learning extra special and memorable",
+    "enrollButton": "Enroll Your Child",
+    "scheduleButton": "Schedule a Visit",
+    "learnMore": "Learn More",
+    "services": {
+      "earlyLearning": {
+        "title": "Early Learning",
+        "description": "Comprehensive educational programs designed to build foundational skills in reading, writing, and mathematics.",
+        "features": {
+          "0": "Age-appropriate curriculum",
+          "1": "Interactive learning",
+          "2": "Progress tracking"
+        }
+      },
+      "creativeArts": {
+        "title": "Creative Arts",
+        "description": "Unleash your child's creativity through painting, drawing, crafts, and various artistic expressions.",
+        "features": {
+          "0": "Art workshops",
+          "1": "Creative projects",
+          "2": "Skill development"
+        }
+      },
+      "musicDance": {
+        "title": "Music & Dance",
+        "description": "Musical education and dance classes that enhance rhythm, coordination, and self-expression.",
+        "features": {
+          "0": "Instrument learning",
+          "1": "Dance classes",
+          "2": "Performance opportunities"
+        }
+      },
+      "physicalEducation": {
+        "title": "Physical Education",
+        "description": "Fun physical activities and sports that promote healthy lifestyle and teamwork skills.",
+        "features": {
+          "0": "Sports activities",
+          "1": "Motor skills",
+          "2": "Team building"
+        }
+      },
+      "languageDevelopment": {
+        "title": "Language Development",
+        "description": "Multilingual programs that enhance communication skills and cultural awareness.",
+        "features": {
+          "0": "Bilingual education",
+          "1": "Communication skills",
+          "2": "Cultural awareness"
+        }
+      },
+      "stemLearning": {
+        "title": "STEM Learning",
+        "description": "Science, technology, engineering, and math activities that spark curiosity and innovation.",
+        "features": {
+          "0": "Science experiments",
+          "1": "Technology basics",
+          "2": "Problem solving"
+        }
+      }
+    },
+    "specialItems": {
+      "dramaClub": {
+        "title": "Drama Club",
+        "description": "Build confidence through storytelling and performance"
+      },
+      "natureExplorer": {
+        "title": "Nature Explorer",
+        "description": "Outdoor learning and environmental awareness"
+      }
+    }
+  },
+  "places": {
+    "sectionLabel": "Our Numbers",
+    "title": "Number of daycare places",
+    "description": "Discover our hosting capacities and our team dedicated to the development of your children in a secure and caring environment.",
+    "ageGroups": {
+      "infants": "0 months to 18 months",
+      "toddlers": "18 months to 5 years",
+      "teachers": "Number of teachers"
+    }
+  },
+  "testimonials": {
+    "sectionLabel": "Testimonials",
+    "title": "Parent Testimonials",
+    "description": "Discover what our parents think about our daycare and the services we offer to their children.",
+    "parent": "Parent",
+    "items": {
+      "gregory": "A beautiful daycare perfect for my children! I recommend it to everyone",
+      "sarah": "A very safe daycare for my child, he always has fun there. A trustworthy team!",
+      "belba": "My son attended the Saint Michel Academy daycare for 4 years until he left for kindergarten this year. We were very satisfied with the colossal work that the educators did and the good atmosphere that exists between parents and staff"
+    }
+  }
+}

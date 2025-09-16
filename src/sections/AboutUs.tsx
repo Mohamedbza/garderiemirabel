@@ -2,23 +2,23 @@ import { useTranslation } from "react-i18next";
 import { FaPlay, FaGamepad, FaAppleAlt, FaShieldAlt } from "react-icons/fa";
 
 const AboutUs = () => {
-  const { t } = useTranslation("aboutSection");
+  const { t } = useTranslation();
 
   const features = [
     {
       icon: <FaGamepad className="w-6 h-6" />,
-      title: "Sport Activities",
-      description: "Engaging physical activities that promote healthy development and teamwork skills."
+      title: t('about.features.sportActivities.title'),
+      description: t('about.features.sportActivities.description')
     },
     {
       icon: <FaShieldAlt className="w-6 h-6" />,
-      title: "Highly Secured",
-      description: "Complete safety measures and secure environment for your peace of mind."
+      title: t('about.features.highlySecured.title'),
+      description: t('about.features.highlySecured.description')
     },
     {
       icon: <FaAppleAlt className="w-6 h-6" />,
-      title: "Outdoor Games",
-      description: "Fun outdoor activities that encourage exploration and connection with nature."
+      title: t('about.features.outdoorGames.title'),
+      description: t('about.features.outdoorGames.description')
     },
   ];
 
@@ -31,23 +31,20 @@ const AboutUs = () => {
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <p className="text-pink-500 text-xl font-semibold tracking-wide flex items-center justify-center gap-2">
             <span className="w-12 h-0.5 bg-pink-500"></span>
-            About Us
+{t('about.sectionLabel')}
             <span className="w-12 h-0.5 bg-pink-500"></span>
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-            Welcome to Kindergarten
+{t('about.title')}
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Build Bright Future
+              {t('about.titleHighlight')}
             </span>
             <br />
-            For Your Children
+            {t('about.titleEnd')}
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+{t('about.description')}
           </p>
         </div>
 
@@ -71,13 +68,13 @@ const AboutUs = () => {
 
               {/* Floating badges */}
               <div className="absolute -top-4 -right-4 bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-pulse">
-                ⭐ Best Care
+{t('about.bestCare')}
               </div>
               <div
                 className="absolute -bottom-4 -left-4 bg-green-400 text-green-900 px-4 py-2 rounded-full font-bold text-sm shadow-lg animate-pulse"
                 style={{ animationDelay: "1s" }}
               >
-                💚 Safe Environment
+{t('about.safeEnvironment')}
               </div>
             </div>
           </div>
@@ -85,13 +82,10 @@ const AboutUs = () => {
           {/* Right: Supporting Text */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-gray-800">
-              A Place to Learn and Grow
+{t('about.videoTitle')}
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Our kindergarten provides a nurturing and stimulating environment 
-              where children can explore, create, and grow into confident individuals. 
-              We focus on play-based learning and holistic development to prepare 
-              them for a bright future.
+{t('about.videoDescription')}
             </p>
           </div>
         </div>

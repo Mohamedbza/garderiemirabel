@@ -1,19 +1,18 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import enHeroSection from "./locales/en/heroSection.json";
-
-import frHeroSection from "./locales/fr/heroSection.json";
+import en from "./locales/en.json";
+import fr from "./locales/fr.json";
 
 i18n.use(initReactI18next).init({
   lng: "fr",
-  fallbackLng: "fr",
+  fallbackLng: "en",
   resources: {
-    fr: {
-      heroSection: frHeroSection,
-    },
     en: {
-      heroSection: enHeroSection,
+      translation: en,
+    },
+    fr: {
+      translation: fr,
     },
   },
 });

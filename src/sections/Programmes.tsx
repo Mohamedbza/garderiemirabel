@@ -12,69 +12,93 @@ import {
 } from "react-icons/fa";
 
 const Programmes = () => {
-  const { t } = useTranslation("servicesSection");
+  const { t } = useTranslation();
 
   const services = [
     {
       icon: <FaBook className="w-8 h-8" />,
-      title: "Early Learning",
-      description: "Comprehensive educational programs designed to build foundational skills in reading, writing, and mathematics.",
+      title: t('programs.services.earlyLearning.title'),
+      description: t('programs.services.earlyLearning.description'),
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
-      features: ["Age-appropriate curriculum", "Interactive learning", "Progress tracking"]
+      features: [
+        t('programs.services.earlyLearning.features.0'),
+        t('programs.services.earlyLearning.features.1'),
+        t('programs.services.earlyLearning.features.2')
+      ]
     },
     {
       icon: <FaPaintBrush className="w-8 h-8" />,
-      title: "Creative Arts",
-      description: "Unleash your child's creativity through painting, drawing, crafts, and various artistic expressions.",
+      title: t('programs.services.creativeArts.title'),
+      description: t('programs.services.creativeArts.description'),
       color: "from-pink-500 to-pink-600",
       bgColor: "bg-pink-50",
-      features: ["Art workshops", "Creative projects", "Skill development"]
+      features: [
+        t('programs.services.creativeArts.features.0'),
+        t('programs.services.creativeArts.features.1'),
+        t('programs.services.creativeArts.features.2')
+      ]
     },
     {
       icon: <FaMusic className="w-8 h-8" />,
-      title: "Music & Dance",
-      description: "Musical education and dance classes that enhance rhythm, coordination, and self-expression.",
+      title: t('programs.services.musicDance.title'),
+      description: t('programs.services.musicDance.description'),
       color: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-50",
-      features: ["Instrument learning", "Dance classes", "Performance opportunities"]
+      features: [
+        t('programs.services.musicDance.features.0'),
+        t('programs.services.musicDance.features.1'),
+        t('programs.services.musicDance.features.2')
+      ]
     },
     {
       icon: <FaRunning className="w-8 h-8" />,
-      title: "Physical Education",
-      description: "Fun physical activities and sports that promote healthy lifestyle and teamwork skills.",
+      title: t('programs.services.physicalEducation.title'),
+      description: t('programs.services.physicalEducation.description'),
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
-      features: ["Sports activities", "Motor skills", "Team building"]
+      features: [
+        t('programs.services.physicalEducation.features.0'),
+        t('programs.services.physicalEducation.features.1'),
+        t('programs.services.physicalEducation.features.2')
+      ]
     },
     {
       icon: <FaLanguage className="w-8 h-8" />,
-      title: "Language Development",
-      description: "Multilingual programs that enhance communication skills and cultural awareness.",
+      title: t('programs.services.languageDevelopment.title'),
+      description: t('programs.services.languageDevelopment.description'),
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-50",
-      features: ["Bilingual education", "Communication skills", "Cultural awareness"]
+      features: [
+        t('programs.services.languageDevelopment.features.0'),
+        t('programs.services.languageDevelopment.features.1'),
+        t('programs.services.languageDevelopment.features.2')
+      ]
     },
     {
       icon: <FaLaptopCode className="w-8 h-8" />,
-      title: "STEM Learning",
-      description: "Science, technology, engineering, and math activities that spark curiosity and innovation.",
+      title: t('programs.services.stemLearning.title'),
+      description: t('programs.services.stemLearning.description'),
       color: "from-indigo-500 to-indigo-600",
       bgColor: "bg-indigo-50",
-      features: ["Science experiments", "Technology basics", "Problem solving"]
+      features: [
+        t('programs.services.stemLearning.features.0'),
+        t('programs.services.stemLearning.features.1'),
+        t('programs.services.stemLearning.features.2')
+      ]
     }
   ];
 
   const specialPrograms = [
     {
       icon: <FaTheaterMasks className="w-6 h-6" />,
-      title: "Drama Club",
-      description: "Build confidence through storytelling and performance"
+      title: t('programs.specialItems.dramaClub.title'),
+      description: t('programs.specialItems.dramaClub.description')
     },
     {
       icon: <FaSeedling className="w-6 h-6" />,
-      title: "Nature Explorer",
-      description: "Outdoor learning and environmental awareness"
+      title: t('programs.specialItems.natureExplorer.title'),
+      description: t('programs.specialItems.natureExplorer.description')
     }
   ];
 
@@ -97,21 +121,20 @@ const Programmes = () => {
         <div className="text-center mb-16 space-y-6">
           <div className="flex items-center justify-center gap-2">
             <span className="w-12 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500"></span>
-            <p className="text-pink-500 text-lg font-semibold tracking-wide">Our Programmes</p>
+            <p className="text-pink-500 text-lg font-semibold tracking-wide">{t('programs.sectionLabel')}</p>
             <span className="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500"></span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
-            What We Offer For
+{t('programs.title')}
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
-              Your Little Ones
+              {t('programs.titleHighlight')}
             </span>
           </h2>
           
           <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-            Discover our comprehensive range of educational programs and activities designed to nurture 
-            your child's growth, creativity, and development in a fun and engaging environment.
+{t('programs.description')}
           </p>
         </div>
 
@@ -154,7 +177,7 @@ const Programmes = () => {
                 
                 {/* Learn More Link */}
                 <div className="pt-4 flex items-center gap-2 text-gray-700 group-hover:text-gray-900 transition-colors">
-                  <span className="font-medium">Learn More</span>
+                  <span className="font-medium">{t('programs.learnMore')}</span>
                   <FaArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -169,10 +192,10 @@ const Programmes = () => {
         <div className="bg-white bg-opacity-60 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-800 mb-4">
-              Special Programs
+{t('programs.specialPrograms')}
             </h3>
             <p className="text-gray-600 text-lg">
-              Unique activities that make learning extra special and memorable
+{t('programs.specialDescription')}
             </p>
           </div>
           
@@ -202,14 +225,14 @@ const Programmes = () => {
         <div className="text-center mt-16">
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-              Enroll Your Child
+{t('programs.enrollButton')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
             
             <button className="bg-transparent border-2 border-purple-400 text-purple-600 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-              Schedule a Visit
+{t('programs.scheduleButton')}
             </button>
           </div>
         </div>

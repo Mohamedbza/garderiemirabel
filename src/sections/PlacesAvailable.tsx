@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react"
+import { useTranslation } from "react-i18next"
 
 interface StatisticProps {
   number: number
@@ -103,6 +104,8 @@ function AnimatedCounter({ number, label, duration = 2000 }: StatisticProps) {
 }
 
 export default function Statistics() {
+  const { t } = useTranslation()
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 flex items-center justify-center">
       <div className="max-w-7xl mx-auto px-4 py-16">
@@ -111,33 +114,31 @@ export default function Statistics() {
           <div className="space-y-6">
             <div className="flex items-center justify-center space-x-4">
               <div className="h-px bg-pink-500 w-16"></div>
-              <span className="text-pink-500 text-xl font-semibold">{"Nos Chiffres"}</span>
+              <span className="text-pink-500 text-xl font-semibold">{t('places.sectionLabel')}</span>
               <div className="h-px bg-pink-500 w-16"></div>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              {"Nombre de places en garderie"}
+{t('places.title')}
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-              {
-                "Découvrez nos capacités d'accueil et notre équipe dédiée à l'épanouissement de vos enfants dans un environnement sécurisé et bienveillant."
-              }
+{t('places.description')}
             </p>
           </div>
 
           {/* Statistics Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
             <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-3xl p-8 hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
-              <AnimatedCounter number={14} label="0 mois à 18 mois" duration={2500} />
+              <AnimatedCounter number={14} label={t('places.ageGroups.infants')} duration={2500} />
             </div>
 
             <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-3xl p-8 hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
-              <AnimatedCounter number={66} label="18 mois à 5 ans" duration={3000} />
+              <AnimatedCounter number={66} label={t('places.ageGroups.toddlers')} duration={3000} />
             </div>
 
             <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-3xl p-8 hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
-              <AnimatedCounter number={15} label="Nombres de professeurs" duration={2200} />
+              <AnimatedCounter number={15} label={t('places.ageGroups.teachers')} duration={2200} />
             </div>
           </div>
         </div>

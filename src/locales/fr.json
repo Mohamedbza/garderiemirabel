@@ -1,0 +1,159 @@
+{
+  "hero": {
+    "subtitle": "Nous prenons soin de votre bébé",
+    "title": "La meilleure aire de jeux",
+    "titleHighlight": "Pour vos enfants",
+    "description": "Offrir un environnement sûr et nourrissant où vos enfants peuvent apprendre, jouer et grandir. Notre personnel expérimenté crée des activités engageantes qui favorisent le développement et la créativité.",
+    "getStarted": "Commencer",
+    "learnMore": "En savoir plus"
+  },
+  "about": {
+    "sectionLabel": "À propos de nous",
+    "title": "Bienvenue à la maternelle",
+    "titleHighlight": "Construire un avenir brillant",
+    "titleEnd": "Pour vos enfants",
+    "description": "Lorem Ipsum est simplement un texte factice de l'industrie de l'impression et de la composition. Lorem Ipsum est le texte factice standard de l'industrie depuis les années 1500, quand un imprimeur inconnu a pris une galée de caractères et l'a mélangée pour en faire un livre de spécimens de caractères.",
+    "videoTitle": "Un endroit pour apprendre et grandir",
+    "videoDescription": "Notre maternelle offre un environnement nourrissant et stimulant où les enfants peuvent explorer, créer et grandir pour devenir des individus confiants. Nous nous concentrons sur l'apprentissage par le jeu et le développement holistique pour les préparer à un avenir brillant.",
+    "bestCare": "⭐ Meilleur soin",
+    "safeEnvironment": "💚 Environnement sûr",
+    "features": {
+      "sportActivities": {
+        "title": "Activités sportives",
+        "description": "Activités physiques engageantes qui favorisent un développement sain et les compétences de travail d'équipe."
+      },
+      "highlySecured": {
+        "title": "Hautement sécurisé",
+        "description": "Mesures de sécurité complètes et environnement sécurisé pour votre tranquillité d'esprit."
+      },
+      "outdoorGames": {
+        "title": "Jeux extérieurs",
+        "description": "Activités extérieures amusantes qui encouragent l'exploration et la connexion avec la nature."
+      }
+    }
+  },
+  "services": {
+    "sectionLabel": "Services",
+    "title": "Nos incroyables",
+    "titleHighlight": "Services et programmes",
+    "titleEnd": "Pour vos petits",
+    "description": "Découvrez notre gamme complète de programmes éducatifs et de développement conçus pour nourrir la croissance de votre enfant dans un environnement amusant et engageant.",
+    "serviceCounter": "Service {{current}} sur {{total}}",
+    "items": {
+      "educational": {
+        "title": "Programmes éducatifs",
+        "content": "Programmes d'apprentissage complets conçus pour développer les compétences cognitives, la créativité et la pensée critique grâce à des activités interactives et des méthodes d'apprentissage basées sur le jeu."
+      },
+      "arts": {
+        "title": "Arts créatifs et artisanat",
+        "content": "Activités artistiques pratiques qui encouragent l'expression de soi, le développement de la motricité fine et l'imagination à travers la peinture, le dessin, la sculpture et divers projets d'artisanat."
+      },
+      "physical": {
+        "title": "Activités physiques",
+        "content": "Exercices physiques amusants et activités sportives qui favorisent un développement sain, la coordination, le travail d'équipe et les compétences sociales dans un environnement extérieur sûr."
+      },
+      "science": {
+        "title": "Découverte scientifique",
+        "content": "Expériences scientifiques et activités de découverte adaptées à l'âge qui éveillent la curiosité, encouragent l'exploration et introduisent des concepts scientifiques de base par l'apprentissage pratique."
+      }
+    }
+  },
+  "programs": {
+    "sectionLabel": "Nos programmes",
+    "title": "Ce que nous offrons pour",
+    "titleHighlight": "Vos petits",
+    "description": "Découvrez notre gamme complète de programmes éducatifs et d'activités conçus pour nourrir la croissance, la créativité et le développement de votre enfant dans un environnement amusant et engageant.",
+    "specialPrograms": "Programmes spéciaux",
+    "specialDescription": "Activités uniques qui rendent l'apprentissage très spécial et mémorable",
+    "enrollButton": "Inscrire votre enfant",
+    "scheduleButton": "Planifier une visite",
+    "learnMore": "En savoir plus",
+    "services": {
+      "earlyLearning": {
+        "title": "Apprentissage précoce",
+        "description": "Programmes éducatifs complets conçus pour développer les compétences fondamentales en lecture, écriture et mathématiques.",
+        "features": {
+          "0": "Curriculum adapté à l'âge",
+          "1": "Apprentissage interactif",
+          "2": "Suivi des progrès"
+        }
+      },
+      "creativeArts": {
+        "title": "Arts créatifs",
+        "description": "Libérez la créativité de votre enfant grâce à la peinture, au dessin, à l'artisanat et à diverses expressions artistiques.",
+        "features": {
+          "0": "Ateliers d'art",
+          "1": "Projets créatifs",
+          "2": "Développement des compétences"
+        }
+      },
+      "musicDance": {
+        "title": "Musique et danse",
+        "description": "Éducation musicale et cours de danse qui améliorent le rythme, la coordination et l'expression de soi.",
+        "features": {
+          "0": "Apprentissage d'instruments",
+          "1": "Cours de danse",
+          "2": "Opportunités de performance"
+        }
+      },
+      "physicalEducation": {
+        "title": "Éducation physique",
+        "description": "Activités physiques amusantes et sports qui favorisent un mode de vie sain et les compétences de travail d'équipe.",
+        "features": {
+          "0": "Activités sportives",
+          "1": "Compétences motrices",
+          "2": "Esprit d'équipe"
+        }
+      },
+      "languageDevelopment": {
+        "title": "Développement linguistique",
+        "description": "Programmes multilingues qui améliorent les compétences de communication et la sensibilisation culturelle.",
+        "features": {
+          "0": "Éducation bilingue",
+          "1": "Compétences de communication",
+          "2": "Sensibilisation culturelle"
+        }
+      },
+      "stemLearning": {
+        "title": "Apprentissage STEM",
+        "description": "Activités de science, technologie, ingénierie et mathématiques qui éveillent la curiosité et l'innovation.",
+        "features": {
+          "0": "Expériences scientifiques",
+          "1": "Bases technologiques",
+          "2": "Résolution de problèmes"
+        }
+      }
+    },
+    "specialItems": {
+      "dramaClub": {
+        "title": "Club de théâtre",
+        "description": "Construire la confiance grâce à la narration et à la performance"
+      },
+      "natureExplorer": {
+        "title": "Explorateur de la nature",
+        "description": "Apprentissage en plein air et sensibilisation environnementale"
+      }
+    }
+  },
+  "places": {
+    "sectionLabel": "Nos chiffres",
+    "title": "Nombre de places en garderie",
+    "description": "Découvrez nos capacités d'accueil et notre équipe dédiée à l'épanouissement de vos enfants dans un environnement sécurisé et bienveillant.",
+    "ageGroups": {
+      "infants": "0 mois à 18 mois",
+      "toddlers": "18 mois à 5 ans",
+      "teachers": "Nombres de professeurs"
+    }
+  },
+  "testimonials": {
+    "sectionLabel": "Témoignages",
+    "title": "Témoignages des parents",
+    "description": "Découvrez ce que nos parents pensent de notre garderie et des services que nous offrons à leurs enfants.",
+    "parent": "Parent",
+    "items": {
+      "gregory": "Une garderie magnifique parfaite pour mes enfants! Je la recommande à tout le monde",
+      "sarah": "Une garderie très sécuritaire pour mon enfant, il s'amuse toujours là bas. Une équipe de confiance!",
+      "belba": "Mon fils a fréquenté la garderie l'académie de Saint Michel pendant 4 ans jusqu'à son départ à la maternelle cette année. On était très satisfait du travail colossal que les éducatrices ont fait et de la bonne ambiance existante entre les parents et le personnel"
+    }
+  }
+}

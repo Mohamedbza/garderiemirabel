@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import logo from "../assets/hero-img.jpg";
 
 const HeroSection = () => {
-  const { t } = useTranslation("heroSection");
+  const { t } = useTranslation();
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
@@ -25,26 +25,25 @@ const HeroSection = () => {
             {/* Left Content */}
             <div className="text-white space-y-6">
               <div className="space-y-4">
-                <p className="text-pink-400 text-lg font-medium tracking-wide">We Care Your Baby</p>
+                <p className="text-pink-400 text-lg font-medium tracking-wide">{t('hero.subtitle')}</p>
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                  The Best Play Area
+                  {t('hero.title')}
                   <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400">
-                    For Your Kids
+                    {t('hero.titleHighlight')}
                   </span>
                 </h1>
                 <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
-                  Providing a safe, nurturing environment where your children can learn, play, and grow. 
-                  Our experienced staff creates engaging activities that promote development and creativity.
+                  {t('hero.description')}
                 </p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <button className="bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                  Get Started
+                  {t('hero.getStarted')}
                 </button>
                 <button className="bg-transparent border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-                  Learn More
+                  {t('hero.learnMore')}
                 </button>
               </div>
             </div>
