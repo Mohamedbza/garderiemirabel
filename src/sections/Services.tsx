@@ -44,7 +44,7 @@ const Services = () => {
   }
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 overflow-hidden">
+    <div id="services" className="relative min-h-screen bg-pink-50 overflow-hidden">
       {/* Main container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 space-y-16">
         {/* Section Header */}
@@ -57,7 +57,7 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
 {t('services.title')}
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            <span className="text-blue-500">
               {t('services.titleHighlight')}
             </span>
             <br />
@@ -96,7 +96,7 @@ const Services = () => {
                     alt={services[currentIndex].title}
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10"></div>
+                  <div className="absolute inset-0 bg-black/10"></div>
                 </div>
 
                 {/* Right: Content */}
@@ -110,11 +110,8 @@ const Services = () => {
 
                   {/* Service number indicator */}
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-blue-400 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                    <div className="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                       {String(currentIndex + 1).padStart(2, "0")}
-                    </div>
-                    <div className="text-sm text-gray-500">
-{t('services.serviceCounter', { current: currentIndex + 1, total: services.length })}
                     </div>
                   </div>
                 </div>

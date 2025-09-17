@@ -38,7 +38,7 @@ export default function Testimonials() {
       { threshold: 0.1 },
     )
 
-    const element = document.getElementById("testimonials-section")
+    const element = document.getElementById("testimonials")
     if (element) {
       observer.observe(element)
     }
@@ -64,8 +64,8 @@ export default function Testimonials() {
 
   return (
     <section
-      id="testimonials-section"
-      className="relative min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 overflow-hidden"
+      id="testimonials"
+      className="relative min-h-screen bg-pink-50 overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -78,14 +78,14 @@ export default function Testimonials() {
         <div className="text-center mb-16">
           {/* Section label with decorative lines */}
           <div className="flex items-center justify-center mb-8">
-            <div className="h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent w-20"></div>
+            <div className="h-px bg-pink-500 w-20"></div>
             <span className="mx-4 text-pink-500 text-xl font-semibold">{t('testimonials.sectionLabel')}</span>
-            <div className="h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent w-20"></div>
+            <div className="h-px bg-pink-500 w-20"></div>
           </div>
 
           {/* Main title */}
           <h2
-            className={`text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6 transition-all duration-1000 ${
+            className={`text-4xl md:text-5xl font-bold text-blue-500 mb-6 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
@@ -126,7 +126,7 @@ export default function Testimonials() {
           >
             <div className="text-center">
               {/* Quote icon */}
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-pink-500 rounded-full mb-6">
                 <Quote className="w-8 h-8 text-white" />
               </div>
 
@@ -158,7 +158,7 @@ export default function Testimonials() {
                 onClick={() => goToTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? "bg-gradient-to-r from-pink-500 to-purple-500 scale-125"
+                    ? "bg-pink-500 scale-125"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
               />
