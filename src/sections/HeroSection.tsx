@@ -1,18 +1,68 @@
 import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import logo from "../assets/hero-img.jpg";
 
 const HeroSection = () => {
   const { t } = useTranslation();
 
+  // Array of background images for the carousel
+  const backgroundImages = [
+    logo, // Original hero image
+    "https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", // Children playing
+    "https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", // Daycare classroom
+    "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2086&q=80", // Children learning
+    "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2132&q=80"  // Children outdoor play
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [nextImageIndex, setNextImageIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+
+      setTimeout(() => {
+        setCurrentImageIndex(nextImageIndex);
+        setNextImageIndex((nextImageIndex + 1) % backgroundImages.length);
+        setIsTransitioning(false);
+      }, 1500); // Much shorter to allow proper transition
+
+    }, 10000); // Change image every 10 seconds (even slower)
+
+    return () => clearInterval(interval);
+  }, [nextImageIndex, backgroundImages.length]);
+
   return (
     <div id="hero" className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
-        {/* Background Image Overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
-          style={{
-            backgroundImage: `url(${logo})`
-          }}
-        />
+        {/* Animated Background Carousel */}
+        <div className="absolute inset-0">
+          {/* Current Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+            style={{
+              backgroundImage: `url(${backgroundImages[currentImageIndex]})`,
+              transition: 'transform 3s ease-out',
+              transform: isTransitioning ? 'translateX(100%)' : 'translateX(0%)',
+              zIndex: 2
+            }}
+          />
+
+          {/* Next Image (sliding in from left) */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+            style={{
+              backgroundImage: `url(${backgroundImages[nextImageIndex]})`,
+              transition: 'transform 3s ease-out',
+              transform: isTransitioning ? 'translateX(0%)' : 'translateX(-100%)',
+              zIndex: 1
+            }}
+          />
+
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black opacity-30"></div>
+        </div>
         
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-16 h-16 bg-pink-400 rounded-full opacity-20 animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }} />
@@ -38,13 +88,13 @@ const HeroSection = () => {
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <div className="pt-4">
+                <Link
+                  to="/contact"
+                  className="inline-block bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center"
+                >
                   {t('hero.getStarted')}
-                </button>
-                <button className="bg-transparent border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-                  {t('hero.learnMore')}
-                </button>
+                </Link>
               </div>
             </div>
 

@@ -1,8 +1,13 @@
 import { Calendar, User, ArrowRight, Heart, BookOpen, Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
   const { t } = useTranslation();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const blogPosts = [
     {
@@ -136,10 +141,14 @@ const Blogs = () => {
                     {t(`blogs.posts.${post.id}.excerpt`)}
                   </p>
 
-                  <button className="flex items-center space-x-2 text-pink-500 hover:text-pink-600 font-semibold group-hover:translate-x-2 transition-all">
+                  <Link
+                    to={`/blog/${post.id}`}
+                    onClick={scrollToTop}
+                    className="flex items-center space-x-2 text-pink-500 hover:text-pink-600 font-semibold group-hover:translate-x-2 transition-all"
+                  >
                     <span>{t('blogs.readMore')}</span>
                     <ArrowRight size={20} />
-                  </button>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -196,10 +205,14 @@ const Blogs = () => {
                     {t(`blogs.posts.${post.id}.excerpt`)}
                   </p>
 
-                  <button className="flex items-center space-x-2 text-pink-500 hover:text-pink-600 font-semibold text-sm group-hover:translate-x-1 transition-all">
+                  <Link
+                    to={`/blog/${post.id}`}
+                    onClick={scrollToTop}
+                    className="flex items-center space-x-2 text-pink-500 hover:text-pink-600 font-semibold text-sm group-hover:translate-x-1 transition-all"
+                  >
                     <span>{t('blogs.readMore')}</span>
                     <ArrowRight size={16} />
-                  </button>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -207,26 +220,6 @@ const Blogs = () => {
         </div>
       </section>
 
-      {/* Newsletter Subscription */}
-      <section className="py-24 bg-gradient-to-r from-pink-500 to-blue-500">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <Heart size={64} className="mx-auto mb-8" />
-          <h2 className="text-4xl font-bold mb-6">{t('blogs.newsletter.title')}</h2>
-          <p className="text-xl mb-10 opacity-90 leading-relaxed">
-            {t('blogs.newsletter.subtitle')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder={t('blogs.newsletter.placeholder')}
-              className="flex-1 px-6 py-4 rounded-xl text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-white/30"
-            />
-            <button className="bg-white text-gray-800 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold transition-colors shadow-lg hover:shadow-xl">
-              {t('blogs.newsletter.subscribe')}
-            </button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

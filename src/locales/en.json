@@ -11,7 +11,7 @@
     "gallery": "Gallery",
     "blogs": "Blog",
     "phoneText": "Have any questions?",
-    "phoneNumber": "call us: +145 043 89696"
+    "phoneNumber": "call us: 450-438-9696"
   },
   "hero": {
     "subtitle": "We Care for Your Baby",
@@ -176,7 +176,7 @@
     "contactInfo": "Contact Information",
     "phone": {
       "title": "Phone",
-      "hours": "Monday to Friday: 7:00 AM - 6:00 PM"
+      "hours": "Monday to Friday: 6:30 AM - 6:00 PM"
     },
     "email": {
       "title": "Email",
@@ -187,7 +187,7 @@
     },
     "hours": {
       "title": "Opening Hours",
-      "weekdays": "Monday to Friday: 7:00 AM - 6:00 PM",
+      "weekdays": "Monday to Friday: 6:30 AM - 6:00 PM",
       "weekend": "Closed on weekends"
     },
     "form": {
@@ -211,11 +211,11 @@
     "description": "A safe and nurturing environment where your children can learn, play, and grow with experienced educators.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Information",
-    "address": "Mirabel, Quebec, Canada",
+    "address": "13950, Rue de la Chapelle, Mirabel, Qc. J7J 2C8",
     "email": "info@garderiemirabel.ca",
     "hours": "Opening Hours",
     "weekdays": "Monday - Friday",
-    "weekdaysHours": "7:00 AM - 6:00 PM",
+    "weekdaysHours": "6:30 AM - 6:00 PM",
     "weekends": "Saturday - Sunday",
     "weekendsHours": "Closed",
     "allRightsReserved": "All rights reserved.",
@@ -463,7 +463,7 @@
       },
       "1": {
         "question": "What are your operating hours?",
-        "answer": "We are open Monday through Friday from 7:00 AM to 6:00 PM. We are closed on weekends and major holidays. Extended hours may be available upon request."
+        "answer": "We are open Monday through Friday from 6:30 AM to 6:00 PM. We are closed on weekends and major holidays. Extended hours may be available upon request."
       },
       "2": {
         "question": "What is your fee structure?",

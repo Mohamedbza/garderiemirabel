@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const { t } = useTranslation();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gradient-to-br from-blue-50 to-pink-50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -45,37 +49,37 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-gray-800">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-600 hover:text-pink-500 transition-colors">
+                <Link to="/" onClick={scrollToTop} className="text-gray-600 hover:text-pink-500 transition-colors">
                   {t('navigation.home')}
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-pink-500 transition-colors">
+                <Link to="/about" onClick={scrollToTop} className="text-gray-600 hover:text-pink-500 transition-colors">
                   {t('navigation.about')}
                 </Link>
               </li>
               <li>
-                <Link to="/programs" className="text-gray-600 hover:text-pink-500 transition-colors">
+                <Link to="/programs" onClick={scrollToTop} className="text-gray-600 hover:text-pink-500 transition-colors">
                   {t('navigation.programs')}
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="text-gray-600 hover:text-pink-500 transition-colors">
+                <Link to="/gallery" onClick={scrollToTop} className="text-gray-600 hover:text-pink-500 transition-colors">
                   {t('navigation.gallery')}
                 </Link>
               </li>
               <li>
-                <Link to="/blogs" className="text-gray-600 hover:text-pink-500 transition-colors">
+                <Link to="/blogs" onClick={scrollToTop} className="text-gray-600 hover:text-pink-500 transition-colors">
                   {t('navigation.blogs')}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-600 hover:text-pink-500 transition-colors">
+                <Link to="/contact" onClick={scrollToTop} className="text-gray-600 hover:text-pink-500 transition-colors">
                   {t('navigation.contact')}
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-gray-600 hover:text-pink-500 transition-colors">
+                <Link to="/faq" onClick={scrollToTop} className="text-gray-600 hover:text-pink-500 transition-colors">
                   {t('navigation.faq')}
                 </Link>
               </li>

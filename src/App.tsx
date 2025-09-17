@@ -12,6 +12,7 @@ import ContactPage from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Gallery from './pages/Gallery';
 import Blogs from './pages/Blogs';
+import BlogPost from './pages/BlogPost';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/programs" element={<Programs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/faq" element={<FAQ />} />
         </Routes>
