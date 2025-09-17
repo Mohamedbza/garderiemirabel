@@ -103,7 +103,7 @@ const Programmes = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden">
+    <div id="programs" className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-10 left-5 w-40 h-40 bg-gradient-to-r from-pink-200 to-purple-200 rounded-full opacity-20 animate-pulse" />
       <div className="absolute top-60 right-10 w-32 h-32 bg-gradient-to-r from-blue-200 to-indigo-200 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />

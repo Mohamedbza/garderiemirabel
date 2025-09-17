@@ -1,10 +1,24 @@
 {
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "programs": "Programmes",
+    "places": "Places",
+    "testimonials": "Témoignages",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "gallery": "Galerie",
+    "blogs": "Blog",
+    "phoneText": "Vous avez des questions?",
+    "phoneNumber": "appelez-nous: +145 043 89696"
+  },
   "hero": {
-    "subtitle": "Nous prenons soin de votre bébé",
-    "title": "La meilleure aire de jeux",
+    "subtitle": "Nous prenons soin de vos enfants",
+    "title": "La meilleure garderie",
     "titleHighlight": "Pour vos enfants",
-    "description": "Offrir un environnement sûr et nourrissant où vos enfants peuvent apprendre, jouer et grandir. Notre personnel expérimenté crée des activités engageantes qui favorisent le développement et la créativité.",
-    "getStarted": "Commencer",
+    "description": "Nous offrons un environnement sûr et bienveillant où vos enfants peuvent apprendre, jouer et grandir. Notre équipe expérimentée crée des activités stimulantes qui favorisent le développement et la créativité.",
+    "getStarted": "Inscrire maintenant",
     "learnMore": "En savoir plus"
   },
   "about": {
@@ -154,6 +168,478 @@
       "gregory": "Une garderie magnifique parfaite pour mes enfants! Je la recommande à tout le monde",
       "sarah": "Une garderie très sécuritaire pour mon enfant, il s'amuse toujours là bas. Une équipe de confiance!",
       "belba": "Mon fils a fréquenté la garderie l'académie de Saint Michel pendant 4 ans jusqu'à son départ à la maternelle cette année. On était très satisfait du travail colossal que les éducatrices ont fait et de la bonne ambiance existante entre les parents et le personnel"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Nous sommes là pour répondre à toutes vos questions. N'hésitez pas à nous contacter pour plus d'informations sur nos services.",
+    "contactInfo": "Informations de contact",
+    "phone": {
+      "title": "Téléphone",
+      "hours": "Lundi au vendredi : 7h00 - 18h00"
+    },
+    "email": {
+      "title": "Courriel",
+      "response": "Nous répondons dans les 24 heures"
+    },
+    "address": {
+      "title": "Adresse"
+    },
+    "hours": {
+      "title": "Heures d'ouverture",
+      "weekdays": "Lundi au vendredi : 7h00 - 18h00",
+      "weekend": "Fermé les fins de semaine"
+    },
+    "form": {
+      "title": "Formulaire d'inscription",
+      "childName": "Nom de l'enfant",
+      "childNamePlaceholder": "Entrez le nom complet de votre enfant",
+      "parentName": "Nom des parents",
+      "parentNamePlaceholder": "Entrez votre nom complet",
+      "birthDate": "Date de naissance de l'enfant",
+      "parentPhone": "Numéro de téléphone des parents",
+      "parentPhonePlaceholder": "(514) 123-4567",
+      "parentEmail": "Courriel des parents",
+      "parentEmailPlaceholder": "votre.email@exemple.com",
+      "startDate": "Date de début",
+      "message": "Message additionnel",
+      "messagePlaceholder": "Informations supplémentaires ou questions...",
+      "submit": "Soumettre l'inscription"
+    }
+  },
+  "footer": {
+    "description": "Un environnement sûr et bienveillant où vos enfants peuvent apprendre, jouer et grandir avec des éducateurs expérimentés.",
+    "quickLinks": "Liens rapides",
+    "contactInfo": "Informations de contact",
+    "address": "Mirabel, Québec, Canada",
+    "email": "info@garderiemirabel.ca",
+    "hours": "Heures d'ouverture",
+    "weekdays": "Lundi - Vendredi",
+    "weekdaysHours": "7h00 - 18h00",
+    "weekends": "Samedi - Dimanche",
+    "weekendsHours": "Fermé",
+    "allRightsReserved": "Tous droits réservés.",
+    "madeWith": "Fait avec",
+    "forChildren": "pour les enfants"
+  },
+  "ourStory": {
+    "title": "Notre",
+    "titleHighlight": "Histoire",
+    "subtitle": "Découvrez comment Garderie Mirabel 1&2 est devenue un partenaire de confiance dans le parcours de développement de vos enfants.",
+    "founding": {
+      "title": "Nos Débuts",
+      "description": "Fondée en 2015, Garderie Mirabel 1&2 a commencé avec une mission simple : créer un environnement sûr et bienveillant où les enfants peuvent s'épanouir. Nos fondateurs, passionnés par l'éducation de la petite enfance, voulaient établir un lieu où les familles se sentent comme chez elles et où les enfants développent confiance, créativité et amour de l'apprentissage."
+    },
+    "mission": {
+      "title": "Notre Mission Aujourd'hui",
+      "description": "Aujourd'hui, nous continuons à honorer cette vision en fournissant des services de garde exceptionnels qui soutiennent le développement unique de chaque enfant. Nous croyons en la promotion de l'indépendance, de la créativité et des compétences sociales grâce à l'apprentissage par le jeu et à l'attention individualisée."
+    },
+    "stats": {
+      "families": "Familles Heureuses",
+      "experience": "Années d'Expérience"
+    },
+    "visual": {
+      "title": "Construit avec Amour",
+      "description": "Chaque coin de notre établissement est conçu en pensant à la sécurité, au confort et au développement des enfants."
+    }
+  },
+  "ourTeam": {
+    "title": "Rencontrez Notre",
+    "titleHighlight": "Équipe Formidable",
+    "description": "Nos éducateurs dévoués apportent passion, expérience et expertise pour créer le meilleur environnement pour vos enfants.",
+    "yearsExperience": "années d'expérience",
+    "contact": "Contacter",
+    "members": {
+      "director": {
+        "name": "Marie-Claire Dubois",
+        "role": "Directrice du Centre",
+        "description": "Passionnée par le développement de la petite enfance avec une vaste expérience en leadership éducatif."
+      },
+      "leadEducator": {
+        "name": "Sophie Martin",
+        "role": "Éducatrice Principale",
+        "description": "Spécialisée dans les approches d'apprentissage créatives et a un don pour révéler le potentiel de chaque enfant."
+      },
+      "infantSpecialist": {
+        "name": "Julie Tremblay",
+        "role": "Spécialiste en Soins aux Nourrissons",
+        "description": "Experte en développement des nourrissons et création d'environnements bienveillants pour nos plus jeunes apprenants."
+      },
+      "musicTeacher": {
+        "name": "David Chen",
+        "role": "Professeur de Musique et Arts",
+        "description": "Apporte joie et créativité à travers les activités de musique, d'arts et de mouvement."
+      }
+    },
+    "specialties": {
+      "earlyChildhood": "Développement de la Petite Enfance",
+      "creativity": "Arts Créatifs et Expression",
+      "infantCare": "Soins et Développement des Nourrissons",
+      "musicDevelopment": "Musique et Mouvement"
+    },
+    "values": {
+      "title": "Les Valeurs de Notre Équipe",
+      "compassion": {
+        "title": "Compassion",
+        "description": "Nous nous soucions profondément de chaque enfant et famille de notre communauté."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Nous visons les plus hauts standards dans tout ce que nous faisons."
+      },
+      "community": {
+        "title": "Communauté",
+        "description": "Nous construisons des relations solides qui durent toute une vie."
+      }
+    }
+  },
+  "ourPhilosophy": {
+    "title": "Notre Philosophie",
+    "titleHighlight": "Éducative",
+    "subtitle": "Nous croyons en l'épanouissement de l'enfant dans son ensemble grâce à un développement complet dans tous les domaines de croissance.",
+    "pillars": {
+      "cognitive": {
+        "title": "Développement Cognitif",
+        "description": "Construire les compétences de réflexion, les capacités de résolution de problèmes et la curiosité intellectuelle grâce à des activités engageantes."
+      },
+      "emotional": {
+        "title": "Croissance Émotionnelle",
+        "description": "Aider les enfants à comprendre et exprimer leurs sentiments tout en développant l'empathie et l'intelligence émotionnelle."
+      },
+      "social": {
+        "title": "Compétences Sociales",
+        "description": "Favoriser la coopération, la communication et l'amitié grâce aux activités de groupe et au jeu."
+      },
+      "creative": {
+        "title": "Expression Créative",
+        "description": "Encourager l'imagination, l'expression artistique et la pensée innovante à travers divers médiums."
+      }
+    },
+    "coreValues": {
+      "title": "Nos Valeurs Fondamentales",
+      "respect": {
+        "title": "Respect",
+        "description": "Nous enseignons aux enfants à se respecter eux-mêmes, les autres et leur environnement."
+      },
+      "curiosity": {
+        "title": "Curiosité",
+        "description": "Nous encourageons les questions, l'exploration et un amour de l'apprentissage qui dure toute la vie."
+      },
+      "independence": {
+        "title": "Indépendance",
+        "description": "Nous aidons les enfants à développer confiance et autonomie à leur propre rythme."
+      },
+      "joy": {
+        "title": "Joie",
+        "description": "Nous croyons que l'apprentissage devrait être amusant, engageant et rempli d'émerveillement."
+      }
+    },
+    "approaches": {
+      "title": "Nos Approches Pédagogiques",
+      "playBased": {
+        "title": "Apprentissage par le Jeu",
+        "description": "Les enfants apprennent mieux par le jeu. Notre curriculum intègre les objectifs d'apprentissage dans des activités amusantes et engageantes qui semblent être du jeu mais développent des compétences essentielles."
+      },
+      "creative": {
+        "title": "Intégration des Arts Créatifs",
+        "description": "Nous incorporons la musique, l'art, le théâtre et le mouvement dans les activités quotidiennes pour améliorer l'apprentissage et soutenir différents styles d'apprentissage."
+      },
+      "inclusive": {
+        "title": "Environnement Inclusif",
+        "description": "Nous célébrons la diversité et créons un environnement où chaque enfant se sent valorisé, respecté et soutenu dans son parcours unique."
+      }
+    }
+  },
+  "facilityTour": {
+    "title": "Explorez Nos",
+    "titleHighlight": "Installations",
+    "subtitle": "Faites une visite virtuelle de notre environnement sûr, moderne et adapté aux enfants, conçu pour un apprentissage et un jeu optimaux.",
+    "viewGallery": "Voir la Galerie",
+    "learnMore": "En Savoir Plus",
+    "areas": {
+      "classrooms": {
+        "title": "Salles de Classe Lumineuses",
+        "description": "Espaces d'apprentissage spacieux et bien éclairés conçus pour différents groupes d'âge et activités.",
+        "features": {
+          "0": "Éclairage naturel et ventilation",
+          "1": "Mobilier et matériel adaptés à l'âge",
+          "2": "Stations d'apprentissage interactives"
+        }
+      },
+      "playground": {
+        "title": "Cour de Récréation Extérieure",
+        "description": "Aire de jeu extérieure sécurisée avec équipement moderne pour le développement physique et le plaisir.",
+        "features": {
+          "0": "Équipement de jeu à surface souple",
+          "1": "Zones ombragées pour jouer par tous temps",
+          "2": "Jardin et zone d'exploration de la nature"
+        }
+      },
+      "kitchen": {
+        "title": "Cuisine Moderne",
+        "description": "Cuisine entièrement équipée où nous préparons des repas et collations sains et nutritifs.",
+        "features": {
+          "0": "Ingrédients frais et locaux",
+          "1": "Préparation de repas consciente des allergies",
+          "2": "Aires de service adaptées aux enfants"
+        }
+      },
+      "napRoom": {
+        "title": "Zone de Repos Tranquille",
+        "description": "Espaces paisibles pour le repos et les activités calmes, essentiels au développement de l'enfant.",
+        "features": {
+          "0": "Tapis de couchage et literie individuels",
+          "1": "Éclairage tamisé et atmosphère calme",
+          "2": "Confort à température contrôlée"
+        }
+      },
+      "artStudio": {
+        "title": "Atelier d'Art",
+        "description": "Espace créatif rempli de fournitures et matériaux d'art pour l'expression artistique.",
+        "features": {
+          "0": "Chevalets, peintures et matériel d'artisanat",
+          "1": "Surfaces faciles à nettoyer",
+          "2": "Zones d'exposition pour les œuvres d'art"
+        }
+      },
+      "library": {
+        "title": "Coin Lecture",
+        "description": "Espace bibliothèque confortable qui encourage l'amour de la lecture et de la narration.",
+        "features": {
+          "0": "Collection de livres adaptée à l'âge",
+          "1": "Coins lecture confortables",
+          "2": "Zone de rassemblement pour l'heure du conte"
+        }
+      }
+    },
+    "safety": {
+      "title": "Caractéristiques de Sécurité et Sûreté",
+      "subtitle": "La sécurité de votre enfant est notre priorité absolue. Voici comment nous assurons un environnement sécurisé.",
+      "features": {
+        "security": {
+          "title": "Accès Sécurisé",
+          "description": "Système d'entrée contrôlé et points d'accès surveillés."
+        },
+        "hygiene": {
+          "title": "Protocoles d'Hygiène",
+          "description": "Procédures régulières de nettoyage et de désinfection."
+        },
+        "emergency": {
+          "title": "Préparation aux Urgences",
+          "description": "Plans d'urgence complets et exercices de sécurité."
+        },
+        "supervision": {
+          "title": "Supervision Constante",
+          "description": "Ratios faibles enfant-éducateur assurent une attention individuelle."
+        }
+      }
+    },
+    "virtualTour": {
+      "title": "Planifier une Visite Virtuelle",
+      "description": "Impossible de visiter en personne ? Réservez une visite virtuelle pour voir nos installations depuis le confort de votre domicile.",
+      "button": "Réserver une Visite Virtuelle"
+    }
+  },
+  "faq": {
+    "title": "Foire Aux Questions",
+    "subtitle": "Trouvez des réponses aux questions courantes sur nos services de garderie, processus d'inscription et politiques.",
+    "searchPlaceholder": "Rechercher des questions...",
+    "noResults": "Aucun résultat trouvé",
+    "tryDifferentSearch": "Essayez un terme de recherche différent",
+    "stillHaveQuestions": "Vous avez encore des questions?",
+    "contactMessage": "Nous sommes là pour vous aider! Contactez-nous directement pour une assistance personnalisée.",
+    "callUs": "Appelez-nous maintenant",
+    "sendMessage": "Envoyer un message",
+    "categories": {
+      "enrollment": "Inscription",
+      "safety": "Sécurité et Sûreté",
+      "care": "Soins et Développement",
+      "programs": "Programmes et Activités"
+    },
+    "items": {
+      "0": {
+        "question": "Quelles sont vos exigences d'inscription?",
+        "answer": "Nous acceptons les enfants âgés de 0 à 5 ans. Les documents requis comprennent les registres de vaccination, les contacts d'urgence et un formulaire d'inscription complété. Nous exigeons également une visite de nos installations avant l'inscription."
+      },
+      "1": {
+        "question": "Quelles sont vos heures d'ouverture?",
+        "answer": "Nous sommes ouverts du lundi au vendredi de 7h00 à 18h00. Nous sommes fermés les fins de semaine et les jours fériés. Des heures prolongées peuvent être disponibles sur demande."
+      },
+      "2": {
+        "question": "Quelle est votre structure tarifaire?",
+        "answer": "Nos tarifs varient selon le groupe d'âge et la sélection du programme. Nous offrons des options à temps plein et à temps partiel. Veuillez nous contacter pour les prix actuels et les plans de paiement."
+      },
+      "3": {
+        "question": "Offrez-vous des places subventionnées?",
+        "answer": "Oui, nous participons aux programmes de subvention gouvernementale. Nous pouvons vous aider à déterminer votre admissibilité et vous assister dans le processus de demande. Contactez notre administration pour plus de détails."
+      },
+      "4": {
+        "question": "Quelles mesures de sécurité avez-vous en place?",
+        "answer": "Nous maintenons des protocoles de sécurité stricts incluant des systèmes d'entrée sécurisés, des vérifications d'antécédents pour tout le personnel, des plans de préparation aux urgences et des exercices de sécurité réguliers."
+      },
+      "5": {
+        "question": "Comment gérez-vous les urgences médicales?",
+        "answer": "Tout le personnel est formé aux premiers soins et à la RCR. Nous avons établi des procédures d'urgence et maintenons des contacts d'urgence pour tous les enfants. Nous travaillons étroitement avec les services d'urgence locaux au besoin."
+      },
+      "6": {
+        "question": "Quelles sont vos politiques pour les enfants malades?",
+        "answer": "Les enfants montrant des signes de maladie doivent rester à la maison pour protéger les autres. Nous suivons les directives de santé publique pour les exigences de retour aux soins."
+      },
+      "7": {
+        "question": "Quels repas et collations fournissez-vous?",
+        "answer": "Nous fournissons des repas et collations nutritifs préparés frais quotidiennement dans notre cuisine licenciée. Nous accommodons les restrictions alimentaires et les allergies."
+      },
+      "8": {
+        "question": "Comment communiquez-vous avec les parents?",
+        "answer": "Nous utilisons plusieurs méthodes de communication incluant des rapports quotidiens, partage de photos, bulletins d'information et conférences parent-enseignant. Nous maintenons une politique de porte ouverte."
+      },
+      "9": {
+        "question": "Quelle est votre approche de la discipline?",
+        "answer": "Nous utilisons des techniques de guidance positive se concentrant sur l'enseignement de comportements appropriés. Notre approche met l'accent sur les conséquences naturelles et la redirection."
+      },
+      "10": {
+        "question": "Quel curriculum éducatif suivez-vous?",
+        "answer": "Nous suivons un curriculum d'apprentissage par le jeu qui respecte les normes provinciales d'apprentissage précoce. Notre programme se concentre sur le développement social, émotionnel, physique et cognitif."
+      },
+      "11": {
+        "question": "Offrez-vous des activités parascolaires?",
+        "answer": "Oui, nous offrons divers programmes d'enrichissement incluant la musique, l'art, l'éducation physique et le développement linguistique. Ces activités sont intégrées dans notre horaire quotidien."
+      },
+      "12": {
+        "question": "Comment préparez-vous les enfants pour l'école?",
+        "answer": "Notre programme de préparation à la maternelle se concentre sur les compétences de préparation scolaire incluant les compétences sociales, l'indépendance, le suivi des routines et les fondements académiques."
+      }
+    }
+  },
+  "blogs": {
+    "title": "Notre",
+    "titleHighlight": "Blog",
+    "subtitle": "Découvrez des conseils utiles, des perspectives éducatives et des histoires de notre communauté de garderie pour soutenir le parcours de développement de votre enfant.",
+    "featured": "Articles en Vedette",
+    "latestPosts": "Derniers Articles",
+    "readMore": "Lire la Suite",
+    "categories": {
+      "all": "Tous les Articles",
+      "development": "Développement de l'Enfant",
+      "activities": "Activités Amusantes",
+      "nutrition": "Nutrition et Santé",
+      "safety": "Conseils de Sécurité",
+      "parenting": "Conseils Parentaux"
+    },
+    "posts": {
+      "1": {
+        "title": "L'Importance de l'Apprentissage par le Jeu dans la Petite Enfance",
+        "excerpt": "Découvrez comment l'apprentissage par le jeu façonne le développement cognitif, social et émotionnel de votre enfant pendant ses années cruciales.",
+        "date": "15 mars 2024",
+        "author": "Marie-Claire Dubois"
+      },
+      "2": {
+        "title": "Projets d'Art Créatifs qui Stimulent la Motricité Fine",
+        "excerpt": "Activités artistiques amusantes et engageantes qui aident à développer la motricité fine de votre enfant tout en favorisant la créativité.",
+        "date": "10 mars 2024",
+        "author": "Sophie Martin"
+      },
+      "3": {
+        "title": "Collations Santé que les Enfants Adorent Vraiment",
+        "excerpt": "Idées de collations nutritives et délicieuses qui garderont vos petits heureux et énergisés pendant leur journée à la garderie.",
+        "date": "8 mars 2024",
+        "author": "Julie Tremblay"
+      },
+      "4": {
+        "title": "Créer des Espaces Sécuritaires pour l'Exploration et l'Apprentissage",
+        "excerpt": "Apprenez comment nous concevons nos environnements pour encourager la curiosité tout en maintenant les plus hauts standards de sécurité.",
+        "date": "5 mars 2024",
+        "author": "Marie-Claire Dubois"
+      },
+      "5": {
+        "title": "Développer l'Indépendance chez les Jeunes Enfants",
+        "excerpt": "Stratégies pratiques pour aider votre enfant à développer confiance et indépendance de manière appropriée à son âge.",
+        "date": "1er mars 2024",
+        "author": "Sophie Martin"
+      },
+      "6": {
+        "title": "Le Rôle de la Musique dans le Développement Précoce du Cerveau",
+        "excerpt": "Explorez comment les activités musicales et de mouvement contribuent au développement du langage, de la mémoire et de la croissance cognitive.",
+        "date": "28 février 2024",
+        "author": "David Chen"
+      }
+    },
+    "newsletter": {
+      "title": "Restez Connecté avec Notre Communauté",
+      "subtitle": "Abonnez-vous pour recevoir les derniers articles, conseils parentaux et mises à jour de Garderie Mirabel 1&2.",
+      "placeholder": "Entrez votre adresse courriel",
+      "subscribe": "S'abonner"
+    }
+  },
+  "gallery": {
+    "title": "Notre",
+    "titleHighlight": "Galerie",
+    "subtitle": "Jetez un coup d'œil aux moments joyeux, activités créatives et précieux souvenirs que nous créons ensemble à Garderie Mirabel 1&2.",
+    "featured": "Moments en Vedette",
+    "allPhotos": "Toutes les Photos et Vidéos",
+    "viewImage": "Voir l'Image",
+    "categories": {
+      "all": "Toutes les Photos",
+      "activities": "Activités Quotidiennes",
+      "learning": "Moments d'Apprentissage",
+      "arts": "Arts et Artisanat",
+      "outdoor": "Plaisir Extérieur",
+      "events": "Événements Spéciaux"
+    },
+    "items": {
+      "1": {
+        "title": "Temps de Cercle Matinal",
+        "description": "Les enfants se rassemblent pour leurs activités quotidiennes de cercle et de narration."
+      },
+      "2": {
+        "title": "Lecture Ensemble",
+        "description": "Moments de lecture tranquille dans notre coin bibliothèque confortable."
+      },
+      "3": {
+        "title": "Atelier d'Art en Action",
+        "description": "Expression créative à travers la peinture et l'artisanat dans notre studio d'art."
+      },
+      "4": {
+        "title": "Exploration du Jardin",
+        "description": "Découverte de la nature dans notre jardin d'apprentissage extérieur."
+      },
+      "5": {
+        "title": "Célébration des Fêtes",
+        "description": "Moments spéciaux de nos célébrations saisonnières et événements."
+      },
+      "6": {
+        "title": "Construction et Création",
+        "description": "Jeu de construction qui développe les compétences de résolution de problèmes."
+      },
+      "7": {
+        "title": "Musique et Mouvement",
+        "description": "Danse et chant pendant notre temps de musique."
+      },
+      "8": {
+        "title": "Créations Colorées",
+        "description": "Belles œuvres d'art créées par nos talentueux petits artistes."
+      },
+      "9": {
+        "title": "Aventures de Terrain de Jeu",
+        "description": "Jeu actif et développement physique sur notre terrain de jeu."
+      },
+      "10": {
+        "title": "Célébrations d'Anniversaire",
+        "description": "Faire en sorte que chaque enfant se sente spécial le jour de son anniversaire."
+      },
+      "11": {
+        "title": "Découverte Scientifique",
+        "description": "Expériences pratiques et exploration scientifique."
+      },
+      "12": {
+        "title": "Cuisiner Ensemble",
+        "description": "Apprendre la nutrition à travers des activités de cuisine amusantes."
+      }
+    },
+    "cta": {
+      "title": "Prêt à Rejoindre Notre Communauté?",
+      "subtitle": "Venez nous rendre visite et voyez de première main l'environnement aimant et bienveillant où votre enfant s'épanouira et créera ses propres précieux souvenirs.",
+      "button": "Planifier une Visite"
     }
   }
 }

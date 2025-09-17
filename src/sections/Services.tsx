@@ -44,7 +44,7 @@ const Services = () => {
   }
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 overflow-hidden">
+    <div id="services" className="relative min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 overflow-hidden">
       {/* Main container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 space-y-16">
         {/* Section Header */}

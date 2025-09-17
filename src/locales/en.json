@@ -1,10 +1,24 @@
 {
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "programs": "Programs",
+    "places": "Places",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "gallery": "Gallery",
+    "blogs": "Blog",
+    "phoneText": "Have any questions?",
+    "phoneNumber": "call us: +145 043 89696"
+  },
   "hero": {
-    "subtitle": "We Care Your Baby",
-    "title": "The Best Play Area",
-    "titleHighlight": "For Your Kids",
+    "subtitle": "We Care for Your Baby",
+    "title": "The Best Daycare Center",
+    "titleHighlight": "For Your Children",
     "description": "Providing a safe, nurturing environment where your children can learn, play, and grow. Our experienced staff creates engaging activities that promote development and creativity.",
-    "getStarted": "Get Started",
+    "getStarted": "Enroll Now",
     "learnMore": "Learn More"
   },
   "about": {
@@ -154,6 +168,478 @@
       "gregory": "A beautiful daycare perfect for my children! I recommend it to everyone",
       "sarah": "A very safe daycare for my child, he always has fun there. A trustworthy team!",
       "belba": "My son attended the Saint Michel Academy daycare for 4 years until he left for kindergarten this year. We were very satisfied with the colossal work that the educators did and the good atmosphere that exists between parents and staff"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We're here to answer all your questions. Don't hesitate to contact us for more information about our services.",
+    "contactInfo": "Contact Information",
+    "phone": {
+      "title": "Phone",
+      "hours": "Monday to Friday: 7:00 AM - 6:00 PM"
+    },
+    "email": {
+      "title": "Email",
+      "response": "We respond within 24 hours"
+    },
+    "address": {
+      "title": "Address"
+    },
+    "hours": {
+      "title": "Opening Hours",
+      "weekdays": "Monday to Friday: 7:00 AM - 6:00 PM",
+      "weekend": "Closed on weekends"
+    },
+    "form": {
+      "title": "Enrollment Form",
+      "childName": "Child's Name",
+      "childNamePlaceholder": "Enter your child's full name",
+      "parentName": "Parent's Name",
+      "parentNamePlaceholder": "Enter your full name",
+      "birthDate": "Child's Birth Date",
+      "parentPhone": "Parent's Phone Number",
+      "parentPhonePlaceholder": "(514) 123-4567",
+      "parentEmail": "Parent's Email",
+      "parentEmailPlaceholder": "your.email@example.com",
+      "startDate": "Start Date",
+      "message": "Additional Message",
+      "messagePlaceholder": "Any additional information or questions...",
+      "submit": "Submit Enrollment"
+    }
+  },
+  "footer": {
+    "description": "A safe and nurturing environment where your children can learn, play, and grow with experienced educators.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "address": "Mirabel, Quebec, Canada",
+    "email": "info@garderiemirabel.ca",
+    "hours": "Opening Hours",
+    "weekdays": "Monday - Friday",
+    "weekdaysHours": "7:00 AM - 6:00 PM",
+    "weekends": "Saturday - Sunday",
+    "weekendsHours": "Closed",
+    "allRightsReserved": "All rights reserved.",
+    "madeWith": "Made with",
+    "forChildren": "for children"
+  },
+  "ourStory": {
+    "title": "Our",
+    "titleHighlight": "Story",
+    "subtitle": "Discover how Garderie Mirabel 1&2 became a trusted partner in your children's development journey.",
+    "founding": {
+      "title": "How We Started",
+      "description": "Founded in 2015, Garderie Mirabel 1&2 began with a simple mission: to create a safe, nurturing environment where children can thrive. Our founders, passionate about early childhood education, wanted to establish a place where families feel like home and children develop confidence, creativity, and a love for learning."
+    },
+    "mission": {
+      "title": "Our Mission Today",
+      "description": "Today, we continue to honor that vision by providing exceptional childcare services that support each child's unique development. We believe in fostering independence, creativity, and social skills through play-based learning and individualized attention."
+    },
+    "stats": {
+      "families": "Happy Families",
+      "experience": "Years Experience"
+    },
+    "visual": {
+      "title": "Built with Love",
+      "description": "Every corner of our facility is designed with children's safety, comfort, and development in mind."
+    }
+  },
+  "ourTeam": {
+    "title": "Meet Our",
+    "titleHighlight": "Amazing Team",
+    "description": "Our dedicated educators bring passion, experience, and expertise to create the best environment for your children.",
+    "yearsExperience": "years experience",
+    "contact": "Contact",
+    "members": {
+      "director": {
+        "name": "Marie-Claire Dubois",
+        "role": "Center Director",
+        "description": "Passionate about early childhood development with extensive experience in educational leadership."
+      },
+      "leadEducator": {
+        "name": "Sophie Martin",
+        "role": "Lead Educator",
+        "description": "Specializes in creative learning approaches and has a gift for bringing out each child's potential."
+      },
+      "infantSpecialist": {
+        "name": "Julie Tremblay",
+        "role": "Infant Care Specialist",
+        "description": "Expert in infant development and creating nurturing environments for our youngest learners."
+      },
+      "musicTeacher": {
+        "name": "David Chen",
+        "role": "Music & Arts Teacher",
+        "description": "Brings joy and creativity through music, arts, and movement activities."
+      }
+    },
+    "specialties": {
+      "earlyChildhood": "Early Childhood Development",
+      "creativity": "Creative Arts & Expression",
+      "infantCare": "Infant Care & Development",
+      "musicDevelopment": "Music & Movement"
+    },
+    "values": {
+      "title": "Our Team Values",
+      "compassion": {
+        "title": "Compassion",
+        "description": "We care deeply for every child and family in our community."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We strive for the highest standards in everything we do."
+      },
+      "community": {
+        "title": "Community",
+        "description": "We build strong relationships that last a lifetime."
+      }
+    }
+  },
+  "ourPhilosophy": {
+    "title": "Our Educational",
+    "titleHighlight": "Philosophy",
+    "subtitle": "We believe in nurturing the whole child through comprehensive development across all areas of growth.",
+    "pillars": {
+      "cognitive": {
+        "title": "Cognitive Development",
+        "description": "Building thinking skills, problem-solving abilities, and intellectual curiosity through engaging activities."
+      },
+      "emotional": {
+        "title": "Emotional Growth",
+        "description": "Helping children understand and express their feelings while developing empathy and emotional intelligence."
+      },
+      "social": {
+        "title": "Social Skills",
+        "description": "Fostering cooperation, communication, and friendship through group activities and play."
+      },
+      "creative": {
+        "title": "Creative Expression",
+        "description": "Encouraging imagination, artistic expression, and innovative thinking through various mediums."
+      }
+    },
+    "coreValues": {
+      "title": "Our Core Values",
+      "respect": {
+        "title": "Respect",
+        "description": "We teach children to respect themselves, others, and their environment."
+      },
+      "curiosity": {
+        "title": "Curiosity",
+        "description": "We encourage questions, exploration, and a lifelong love of learning."
+      },
+      "independence": {
+        "title": "Independence",
+        "description": "We help children develop confidence and self-reliance at their own pace."
+      },
+      "joy": {
+        "title": "Joy",
+        "description": "We believe learning should be fun, engaging, and filled with wonder."
+      }
+    },
+    "approaches": {
+      "title": "Our Teaching Approaches",
+      "playBased": {
+        "title": "Play-Based Learning",
+        "description": "Children learn best through play. Our curriculum integrates learning objectives into fun, engaging activities that feel like play but build essential skills."
+      },
+      "creative": {
+        "title": "Creative Arts Integration",
+        "description": "We incorporate music, art, drama, and movement into daily activities to enhance learning and support different learning styles."
+      },
+      "inclusive": {
+        "title": "Inclusive Environment",
+        "description": "We celebrate diversity and create an environment where every child feels valued, respected, and supported in their unique journey."
+      }
+    }
+  },
+  "facilityTour": {
+    "title": "Explore Our",
+    "titleHighlight": "Facility",
+    "subtitle": "Take a virtual tour of our safe, modern, and child-friendly environment designed for optimal learning and play.",
+    "viewGallery": "View Gallery",
+    "learnMore": "Learn More",
+    "areas": {
+      "classrooms": {
+        "title": "Bright Classrooms",
+        "description": "Spacious, well-lit learning spaces designed for different age groups and activities.",
+        "features": {
+          "0": "Natural lighting and ventilation",
+          "1": "Age-appropriate furniture and materials",
+          "2": "Interactive learning stations"
+        }
+      },
+      "playground": {
+        "title": "Outdoor Playground",
+        "description": "Safe outdoor play area with modern equipment for physical development and fun.",
+        "features": {
+          "0": "Soft surface playground equipment",
+          "1": "Shaded areas for all-weather play",
+          "2": "Garden and nature exploration area"
+        }
+      },
+      "kitchen": {
+        "title": "Modern Kitchen",
+        "description": "Fully equipped kitchen where we prepare healthy, nutritious meals and snacks.",
+        "features": {
+          "0": "Fresh, locally-sourced ingredients",
+          "1": "Allergy-conscious meal preparation",
+          "2": "Child-friendly serving areas"
+        }
+      },
+      "napRoom": {
+        "title": "Quiet Rest Area",
+        "description": "Peaceful spaces for rest and quiet activities, essential for child development.",
+        "features": {
+          "0": "Individual sleeping mats and bedding",
+          "1": "Dim lighting and calm atmosphere",
+          "2": "Temperature-controlled comfort"
+        }
+      },
+      "artStudio": {
+        "title": "Art Studio",
+        "description": "Creative space filled with art supplies and materials for artistic expression.",
+        "features": {
+          "0": "Easels, paints, and craft materials",
+          "1": "Easy-to-clean surfaces",
+          "2": "Display areas for artwork"
+        }
+      },
+      "library": {
+        "title": "Reading Corner",
+        "description": "Cozy library space that encourages a love of reading and storytelling.",
+        "features": {
+          "0": "Age-appropriate book collection",
+          "1": "Comfortable reading nooks",
+          "2": "Story time gathering area"
+        }
+      }
+    },
+    "safety": {
+      "title": "Safety & Security Features",
+      "subtitle": "Your child's safety is our top priority. Here's how we ensure a secure environment.",
+      "features": {
+        "security": {
+          "title": "Secure Access",
+          "description": "Controlled entry system and monitored access points."
+        },
+        "hygiene": {
+          "title": "Hygiene Protocols",
+          "description": "Regular cleaning and sanitization procedures."
+        },
+        "emergency": {
+          "title": "Emergency Preparedness",
+          "description": "Comprehensive emergency plans and safety drills."
+        },
+        "supervision": {
+          "title": "Constant Supervision",
+          "description": "Low child-to-educator ratios ensure individual attention."
+        }
+      }
+    },
+    "virtualTour": {
+      "title": "Schedule a Virtual Tour",
+      "description": "Can't visit in person? Book a virtual tour to see our facility from the comfort of your home.",
+      "button": "Book Virtual Tour"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our daycare services, enrollment process, and policies.",
+    "searchPlaceholder": "Search questions...",
+    "noResults": "No results found",
+    "tryDifferentSearch": "Try a different search term",
+    "stillHaveQuestions": "Still have questions?",
+    "contactMessage": "We're here to help! Contact us directly for personalized assistance.",
+    "callUs": "Call Us Now",
+    "sendMessage": "Send a Message",
+    "categories": {
+      "enrollment": "Enrollment",
+      "safety": "Safety & Security",
+      "care": "Care & Development",
+      "programs": "Programs & Activities"
+    },
+    "items": {
+      "0": {
+        "question": "What are your enrollment requirements?",
+        "answer": "We accept children aged 0-5 years. Required documents include immunization records, emergency contacts, and a completed enrollment form. We also require a tour of our facility before enrollment."
+      },
+      "1": {
+        "question": "What are your operating hours?",
+        "answer": "We are open Monday through Friday from 7:00 AM to 6:00 PM. We are closed on weekends and major holidays. Extended hours may be available upon request."
+      },
+      "2": {
+        "question": "What is your fee structure?",
+        "answer": "Our fees vary based on age group and program selection. We offer full-time and part-time options. Please contact us for current pricing and payment plans. We accept various payment methods for your convenience."
+      },
+      "3": {
+        "question": "Do you offer subsidized spots?",
+        "answer": "Yes, we participate in government subsidy programs. We can help you determine your eligibility and assist with the application process. Contact our administration for more details."
+      },
+      "4": {
+        "question": "What safety measures do you have in place?",
+        "answer": "We maintain strict safety protocols including secure entry systems, background checks for all staff, emergency preparedness plans, and regular safety drills. Our facility is regularly inspected and certified."
+      },
+      "5": {
+        "question": "How do you handle medical emergencies?",
+        "answer": "All staff are trained in first aid and CPR. We have established emergency procedures and maintain emergency contacts for all children. We work closely with local emergency services when needed."
+      },
+      "6": {
+        "question": "What are your sick child policies?",
+        "answer": "Children showing signs of illness must stay home to protect others. We follow public health guidelines for return-to-care requirements. We maintain detailed health records and communicate with parents about any health concerns."
+      },
+      "7": {
+        "question": "What meals and snacks do you provide?",
+        "answer": "We provide nutritious meals and snacks prepared fresh daily in our licensed kitchen. We accommodate dietary restrictions and allergies. Menus are planned by nutrition professionals and posted weekly."
+      },
+      "8": {
+        "question": "How do you communicate with parents?",
+        "answer": "We use multiple communication methods including daily reports, photo sharing, newsletters, and parent-teacher conferences. We maintain an open-door policy and encourage regular communication."
+      },
+      "9": {
+        "question": "What is your approach to discipline?",
+        "answer": "We use positive guidance techniques focusing on teaching appropriate behavior. Our approach emphasizes natural consequences, redirection, and helping children understand the impact of their actions."
+      },
+      "10": {
+        "question": "What educational curriculum do you follow?",
+        "answer": "We follow a play-based learning curriculum that meets provincial early learning standards. Our program focuses on social, emotional, physical, and cognitive development through age-appropriate activities."
+      },
+      "11": {
+        "question": "Do you offer extracurricular activities?",
+        "answer": "Yes, we offer various enrichment programs including music, art, physical education, and language development. These activities are integrated into our daily schedule and age-appropriate for each group."
+      },
+      "12": {
+        "question": "How do you prepare children for school?",
+        "answer": "Our kindergarten preparation program focuses on school readiness skills including social skills, independence, following routines, and academic foundations. We work closely with local schools to ensure smooth transitions."
+      }
+    }
+  },
+  "blogs": {
+    "title": "Our",
+    "titleHighlight": "Blog",
+    "subtitle": "Discover helpful tips, educational insights, and stories from our daycare community to support your child's development journey.",
+    "featured": "Featured Articles",
+    "latestPosts": "Latest Posts",
+    "readMore": "Read More",
+    "categories": {
+      "all": "All Articles",
+      "development": "Child Development",
+      "activities": "Fun Activities",
+      "nutrition": "Nutrition & Health",
+      "safety": "Safety Tips",
+      "parenting": "Parenting Advice"
+    },
+    "posts": {
+      "1": {
+        "title": "The Importance of Play-Based Learning in Early Childhood",
+        "excerpt": "Discover how play-based learning shapes your child's cognitive, social, and emotional development during their crucial early years.",
+        "date": "March 15, 2024",
+        "author": "Marie-Claire Dubois"
+      },
+      "2": {
+        "title": "Creative Art Projects That Boost Fine Motor Skills",
+        "excerpt": "Fun and engaging art activities that help develop your child's fine motor skills while fostering creativity and self-expression.",
+        "date": "March 10, 2024",
+        "author": "Sophie Martin"
+      },
+      "3": {
+        "title": "Healthy Snacks That Kids Actually Love",
+        "excerpt": "Nutritious and delicious snack ideas that will keep your little ones happy and energized throughout their day at daycare.",
+        "date": "March 8, 2024",
+        "author": "Julie Tremblay"
+      },
+      "4": {
+        "title": "Creating Safe Spaces for Exploration and Learning",
+        "excerpt": "Learn how we design our environments to encourage curiosity while maintaining the highest safety standards for your children.",
+        "date": "March 5, 2024",
+        "author": "Marie-Claire Dubois"
+      },
+      "5": {
+        "title": "Building Independence in Young Children",
+        "excerpt": "Practical strategies to help your child develop confidence and independence in age-appropriate ways.",
+        "date": "March 1, 2024",
+        "author": "Sophie Martin"
+      },
+      "6": {
+        "title": "The Role of Music in Early Brain Development",
+        "excerpt": "Explore how music and movement activities contribute to language development, memory, and cognitive growth in young children.",
+        "date": "February 28, 2024",
+        "author": "David Chen"
+      }
+    },
+    "newsletter": {
+      "title": "Stay Connected with Our Community",
+      "subtitle": "Subscribe to receive the latest articles, parenting tips, and updates from Garderie Mirabel 1&2.",
+      "placeholder": "Enter your email address",
+      "subscribe": "Subscribe"
+    }
+  },
+  "gallery": {
+    "title": "Our",
+    "titleHighlight": "Gallery",
+    "subtitle": "Take a glimpse into the joyful moments, creative activities, and precious memories we create together at Garderie Mirabel 1&2.",
+    "featured": "Featured Moments",
+    "allPhotos": "All Photos & Videos",
+    "viewImage": "View Image",
+    "categories": {
+      "all": "All Photos",
+      "activities": "Daily Activities",
+      "learning": "Learning Moments",
+      "arts": "Arts & Crafts",
+      "outdoor": "Outdoor Fun",
+      "events": "Special Events"
+    },
+    "items": {
+      "1": {
+        "title": "Morning Circle Time",
+        "description": "Children gathering for their daily circle time activities and storytelling."
+      },
+      "2": {
+        "title": "Reading Together",
+        "description": "Quiet reading moments in our cozy library corner."
+      },
+      "3": {
+        "title": "Art Workshop in Action",
+        "description": "Creative expression through painting and crafts in our art studio."
+      },
+      "4": {
+        "title": "Garden Exploration",
+        "description": "Discovering nature in our outdoor learning garden."
+      },
+      "5": {
+        "title": "Holiday Celebration",
+        "description": "Special moments from our seasonal celebrations and events."
+      },
+      "6": {
+        "title": "Building and Creating",
+        "description": "Construction play that develops problem-solving skills."
+      },
+      "7": {
+        "title": "Music and Movement",
+        "description": "Dancing and singing during our music time."
+      },
+      "8": {
+        "title": "Colorful Creations",
+        "description": "Beautiful artwork created by our talented little artists."
+      },
+      "9": {
+        "title": "Playground Adventures",
+        "description": "Active play and physical development on our playground."
+      },
+      "10": {
+        "title": "Birthday Celebrations",
+        "description": "Making every child feel special on their birthday."
+      },
+      "11": {
+        "title": "Science Discovery",
+        "description": "Hands-on experiments and scientific exploration."
+      },
+      "12": {
+        "title": "Cooking Together",
+        "description": "Learning about nutrition through fun cooking activities."
+      }
+    },
+    "cta": {
+      "title": "Ready to Join Our Community?",
+      "subtitle": "Come visit us and see firsthand the loving, nurturing environment where your child will thrive and create their own precious memories.",
+      "button": "Schedule a Visit"
     }
   }
 }

@@ -1,33 +1,43 @@
 import './i18n';
-import HeroSection from './sections/HeroSection';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/navigation';
-import AboutUs from './sections/AboutUs';
-import Services from './sections/Services';
-import Programmes from './sections/Programmes';
-import PlacesAvailable from './sections/PlacesAvailable';
-import Testimonials from './sections/testimonials';
+import FloatingLanguageSwitcher from './components/FloatingLanguageSwitcher';
+import Footer from './components/Footer';
+
+// Pages
+import Home from './pages/Home';
+import About from './pages/About';
+import Programs from './pages/Programs';
+import ContactPage from './pages/Contact';
+import FAQ from './pages/FAQ';
+import Gallery from './pages/Gallery';
+import Blogs from './pages/Blogs';
 
 const App = () => {
-
   return (
-    <div className="min-h-screen bg-white">
-      
+    <Router>
+      <div className="min-h-screen bg-white">
+        {/* Navigation */}
+        <Navigation />
 
-      {/* Navigation */}
-      <Navigation />
-      {/* Hero Section */}
-      <HeroSection /> 
-      {/* About Us */}
-      <AboutUs /> 
-      {/* Services */}
-      <Services /> 
-      {/* Programmes */}
-      <Programmes /> 
-      {/* PlacesAvailable */}
-      <PlacesAvailable /> 
-      {/* Testimonials */}
-      <Testimonials /> 
-    </div>
+        {/* Page Routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/faq" element={<FAQ />} />
+        </Routes>
+
+        {/* Floating Language Switcher */}
+        <FloatingLanguageSwitcher />
+
+        {/* Footer */}
+        <Footer />
+      </div>
+    </Router>
   );
 };
 

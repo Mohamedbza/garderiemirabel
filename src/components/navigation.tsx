@@ -1,36 +1,50 @@
 import { Phone, Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
 import i18n from '../i18n';
 import { useState } from 'react';
+
 const Navigation = () => {
+    const { t } = useTranslation();
+    const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // Helper function to check if link is active
+    const isActive = (path: string) => {
+        return location.pathname === path;
+    };
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center">
-              <h1 className="text-3xl font-bold">
-                <span className="text-pink-500">Baby</span>
-                <span className="text-blue-500">Care</span>
+              <h1 className="text-2xl font-bold">
+                <span className="text-pink-500">Garderie Mirabel</span>
+                <span className="text-blue-500"> 1&2</span>
               </h1>
             </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-pink-500 font-medium hover:text-pink-600 transition-colors">Home</a>
-              <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">About</a>
-              <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">Services</a>
-              <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">Programs</a>
-              <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">Events</a>
-              <div className="relative group">
-                <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors flex items-center">
-                  Pages
-                  <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </a>
-              </div>
-              <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">Contact</a>
+              <Link to="/" className={`font-medium transition-colors ${isActive('/') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                {t('navigation.home')}
+              </Link>
+              <Link to="/about" className={`transition-colors ${isActive('/about') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                {t('navigation.about')}
+              </Link>
+              <Link to="/programs" className={`transition-colors ${isActive('/programs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                {t('navigation.programs')}
+              </Link>
+              <Link to="/gallery" className={`transition-colors ${isActive('/gallery') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                {t('navigation.gallery')}
+              </Link>
+              <Link to="/blogs" className={`transition-colors ${isActive('/blogs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                {t('navigation.blogs')}
+              </Link>
+              <Link to="/contact" className={`transition-colors ${isActive('/contact') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                {t('navigation.contact')}
+              </Link>
             </div>
 
             {/* Contact Info */}
@@ -38,19 +52,10 @@ const Navigation = () => {
               <div className="flex items-center text-blue-500">
                 <Phone size={20} className="mr-2" />
                 <div>
-                  <p className="text-sm text-gray-600">Have any questions?</p>
-                  <p className="font-medium">call us: +145 043 89696</p>
+                  <p className="text-sm text-gray-600">{t('navigation.phoneText')}</p>
+                  <p className="font-medium">{t('navigation.phoneNumber')}</p>
                 </div>
               </div>
-              {/* Language Switcher */}
-              <select
-                onChange={(e) => i18n.changeLanguage(e.target.value)}
-                defaultValue={i18n.language}
-                className="bg-pink-500 text-gray-800 border border-white rounded px-2 py-1 text-xs cursor-pointer focus:outline-none"
-              >
-                <option value="en">EN</option>
-                <option value="fr">FR</option>
-              </select>
             </div>
 
             {/* Mobile menu button */}
@@ -68,13 +73,24 @@ const Navigation = () => {
           {isMenuOpen && (
             <div className="md:hidden border-t border-gray-200 py-4">
               <div className="flex flex-col space-y-4">
-                <a href="#" className="text-pink-500 font-medium">Home</a>
-                <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">About</a>
-                <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">Services</a>
-                <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">Programs</a>
-                <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">Events</a>
-                <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">Pages</a>
-                <a href="#" className="text-gray-700 hover:text-pink-500 transition-colors">Contact</a>
+                <Link to="/" onClick={() => setIsMenuOpen(false)} className={`font-medium text-left transition-colors ${isActive('/') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                  {t('navigation.home')}
+                </Link>
+                <Link to="/about" onClick={() => setIsMenuOpen(false)} className={`text-left transition-colors ${isActive('/about') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                  {t('navigation.about')}
+                </Link>
+                <Link to="/programs" onClick={() => setIsMenuOpen(false)} className={`text-left transition-colors ${isActive('/programs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                  {t('navigation.programs')}
+                </Link>
+                <Link to="/gallery" onClick={() => setIsMenuOpen(false)} className={`text-left transition-colors ${isActive('/gallery') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                  {t('navigation.gallery')}
+                </Link>
+                <Link to="/blogs" onClick={() => setIsMenuOpen(false)} className={`text-left transition-colors ${isActive('/blogs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                  {t('navigation.blogs')}
+                </Link>
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)} className={`text-left transition-colors ${isActive('/contact') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                  {t('navigation.contact')}
+                </Link>
               </div>
             </div>
           )}
