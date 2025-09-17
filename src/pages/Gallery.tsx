@@ -6,7 +6,6 @@ import { Camera, Heart, Star, Users, Palette, TreePine, Play, X, ChevronLeft, Ch
 
 const Gallery = () => {
   const { t } = useTranslation()
-  const [selectedCategory, setSelectedCategory] = useState("all")
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
   const categories = [
@@ -72,6 +71,20 @@ const Gallery = () => {
       featured: false,
       image: "/gallery/science-discovery-activities.jpg",
     },
+    {
+      id: 13,
+      category: "learning",
+      type: "image",
+      featured: false,
+      image: "/gallery/medium-shot-kids-teacher-table.jpg",
+    },
+    {
+      id: 14,
+      category: "arts",
+      type: "image",
+      featured: false,
+      image: "/gallery/adorable-caucasian-girl-sitting-table-drawing-paper-classroom.jpg",
+    },
   ]
 
   const galleryTitles = {
@@ -105,6 +118,8 @@ const Gallery = () => {
       description: t("gallery.items.11.description"),
     },
     12: { title: t("gallery.items.12.title"), description: t("gallery.items.12.description") },
+    13: { title: t("gallery.items.13.title"), description: t("gallery.items.13.description") },
+    14: { title: t("gallery.items.14.title"), description: t("gallery.items.14.description") },
   }
 
   const allItems = galleryItems
@@ -239,22 +254,30 @@ const Gallery = () => {
             <div className="w-24 h-1 bg-pink-500 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-0">
-            {allItems
-              .filter((item) => !item.featured)
-              .map((item) => (
-                <div
-                  key={item.id}
-                  className="group relative overflow-hidden cursor-pointer"
-                  onClick={() => openLightbox(item.id)}
-                >
-                  {/* Image Container */}
-                  <div className="aspect-square bg-gray-800 relative overflow-hidden">
+          {/* Harmonious Symmetric Gallery Layout */}
+          <div className="relative max-w-7xl mx-auto">
+            {/* First Row - Balanced */}
+            <div className="flex justify-center items-center mb-12 gap-8">
+              {allItems.filter((item) => !item.featured).slice(0, 3).map((item, index) => {
+                const firstRowShapes = [
+                  { shape: "rounded-[3rem]", width: "w-56", height: "h-64" },   // Medium left
+                  { shape: "rounded-full", width: "w-64", height: "h-64" },     // Large center circle
+                  { shape: "rounded-[4rem]", width: "w-52", height: "h-68" },   // Medium right
+                ];
+                const pattern = firstRowShapes[index];
+                const { shape, width, height } = pattern;
+
+                return (
+                  <div
+                    key={item.id}
+                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/30 hover:bg-white/10`}
+                    onClick={() => openLightbox(item.id)}
+                  >
                     {/* Video Play Button */}
                     {item.type === "video" && (
-                      <div className="absolute top-2 right-2 z-10">
-                        <div className="bg-white/90 backdrop-blur-sm p-1 rounded-full">
-                          <Play size={12} className="text-gray-800" />
+                      <div className="absolute top-3 right-3 z-10">
+                        <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-lg">
+                          <Play size={14} className="text-gray-800" />
                         </div>
                       </div>
                     )}
@@ -263,16 +286,197 @@ const Gallery = () => {
                     <img
                       src={item.image || "/placeholder.svg"}
                       alt={galleryTitles[item.id as keyof typeof galleryTitles]?.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${shape}`}
                     />
 
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                      <Camera size={24} className="text-white" />
+                    {/* Subtle Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ${shape}`}></div>
+
+                    {/* Enhanced Hover Content */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105">
+                      <div className="text-white text-center p-3 backdrop-blur-sm bg-black/20 rounded-2xl border border-white/20">
+                        <Camera size={28} className="mx-auto mb-2 drop-shadow-2xl" />
+                        <p className="text-xs font-medium drop-shadow-lg tracking-wide">
+                          {galleryTitles[item.id as keyof typeof galleryTitles]?.title}
+                        </p>
+                      </div>
                     </div>
+
+                    {/* Floating Decorative Elements */}
+                    <div className="absolute top-3 left-3 w-1.5 h-1.5 bg-pink-400/70 rounded-full animate-pulse shadow-lg"></div>
+                    <div className="absolute bottom-3 right-3 w-1 h-1 bg-blue-400/70 rounded-full animate-pulse delay-1000 shadow-lg"></div>
+                    <div className="absolute top-1/3 right-4 w-0.5 h-0.5 bg-white/60 rounded-full animate-pulse delay-500"></div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
+            </div>
+
+            {/* Second Row - Asymmetric Balance */}
+            <div className="flex justify-center items-end mb-12 gap-6">
+              {allItems.filter((item) => !item.featured).slice(3, 7).map((item, index) => {
+                const secondRowShapes = [
+                  { shape: "rounded-[5rem]", width: "w-72", height: "h-48" },   // Wide left
+                  { shape: "rounded-full", width: "w-48", height: "h-48" },     // Small circle
+                  { shape: "rounded-[2.5rem]", width: "w-44", height: "h-72" }, // Tall narrow
+                  { shape: "rounded-[3.5rem]", width: "w-60", height: "h-56" }, // Medium right
+                ];
+                const pattern = secondRowShapes[index];
+                const { shape, width, height } = pattern;
+
+                return (
+                  <div
+                    key={item.id}
+                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/30 hover:bg-white/10`}
+                    onClick={() => openLightbox(item.id)}
+                  >
+                    {/* Video Play Button */}
+                    {item.type === "video" && (
+                      <div className="absolute top-3 right-3 z-10">
+                        <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-lg">
+                          <Play size={14} className="text-gray-800" />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Image Display */}
+                    <img
+                      src={item.image || "/placeholder.svg"}
+                      alt={galleryTitles[item.id as keyof typeof galleryTitles]?.title}
+                      className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${shape}`}
+                    />
+
+                    {/* Subtle Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ${shape}`}></div>
+
+                    {/* Enhanced Hover Content */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105">
+                      <div className="text-white text-center p-3 backdrop-blur-sm bg-black/20 rounded-2xl border border-white/20">
+                        <Camera size={28} className="mx-auto mb-2 drop-shadow-2xl" />
+                        <p className="text-xs font-medium drop-shadow-lg tracking-wide">
+                          {galleryTitles[item.id as keyof typeof galleryTitles]?.title}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Floating Decorative Elements */}
+                    <div className="absolute top-3 left-3 w-1.5 h-1.5 bg-pink-400/70 rounded-full animate-pulse shadow-lg"></div>
+                    <div className="absolute bottom-3 right-3 w-1 h-1 bg-blue-400/70 rounded-full animate-pulse delay-1000 shadow-lg"></div>
+                    <div className="absolute top-1/3 right-4 w-0.5 h-0.5 bg-white/60 rounded-full animate-pulse delay-500"></div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Third Row - Central Focus */}
+            <div className="flex justify-center items-center mb-12 gap-10">
+              {allItems.filter((item) => !item.featured).slice(7, 10).map((item, index) => {
+                const thirdRowShapes = [
+                  { shape: "rounded-[4rem]", width: "w-56", height: "h-60" },   // Left medium
+                  { shape: "rounded-[6rem]", width: "w-80", height: "h-64" },   // Center hero
+                  { shape: "rounded-[3rem]", width: "w-52", height: "h-68" },   // Right medium
+                ];
+                const pattern = thirdRowShapes[index];
+                const { shape, width, height } = pattern;
+
+                return (
+                  <div
+                    key={item.id}
+                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/30 hover:bg-white/10 ${index === 1 ? 'shadow-2xl border-pink-400/20' : ''}`}
+                    onClick={() => openLightbox(item.id)}
+                  >
+                    {/* Video Play Button */}
+                    {item.type === "video" && (
+                      <div className="absolute top-3 right-3 z-10">
+                        <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-lg">
+                          <Play size={14} className="text-gray-800" />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Image Display */}
+                    <img
+                      src={item.image || "/placeholder.svg"}
+                      alt={galleryTitles[item.id as keyof typeof galleryTitles]?.title}
+                      className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${shape}`}
+                    />
+
+                    {/* Subtle Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ${shape}`}></div>
+
+                    {/* Enhanced Hover Content */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105">
+                      <div className="text-white text-center p-3 backdrop-blur-sm bg-black/20 rounded-2xl border border-white/20">
+                        <Camera size={28} className="mx-auto mb-2 drop-shadow-2xl" />
+                        <p className="text-xs font-medium drop-shadow-lg tracking-wide">
+                          {galleryTitles[item.id as keyof typeof galleryTitles]?.title}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Floating Decorative Elements */}
+                    <div className="absolute top-3 left-3 w-1.5 h-1.5 bg-pink-400/70 rounded-full animate-pulse shadow-lg"></div>
+                    <div className="absolute bottom-3 right-3 w-1 h-1 bg-blue-400/70 rounded-full animate-pulse delay-1000 shadow-lg"></div>
+                    <div className="absolute top-1/3 right-4 w-0.5 h-0.5 bg-white/60 rounded-full animate-pulse delay-500"></div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Fourth Row - Final Balance */}
+            <div className="flex justify-center items-start gap-8">
+              {allItems.filter((item) => !item.featured).slice(10).map((item, index) => {
+                const fourthRowShapes = [
+                  { shape: "rounded-full", width: "w-52", height: "h-52" },     // Circle left
+                  { shape: "rounded-[3rem]", width: "w-48", height: "h-56" },   // Medium
+                  { shape: "rounded-[4rem]", width: "w-60", height: "h-48" },   // Wide
+                  { shape: "rounded-full", width: "w-44", height: "h-44" },     // Small circle right
+                ];
+                const pattern = fourthRowShapes[index % fourthRowShapes.length];
+                const { shape, width, height } = pattern;
+
+                return (
+                  <div
+                    key={item.id}
+                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/30 hover:bg-white/10`}
+                    onClick={() => openLightbox(item.id)}
+                  >
+                    {/* Video Play Button */}
+                    {item.type === "video" && (
+                      <div className="absolute top-3 right-3 z-10">
+                        <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-lg">
+                          <Play size={14} className="text-gray-800" />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Image Display */}
+                    <img
+                      src={item.image || "/placeholder.svg"}
+                      alt={galleryTitles[item.id as keyof typeof galleryTitles]?.title}
+                      className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${shape}`}
+                    />
+
+                    {/* Subtle Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ${shape}`}></div>
+
+                    {/* Enhanced Hover Content */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105">
+                      <div className="text-white text-center p-3 backdrop-blur-sm bg-black/20 rounded-2xl border border-white/20">
+                        <Camera size={28} className="mx-auto mb-2 drop-shadow-2xl" />
+                        <p className="text-xs font-medium drop-shadow-lg tracking-wide">
+                          {galleryTitles[item.id as keyof typeof galleryTitles]?.title}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Floating Decorative Elements */}
+                    <div className="absolute top-3 left-3 w-1.5 h-1.5 bg-pink-400/70 rounded-full animate-pulse shadow-lg"></div>
+                    <div className="absolute bottom-3 right-3 w-1 h-1 bg-blue-400/70 rounded-full animate-pulse delay-1000 shadow-lg"></div>
+                    <div className="absolute top-1/3 right-4 w-0.5 h-0.5 bg-white/60 rounded-full animate-pulse delay-500"></div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
@@ -281,73 +485,73 @@ const Gallery = () => {
       <section className="relative py-16">
         <div className="max-w-4xl mx-auto text-center px-4">
           <div className="flex items-center justify-center">
-            <div className="w-48 h-px bg-pink-500"></div>
-            <div className="mx-6 text-white text-sm font-light tracking-widest uppercase">
-              {allItems.length} {t("gallery.allPhotos")}
-            </div>
-            <div className="w-48 h-px bg-blue-500"></div>
+            <div className="w-96 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent"></div>
           </div>
         </div>
       </section>
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-4xl max-h-full">
-            {/* Close Button */}
-            <button
-              onClick={closeLightbox}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-30"
-            >
-              <X size={32} />
-            </button>
+        <div className="fixed inset-0 bg-black/90 z-50">
+          {/* Fixed Close Button - Top Right Corner */}
+          <button
+            onClick={closeLightbox}
+            className="fixed top-6 right-6 z-50 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-3 text-white transition-all duration-300 hover:scale-110 border border-white/20"
+          >
+            <X size={24} />
+          </button>
 
-            <div className="bg-white rounded-2xl overflow-hidden">
-              <div className="h-96 relative overflow-hidden cursor-pointer" onClick={goToNextImage}>
-                <img
-                  src={allItems.find((item) => item.id === selectedImage)?.image || "/placeholder.svg"}
-                  alt={galleryTitles[selectedImage as keyof typeof galleryTitles]?.title}
-                  className="w-full h-full object-cover"
-                />
+          {/* Fixed Navigation Buttons */}
+          {/* Previous Button - Fixed Left Side */}
+          <button
+            onClick={goToPrevImage}
+            className="fixed left-6 top-1/2 -translate-y-1/2 z-50 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-4 text-white transition-all duration-300 hover:scale-110 border border-white/20"
+          >
+            <ChevronLeft size={32} />
+          </button>
 
-                {/* Click indicator */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/10">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
-                    <ChevronRight size={20} className="text-gray-800" />
+          {/* Next Button - Fixed Right Side */}
+          <button
+            onClick={goToNextImage}
+            className="fixed right-6 top-1/2 -translate-y-1/2 z-50 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-4 text-white transition-all duration-300 hover:scale-110 border border-white/20"
+          >
+            <ChevronRight size={32} />
+          </button>
+
+          {/* Content Container */}
+          <div className="flex items-center justify-center min-h-screen p-8">
+            <div className="relative max-w-4xl max-h-full">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
+                <div className="h-96 relative overflow-hidden cursor-pointer" onClick={goToNextImage}>
+                  <img
+                    src={allItems.find((item) => item.id === selectedImage)?.image || "/placeholder.svg"}
+                    alt={galleryTitles[selectedImage as keyof typeof galleryTitles]?.title}
+                    className="w-full h-full object-cover"
+                  />
+
+                  {/* Click indicator */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/10">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
+                      <ChevronRight size={20} className="text-gray-800" />
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-2xl font-bold text-gray-800">
-                    {galleryTitles[selectedImage as keyof typeof galleryTitles]?.title}
-                  </h3>
-                  <div className="text-sm text-gray-500">
-                    {allItems.findIndex(item => item.id === selectedImage) + 1} / {allItems.length}
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-2xl font-bold text-gray-800">
+                      {galleryTitles[selectedImage as keyof typeof galleryTitles]?.title}
+                    </h3>
+                    <div className="text-sm text-gray-500">
+                      {allItems.findIndex(item => item.id === selectedImage) + 1} / {allItems.length}
+                    </div>
                   </div>
+                  <p className="text-gray-600">
+                    {galleryTitles[selectedImage as keyof typeof galleryTitles]?.description}
+                  </p>
                 </div>
-                <p className="text-gray-600">
-                  {galleryTitles[selectedImage as keyof typeof galleryTitles]?.description}
-                </p>
               </div>
             </div>
-
-            {/* Previous Button - Outside */}
-            <button
-              onClick={goToPrevImage}
-              className="absolute -left-16 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-4 text-white transition-all duration-300 hover:scale-110"
-            >
-              <ChevronLeft size={28} />
-            </button>
-
-            {/* Next Button - Outside */}
-            <button
-              onClick={goToNextImage}
-              className="absolute -right-16 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-4 text-white transition-all duration-300 hover:scale-110"
-            >
-              <ChevronRight size={28} />
-            </button>
           </div>
         </div>
       )}

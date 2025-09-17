@@ -23,12 +23,12 @@
   },
   "about": {
     "sectionLabel": "À propos de nous",
-    "title": "Bienvenue à la maternelle",
+    "title": "Bienvenue à la garderie",
     "titleHighlight": "Construire un avenir brillant",
     "titleEnd": "Pour vos enfants",
     "description": "À la Garderie Mirabel 1&2, nous croyons que chaque enfant mérite un environnement bienveillant où il peut explorer, apprendre et grandir en toute confiance. Nos éducateurs expérimentés se consacrent à offrir une éducation préscolaire de qualité grâce à l'apprentissage par le jeu, aidant les enfants à développer les compétences sociales, émotionnelles et cognitives essentielles qui les serviront tout au long de leur vie.",
     "videoTitle": "Un endroit pour apprendre et grandir",
-    "videoDescription": "Notre maternelle offre un environnement nourrissant et stimulant où les enfants peuvent explorer, créer et grandir pour devenir des individus confiants. Nous nous concentrons sur l'apprentissage par le jeu et le développement holistique pour les préparer à un avenir brillant.",
+    "videoDescription": "Notre garderie offre un environnement nourrissant et stimulant où les enfants peuvent explorer, créer et grandir pour devenir des individus confiants. Nous nous concentrons sur l'apprentissage par le jeu et le développement holistique pour les préparer à un avenir brillant.",
     "bestCare": "⭐ Meilleur soin",
     "safeEnvironment": "💚 Environnement sûr",
     "features": {
@@ -634,6 +634,14 @@
       "12": {
         "title": "Cuisiner Ensemble",
         "description": "Apprendre la nutrition à travers des activités de cuisine amusantes."
+      },
+      "13": {
+        "title": "Apprentissage à Table",
+        "description": "Enfants et éducatrice engagés dans des activités d'apprentissage ciblées à la table."
+      },
+      "14": {
+        "title": "Dessin Créatif",
+        "description": "Jeune artiste concentrée sur sa création artistique en classe."
       }
     },
     "cta": {
