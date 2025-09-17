@@ -1,18 +1,22 @@
 import { useTranslation } from "react-i18next";
-import { 
-  FaBook, 
-  FaPaintBrush, 
-  FaMusic, 
-  FaRunning, 
-  FaLanguage, 
+import { Link } from "react-router-dom";
+import {
+  FaBook,
+  FaPaintBrush,
+  FaMusic,
+  FaRunning,
+  FaLanguage,
   FaLaptopCode,
   FaTheaterMasks,
-  FaSeedling,
-  FaArrowRight
+  FaSeedling
 } from "react-icons/fa";
 
 const Programmes = () => {
   const { t } = useTranslation();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const services = [
     {
@@ -103,32 +107,32 @@ const Programmes = () => {
   ];
 
   return (
-    <div id="programs" className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden">
+    <div id="programs" className="relative min-h-screen bg-blue-50 overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute top-10 left-5 w-40 h-40 bg-gradient-to-r from-pink-200 to-purple-200 rounded-full opacity-20 animate-pulse" />
-      <div className="absolute top-60 right-10 w-32 h-32 bg-gradient-to-r from-blue-200 to-indigo-200 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute bottom-32 left-16 w-28 h-28 bg-gradient-to-r from-green-200 to-teal-200 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '2s' }} />
-      <div className="absolute bottom-10 right-20 w-36 h-36 bg-gradient-to-r from-yellow-200 to-orange-200 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '0.5s' }} />
+      <div className="absolute top-10 left-5 w-40 h-40 bg-pink-200 rounded-full opacity-20 animate-pulse" />
+      <div className="absolute top-60 right-10 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-32 left-16 w-28 h-28 bg-green-200 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-10 right-20 w-36 h-36 bg-yellow-200 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '0.5s' }} />
       
       {/* Floating Geometric Shapes */}
-      <div className="absolute top-24 right-1/4 w-20 h-20 bg-gradient-to-br from-pink-300 to-pink-400 rounded-xl opacity-15 animate-bounce transform rotate-12" style={{ animationDelay: '0s', animationDuration: '4s' }} />
-      <div className="absolute bottom-40 right-1/3 w-16 h-16 bg-gradient-to-br from-blue-300 to-blue-400 rounded-xl opacity-15 animate-bounce transform -rotate-12" style={{ animationDelay: '1.5s', animationDuration: '3s' }} />
-      <div className="absolute top-1/2 left-10 w-12 h-12 bg-gradient-to-br from-green-300 to-green-400 rounded-xl opacity-15 animate-bounce transform rotate-45" style={{ animationDelay: '2.5s', animationDuration: '5s' }} />
+      <div className="absolute top-24 right-1/4 w-20 h-20 bg-pink-300 rounded-xl opacity-15 animate-bounce transform rotate-12" style={{ animationDelay: '0s', animationDuration: '4s' }} />
+      <div className="absolute bottom-40 right-1/3 w-16 h-16 bg-blue-300 rounded-xl opacity-15 animate-bounce transform -rotate-12" style={{ animationDelay: '1.5s', animationDuration: '3s' }} />
+      <div className="absolute top-1/2 left-10 w-12 h-12 bg-green-300 rounded-xl opacity-15 animate-bounce transform rotate-45" style={{ animationDelay: '2.5s', animationDuration: '5s' }} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
         
         {/* Header Section */}
         <div className="text-center mb-16 space-y-6">
           <div className="flex items-center justify-center gap-2">
-            <span className="w-12 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500"></span>
+            <span className="w-12 h-0.5 bg-pink-500"></span>
             <p className="text-pink-500 text-lg font-semibold tracking-wide">{t('programs.sectionLabel')}</p>
-            <span className="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500"></span>
+            <span className="w-12 h-0.5 bg-blue-500"></span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
 {t('programs.title')}
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+            <span className="text-blue-500">
               {t('programs.titleHighlight')}
             </span>
           </h2>
@@ -151,7 +155,7 @@ const Programmes = () => {
               </div>
               
               {/* Service Icon */}
-              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl text-white mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`inline-flex items-center justify-center w-16 h-16 bg-blue-500 rounded-2xl text-white mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                 {service.icon}
               </div>
               
@@ -169,21 +173,15 @@ const Programmes = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-2 text-gray-700">
-                      <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full`}></div>
+                      <div className={`w-2 h-2 bg-blue-500 rounded-full`}></div>
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
-                {/* Learn More Link */}
-                <div className="pt-4 flex items-center gap-2 text-gray-700 group-hover:text-gray-900 transition-colors">
-                  <span className="font-medium">{t('programs.learnMore')}</span>
-                  <FaArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </div>
               </div>
               
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-700"></div>
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-700"></div>
             </div>
           ))}
         </div>
@@ -203,9 +201,9 @@ const Programmes = () => {
             {specialPrograms.map((program, index) => (
               <div 
                 key={index}
-                className="flex items-center gap-4 p-6 bg-gradient-to-r from-white to-gray-50 rounded-2xl hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                className="flex items-center gap-4 p-6 bg-white rounded-2xl hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-xl flex items-center justify-center text-white">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white">
                   {program.icon}
                 </div>
                 <div>
@@ -224,16 +222,16 @@ const Programmes = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-{t('programs.enrollButton')}
+            <Link
+              to="/contact"
+              onClick={scrollToTop}
+              className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+            >
+              {t('programs.enrollButton')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </button>
-            
-            <button className="bg-transparent border-2 border-purple-400 text-purple-600 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-{t('programs.scheduleButton')}
-            </button>
+            </Link>
           </div>
         </div>
       </div>

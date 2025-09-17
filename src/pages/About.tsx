@@ -6,7 +6,7 @@ import FacilityTour from '../sections/FacilityTour';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white ">
       <AboutUs />
       <OurStory />
       <OurTeam />

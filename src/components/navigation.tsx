@@ -1,7 +1,6 @@
 import { Phone, Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import i18n from '../i18n';
 import { useState } from 'react';
 
 const Navigation = () => {
@@ -12,6 +11,12 @@ const Navigation = () => {
     // Helper function to check if link is active
     const isActive = (path: string) => {
         return location.pathname === path;
+    };
+
+    // Helper function to scroll to top when navigating
+    const handleLinkClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setIsMenuOpen(false);
     };
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
@@ -27,22 +32,22 @@ const Navigation = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/" className={`font-medium transition-colors ${isActive('/') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+              <Link to="/" onClick={handleLinkClick} className={`font-medium transition-colors ${isActive('/') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                 {t('navigation.home')}
               </Link>
-              <Link to="/about" className={`transition-colors ${isActive('/about') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+              <Link to="/about" onClick={handleLinkClick} className={`transition-colors ${isActive('/about') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                 {t('navigation.about')}
               </Link>
-              <Link to="/programs" className={`transition-colors ${isActive('/programs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+              <Link to="/programs" onClick={handleLinkClick} className={`transition-colors ${isActive('/programs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                 {t('navigation.programs')}
               </Link>
-              <Link to="/gallery" className={`transition-colors ${isActive('/gallery') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+              <Link to="/gallery" onClick={handleLinkClick} className={`transition-colors ${isActive('/gallery') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                 {t('navigation.gallery')}
               </Link>
-              <Link to="/blogs" className={`transition-colors ${isActive('/blogs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+              <Link to="/blogs" onClick={handleLinkClick} className={`transition-colors ${isActive('/blogs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                 {t('navigation.blogs')}
               </Link>
-              <Link to="/contact" className={`transition-colors ${isActive('/contact') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+              <Link to="/contact" onClick={handleLinkClick} className={`transition-colors ${isActive('/contact') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                 {t('navigation.contact')}
               </Link>
             </div>
@@ -73,22 +78,22 @@ const Navigation = () => {
           {isMenuOpen && (
             <div className="md:hidden border-t border-gray-200 py-4">
               <div className="flex flex-col space-y-4">
-                <Link to="/" onClick={() => setIsMenuOpen(false)} className={`font-medium text-left transition-colors ${isActive('/') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                <Link to="/" onClick={handleLinkClick} className={`font-medium text-left transition-colors ${isActive('/') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                   {t('navigation.home')}
                 </Link>
-                <Link to="/about" onClick={() => setIsMenuOpen(false)} className={`text-left transition-colors ${isActive('/about') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                <Link to="/about" onClick={handleLinkClick} className={`text-left transition-colors ${isActive('/about') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                   {t('navigation.about')}
                 </Link>
-                <Link to="/programs" onClick={() => setIsMenuOpen(false)} className={`text-left transition-colors ${isActive('/programs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                <Link to="/programs" onClick={handleLinkClick} className={`text-left transition-colors ${isActive('/programs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                   {t('navigation.programs')}
                 </Link>
-                <Link to="/gallery" onClick={() => setIsMenuOpen(false)} className={`text-left transition-colors ${isActive('/gallery') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                <Link to="/gallery" onClick={handleLinkClick} className={`text-left transition-colors ${isActive('/gallery') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                   {t('navigation.gallery')}
                 </Link>
-                <Link to="/blogs" onClick={() => setIsMenuOpen(false)} className={`text-left transition-colors ${isActive('/blogs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                <Link to="/blogs" onClick={handleLinkClick} className={`text-left transition-colors ${isActive('/blogs') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                   {t('navigation.blogs')}
                 </Link>
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)} className={`text-left transition-colors ${isActive('/contact') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
+                <Link to="/contact" onClick={handleLinkClick} className={`text-left transition-colors ${isActive('/contact') ? 'text-pink-500' : 'text-gray-700 hover:text-pink-500'}`}>
                   {t('navigation.contact')}
                 </Link>
               </div>

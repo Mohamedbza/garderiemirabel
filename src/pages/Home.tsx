@@ -3,6 +3,7 @@ import AboutUs from '../sections/AboutUs';
 import Services from '../sections/Services';
 import PlacesAvailable from '../sections/PlacesAvailable';
 import Testimonials from '../sections/testimonials';
+import FAQ from './FAQ';
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
 
       {/* Testimonials */}
       <Testimonials />
+      <FAQ />
     </div>
   );
 };

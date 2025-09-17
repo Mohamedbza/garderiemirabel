@@ -82,7 +82,7 @@ const OurPhilosophy = () => {
         </div>
 
         {/* Core Values */}
-        <div className="bg-gradient-to-br from-blue-50 to-pink-50 rounded-2xl p-8 mb-16">
+        <div className="bg-blue-50 rounded-2xl p-8 mb-16">
           <h3 className="text-2xl font-bold text-center text-gray-800 mb-8">
             {t('ourPhilosophy.coreValues.title')}
           </h3>

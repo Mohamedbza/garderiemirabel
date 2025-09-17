@@ -1,7 +1,7 @@
 import type React from "react"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Phone, Mail, MapPin, Facebook, Send, Clock } from "lucide-react"
+import { Phone, Mail, MapPin, Send, Clock } from "lucide-react"
 
 export default function Contact() {
   const { t } = useTranslation()
@@ -29,23 +29,23 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 relative overflow-hidden">
+    <section id="contact" className="min-h-screen bg-pink-50 relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-pink-300 to-purple-400 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-300 to-pink-400 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full opacity-10 blur-2xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-pink-300 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-300 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-pink-300 rounded-full opacity-10 blur-2xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-6">
-            <div className="h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent w-24"></div>
+            <div className="h-px bg-pink-500 w-24"></div>
             <span className="px-4 text-pink-500 text-xl font-semibold">{t('navigation.contact')}</span>
-            <div className="h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent w-24"></div>
+            <div className="h-px bg-pink-500 w-24"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-500 mb-6">
             {t('contact.title')}
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
@@ -64,7 +64,7 @@ export default function Contact() {
 
               {/* Phone */}
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -77,7 +77,7 @@ export default function Contact() {
 
               {/* Email */}
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ export default function Contact() {
 
               {/* Address */}
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -104,7 +104,7 @@ export default function Contact() {
 
               {/* Hours */}
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center">
                   <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -248,7 +248,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                className="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
                 {t('contact.form.submit')}

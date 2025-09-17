@@ -9,25 +9,29 @@ const OurTeam = () => {
       id: 'director',
       role: 'director',
       experience: '12',
-      specialty: 'earlyChildhood'
+      specialty: 'earlyChildhood',
+      image: '/team/david-portrait.png'
     },
     {
       id: 'leadEducator',
       role: 'leadEducator',
       experience: '8',
-      specialty: 'creativity'
+      specialty: 'creativity',
+      image: '/team/julie-portrait.png'
     },
     {
       id: 'infantSpecialist',
       role: 'infantSpecialist',
       experience: '6',
-      specialty: 'infantCare'
+      specialty: 'infantCare',
+      image: '/team/marie-claire.png'
     },
     {
       id: 'musicTeacher',
       role: 'musicTeacher',
       experience: '5',
-      specialty: 'musicDevelopment'
+      specialty: 'musicDevelopment',
+      image: '/team/parent-woman-professional.jpg'
     }
   ];
 
@@ -45,10 +49,14 @@ const OurTeam = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member) => (
-            <div key={member.id} className="bg-gradient-to-br from-blue-50 to-pink-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+            <div key={member.id} className="bg-blue-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
               {/* Avatar placeholder */}
-              <div className="w-24 h-24 bg-gradient-to-br from-pink-200 to-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Heart size={32} className="text-pink-500" />
+              <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                <img
+                  src={member.image}
+                  alt={t(`ourTeam.members.${member.id}.name`)}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Team member info */}
@@ -85,7 +93,7 @@ const OurTeam = () => {
         </div>
 
         {/* Team values */}
-        <div className="mt-16 bg-gradient-to-r from-pink-500 to-blue-500 rounded-2xl p-8 text-white text-center">
+        <div className="mt-16 bg-pink-500 rounded-2xl p-8 text-white text-center">
           <h3 className="text-2xl font-bold mb-4">{t('ourTeam.values.title')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>

@@ -35,7 +35,7 @@ const HeroSection = () => {
   }, [nextImageIndex, backgroundImages.length]);
 
   return (
-    <div id="hero" className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+    <div id="hero" className="relative min-h-screen bg-gray-800 overflow-hidden">
         {/* Animated Background Carousel */}
         <div className="absolute inset-0">
           {/* Current Image */}
@@ -79,7 +79,7 @@ const HeroSection = () => {
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                   {t('hero.title')}
                   <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400">
+                  <span className="text-pink-500">
                     {t('hero.titleHighlight')}
                   </span>
                 </h1>
@@ -91,7 +91,7 @@ const HeroSection = () => {
               <div className="pt-4">
                 <Link
                   to="/contact"
-                  className="inline-block bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center"
+                  className="inline-block bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center"
                 >
                   {t('hero.getStarted')}
                 </Link>

@@ -5,7 +5,7 @@ const OurStory = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-pink-50">
+    <section className="py-16 bg-blue-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -54,7 +54,7 @@ const OurStory = () => {
 
           {/* Image/Visual Content */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-pink-200 to-blue-200 rounded-2xl p-8 h-96 flex items-center justify-center">
+            <div className="bg-pink-200 rounded-2xl p-8 h-96 flex items-center justify-center">
               <div className="text-center">
                 <Heart size={64} className="text-pink-500 mx-auto mb-4" />
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">{t('ourStory.visual.title')}</h4>
