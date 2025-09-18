@@ -70,6 +70,13 @@
         "title": "Science Discovery",
         "content": "Age-appropriate science experiments and discovery activities that spark curiosity, encourage exploration, and introduce basic scientific concepts through hands-on learning."
       }
+    },
+    "stats": {
+      "creativeProjects": "Creative Projects",
+      "artSpecialists": "Art Specialists",
+      "outdoorAreas": "Outdoor Areas",
+      "experiments": "Experiments",
+      "learningTools": "Learning Tools"
     }
   },
   "programs": {

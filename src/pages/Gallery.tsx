@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
+import { motion } from "framer-motion"
 import { Camera, Heart, Star, Users, Palette, TreePine, Play, X, ChevronLeft, ChevronRight } from "lucide-react"
+import { pageVariants, pageTransition } from '../utils/animations'
 
 const Gallery = () => {
   const { t } = useTranslation()
@@ -145,25 +147,32 @@ const Gallery = () => {
   }
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <motion.div 
+      className="min-h-screen bg-white relative overflow-hidden"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-32 px-4">
+      <section className="relative py-10 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-pink-500 rounded-full mb-8 shadow-2xl">
             <Camera className="text-white" size={32} />
           </div>
           <h1 className="text-7xl md:text-8xl font-bold mb-8 leading-tight">
-            <span className="text-white">{t("gallery.title")} </span>
-            <span className="text-pink-400">{t("gallery.titleHighlight")}</span>
+            <span className="text-gray-800">{t("gallery.title")} </span>
+            <span className="text-pink-500">{t("gallery.titleHighlight")}</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-16 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
             {t("gallery.subtitle")}
           </p>
 
@@ -177,10 +186,10 @@ const Gallery = () => {
       </section>
 
       {/* Featured Gallery Items */}
-      <section className="relative py-20 px-4">
+      <section className="relative  px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">{t("gallery.featured")}</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">{t("gallery.featured")}</h2>
             <div className="w-24 h-1 bg-pink-500 mx-auto"></div>
           </div>
 
@@ -190,7 +199,7 @@ const Gallery = () => {
               .map((item) => (
                 <div
                   key={item.id}
-                  className="group relative bg-white/10 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/20 shadow-2xl hover:shadow-pink-500/25 transition-all duration-500 hover:scale-[1.02] hover:border-pink-500/50 cursor-pointer"
+                  className="group relative bg-gray-50 backdrop-blur-sm rounded-3xl overflow-hidden border border-gray-200 shadow-2xl hover:shadow-pink-500/25 transition-all duration-500 hover:scale-[1.02] hover:border-pink-500/50 cursor-pointer"
                   onClick={() => openLightbox(item.id)}
                 >
                   {/* Image/Video Container */}
@@ -231,10 +240,10 @@ const Gallery = () => {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-pink-500 transition-colors">
                       {galleryTitles[item.id as keyof typeof galleryTitles]?.title}
                     </h3>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-600 text-sm">
                       {galleryTitles[item.id as keyof typeof galleryTitles]?.description}
                     </p>
                   </div>
@@ -248,7 +257,7 @@ const Gallery = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">{t("gallery.allPhotos")}</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">{t("gallery.allPhotos")}</h2>
             <div className="w-24 h-1 bg-pink-500 mx-auto"></div>
           </div>
 
@@ -268,7 +277,7 @@ const Gallery = () => {
                 return (
                   <div
                     key={item.id}
-                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/30 hover:bg-white/10`}
+                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-gray-50 to-gray-100 backdrop-blur-md border border-gray-200 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/50 hover:bg-gray-100`}
                     onClick={() => openLightbox(item.id)}
                   >
                     {/* Video Play Button */}
@@ -329,7 +338,7 @@ const Gallery = () => {
                 return (
                   <div
                     key={item.id}
-                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/30 hover:bg-white/10`}
+                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-gray-50 to-gray-100 backdrop-blur-md border border-gray-200 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/50 hover:bg-gray-100`}
                     onClick={() => openLightbox(item.id)}
                   >
                     {/* Video Play Button */}
@@ -389,7 +398,7 @@ const Gallery = () => {
                 return (
                   <div
                     key={item.id}
-                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/30 hover:bg-white/10 ${index === 1 ? 'shadow-2xl border-pink-400/20' : ''}`}
+                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-gray-50 to-gray-100 backdrop-blur-md border border-gray-200 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/50 hover:bg-gray-100 ${index === 1 ? 'shadow-2xl border-pink-400/30' : ''}`}
                     onClick={() => openLightbox(item.id)}
                   >
                     {/* Video Play Button */}
@@ -450,7 +459,7 @@ const Gallery = () => {
                 return (
                   <div
                     key={item.id}
-                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/30 hover:bg-white/10`}
+                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-gray-50 to-gray-100 backdrop-blur-md border border-gray-200 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/50 hover:bg-gray-100`}
                     onClick={() => openLightbox(item.id)}
                   >
                     {/* Video Play Button */}
@@ -574,7 +583,7 @@ const Gallery = () => {
         </div>
       )}
 
-    </div>
+    </motion.div>
   )
 }
 

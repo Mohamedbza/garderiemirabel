@@ -1,8 +1,10 @@
 
 import { useParams, Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
+import { motion } from "framer-motion"
 import { Calendar, User, ArrowLeft, Clock, Heart, Share2, Tag } from "lucide-react"
 import { useState, useEffect } from "react"
+import { pageVariants, pageTransition } from "../utils/animations"
 
 interface ContentItem {
   type: string
@@ -421,7 +423,14 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <motion.div 
+      className="min-h-screen bg-white"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       {/* Hero Section */}
       <div className="relative h-96 overflow-hidden">
         <div
@@ -553,7 +562,7 @@ const BlogPost = () => {
           </div>
         </section>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

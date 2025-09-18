@@ -55,7 +55,7 @@ const AboutUs = () => {
             <div className="relative overflow-hidden rounded-3xl shadow-2xl group">
               <div className="aspect-video bg-blue-500 flex items-center justify-center">
                 <img
-                  src="/kindergarten-video-background.jpg"
+                  src="/images/apprendre.jpg"
                   alt="Children playing and learning"
                   className="w-full h-full object-cover"
                 />
