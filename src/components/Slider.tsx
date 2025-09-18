@@ -50,17 +50,6 @@ const Slider: React.FC<SliderProps> = ({
     return () => clearInterval(timer);
   }, [sliderItems.length, autoAdvance, interval]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % sliderItems.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + sliderItems.length) % sliderItems.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
 
   return (
     <div className='w-full h-full'>
@@ -76,7 +65,7 @@ const Slider: React.FC<SliderProps> = ({
                 <div className='relative w-full h-full'>
                   <img 
                     src={item.photo} 
-                    alt={item.title}
+                    alt={`Slide ${item.id}`}
                     className='w-full h-full object-cover'
                   />
                 </div>
