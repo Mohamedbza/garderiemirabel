@@ -9,37 +9,37 @@ const FacilityTour = () => {
       key: "classrooms",
       icon: Camera,
       color: "bg-blue-100 text-blue-600",
-      imageUrl: "public/images/installations/art-workshop-studio-CyfT9aw2tkzlTDDr0XZNqJQtLrEWqi.png",
+      imageUrl: "/images/Installations/art-workshop-studio-CyfT9aw2tkzlTDDr0XZNqJQtLrEWqi.png",
     },
     {
       key: "playground",
       icon: TreePine,
       color: "bg-green-100 text-green-600",
-      imageUrl: "public/images/installations/bright-classroom-interior-oUcoI9euLMkthuiM1uTGF62GQf8lpj.png",
+      imageUrl: "/images/Installations/bright-classroom-interior-oUcoI9euLMkthuiM1uTGF62GQf8lpj.png",
     },
     {
       key: "kitchen",
       icon: Utensils,
       color: "bg-pink-100 text-pink-600",
-      imageUrl: "public/images/installations/cozy-reading-corner-5gOpOYTDWdqSbrq7IwaCpMrUWNji5V.png",
+      imageUrl: "/images/Installations/cozy-reading-corner-5gOpOYTDWdqSbrq7IwaCpMrUWNji5V.png",
     },
     {
       key: "napRoom",
       icon: Shield,
       color: "bg-purple-100 text-purple-600",
-      imageUrl: "public/images/installations/modern-kitchen-facility-3ByESqrkd7LPMGx0fGhNwNBGpoyQfN.png",
+      imageUrl: "/images/Installations/modern-kitchen-facility-3ByESqrkd7LPMGx0fGhNwNBGpoyQfN.png",
     },
     {
       key: "artStudio",
       icon: Camera,
       color: "bg-yellow-100 text-yellow-600",
-      imageUrl: "public/images/installations/outdoor-playground-equipment-SwR3ZlEafz47Msnq8iuuY8Eob8huDr.png",
+      imageUrl: "/images/Installations/outdoor-playground-equipment-SwR3ZlEafz47Msnq8iuuY8Eob8huDr.png",
     },
     {
       key: "library",
       icon: Camera,
       color: "bg-indigo-100 text-indigo-600",
-      imageUrl: "public/images/installations/quiet-rest-area-ips9Z81lNHBkdJlIXh2MZVf88FWfCz.png",
+      imageUrl: "/images/Installations/quiet-rest-area-ips9Z81lNHBkdJlIXh2MZVf88FWfCz.png",
     },
   ]
 

@@ -1,5 +1,3 @@
-"use client"
-
 import { Calendar, User, ArrowRight, Heart, BookOpen, Star } from "lucide-react"
 import { useTranslation } from "react-i18next"
 import { Link } from "react-router-dom"

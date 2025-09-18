@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Camera, Heart, Star, Users, Palette, TreePine, Play, X, ChevronLeft, ChevronRight } from "lucide-react"
@@ -287,6 +285,11 @@ const Gallery = () => {
                       src={item.image || "/placeholder.svg"}
                       alt={galleryTitles[item.id as keyof typeof galleryTitles]?.title}
                       className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${shape}`}
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/placeholder.svg";
+                      }}
+                      loading="lazy"
                     />
 
                     {/* Subtle Gradient Overlay */}
@@ -343,6 +346,11 @@ const Gallery = () => {
                       src={item.image || "/placeholder.svg"}
                       alt={galleryTitles[item.id as keyof typeof galleryTitles]?.title}
                       className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${shape}`}
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/placeholder.svg";
+                      }}
+                      loading="lazy"
                     />
 
                     {/* Subtle Gradient Overlay */}
@@ -398,6 +406,11 @@ const Gallery = () => {
                       src={item.image || "/placeholder.svg"}
                       alt={galleryTitles[item.id as keyof typeof galleryTitles]?.title}
                       className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${shape}`}
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/placeholder.svg";
+                      }}
+                      loading="lazy"
                     />
 
                     {/* Subtle Gradient Overlay */}
@@ -454,6 +467,11 @@ const Gallery = () => {
                       src={item.image || "/placeholder.svg"}
                       alt={galleryTitles[item.id as keyof typeof galleryTitles]?.title}
                       className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${shape}`}
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/placeholder.svg";
+                      }}
+                      loading="lazy"
                     />
 
                     {/* Subtle Gradient Overlay */}
