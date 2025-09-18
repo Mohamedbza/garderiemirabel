@@ -23,7 +23,11 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center py-5">
             {/* Luxury Logo Section */}
-            <div className="flex items-center space-x-4 group">
+            <Link
+              to="/"
+              onClick={handleLinkClick}
+              className="flex items-center space-x-4 group cursor-pointer"
+            >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-blue-500/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <img
@@ -43,7 +47,7 @@ const Navigation = () => {
                 </h1>
                 <div className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-pink-500/30 via-transparent to-blue-500/30 rounded-full"></div>
               </div>
-            </div>
+            </Link>
 
             {/* Luxury Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-1">
