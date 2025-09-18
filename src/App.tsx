@@ -31,6 +31,7 @@ const App = () => {
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="*" element={<Home />} />
         </Routes>
 
         {/* Floating Language Switcher */}
