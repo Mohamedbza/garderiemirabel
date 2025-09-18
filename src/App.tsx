@@ -1,5 +1,6 @@
 import './i18n';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Navigation from './components/navigation';
 import FloatingLanguageSwitcher from './components/FloatingLanguageSwitcher';
 import Footer from './components/Footer';
@@ -14,6 +15,26 @@ import Gallery from './pages/Gallery';
 import Blogs from './pages/Blogs';
 import BlogPost from './pages/BlogPost';
 
+const AnimatedRoutes = () => {
+  const location = useLocation();
+  
+  return (
+    <AnimatePresence mode="wait" initial={false}>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
+
 const App = () => {
   return (
     <Router>
@@ -21,18 +42,8 @@ const App = () => {
         {/* Navigation */}
         <Navigation />
 
-        {/* Page Routes */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
+        {/* Page Routes with Animation */}
+        <AnimatedRoutes />
 
         {/* Floating Language Switcher */}
         <FloatingLanguageSwitcher />

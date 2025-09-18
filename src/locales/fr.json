@@ -70,6 +70,13 @@
         "title": "Découverte scientifique",
         "content": "Expériences scientifiques et activités de découverte adaptées à l'âge qui éveillent la curiosité, encouragent l'exploration et introduisent des concepts scientifiques de base par l'apprentissage pratique."
       }
+    },
+    "stats": {
+      "creativeProjects": "Projets créatifs",
+      "artSpecialists": "Spécialistes artistiques",
+      "outdoorAreas": "Aires extérieures",
+      "experiments": "Expériences",
+      "learningTools": "Outils d'apprentissage"
     }
   },
   "programs": {
@@ -154,8 +161,8 @@
     "title": "Nombre de places en garderie",
     "description": "Découvrez nos capacités d'accueil et notre équipe dédiée à l'épanouissement de vos enfants dans un environnement sécurisé et bienveillant.",
     "ageGroups": {
-      "infants": "0 mois à 18 mois",
-      "toddlers": "18 mois à 5 ans",
+      "infants": "places pour 0 mois à 18 mois",
+      "toddlers": "places pour 18 mois à 5 ans",
       "teachers": "Nombres de professeurs"
     }
   },

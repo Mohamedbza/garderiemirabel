@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import MiniCounter from "../components/MiniCounter"
 
 const Services = () => {
   const { t } = useTranslation()
@@ -12,24 +13,40 @@ const Services = () => {
       image: "/children-playing-educational-games.jpg",
       title: t('services.items.educational.title'),
       content: t('services.items.educational.content'),
+      stats: [
+        { number: 66, label: t('places.ageGroups.toddlers') },
+        { number: 15, label: t('places.ageGroups.teachers') },
+      ]
     },
     {
       id: 2,
       image: "/children-doing-arts-and-crafts.jpg",
       title: t('services.items.arts.title'),
       content: t('services.items.arts.content'),
+      stats: [
+        { number: 80, label: t('services.stats.creativeProjects') },
+        { number: 5, label: t('services.stats.artSpecialists') },
+      ]
     },
     {
       id: 3,
-      image: "/children-outdoor-sports.png",
+      image: "/images/kidsport.jpg",
       title: t('services.items.physical.title'),
       content: t('services.items.physical.content'),
+      stats: [
+        { number: 14, label: t('places.ageGroups.infants') },
+        { number: 3, label: t('services.stats.outdoorAreas') },
+      ]
     },
     {
       id: 4,
       image: "/children-doing-science-experiments.jpg",
       title: t('services.items.science.title'),
       content: t('services.items.science.content'),
+      stats: [
+        { number: 25, label: t('services.stats.experiments') },
+        { number: 12, label: t('services.stats.learningTools') },
+      ]
     },
   ]
 
@@ -43,6 +60,17 @@ const Services = () => {
 
   return (
     <div id="services" className="relative min-h-screen bg-pink-50 overflow-hidden">
+      {/* Top decorative wave */}
+      <div className="absolute top-0 left-0 right-0">
+        <svg
+          className="w-full h-16 fill-current text-white "
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path>
+        </svg>
+      </div>
+
       {/* Main container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 space-y-16">
         {/* Section Header */}
@@ -106,6 +134,22 @@ const Services = () => {
                     <p className="text-gray-600 text-lg leading-relaxed">{services[currentIndex].content}</p>
                   </div>
 
+                  {/* Statistics */}
+                  <div className="space-y-4">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-3">{t('places.sectionLabel')}</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {services[currentIndex].stats.map((stat, index) => (
+                        <div key={index} className="bg-gray-50 rounded-lg p-3">
+                          <MiniCounter 
+                            number={stat.number} 
+                            label={stat.label}
+                            duration={1500 + index * 200}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                   {/* Service number indicator */}
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
@@ -131,17 +175,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-
-      {/* Bottom decorative wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg
-          className="w-full h-16 fill-current text-white opacity-80"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path>
-        </svg>
-      </div>
+ 
     </div>
   )
 }

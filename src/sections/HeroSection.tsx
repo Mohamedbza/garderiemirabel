@@ -1,67 +1,37 @@
 import { useTranslation } from "react-i18next";
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import logo from "../assets/hero-img.jpg";
+import { Link } from 'react-router-dom'; 
+import { motion } from "framer-motion";
+import Slider from "../components/Slider";
 
 const HeroSection = () => {
   const { t } = useTranslation();
 
-  // Array of background images for the carousel
-  const backgroundImages = [
-    logo, // Original hero image
-    "https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", // Children playing
-    "https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", // Daycare classroom
-    "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2086&q=80", // Children learning
-    "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2132&q=80"  // Children outdoor play
-  ];
+  // Animation variants
+  const fadeInUp = {
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, ease: "easeOut" }
+  };
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [nextImageIndex, setNextImageIndex] = useState(1);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const fadeInLeft = {
+    initial: { opacity: 0, x: -60 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.8, ease: "easeOut" }
+  };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTransitioning(true);
-
-      setTimeout(() => {
-        setCurrentImageIndex(nextImageIndex);
-        setNextImageIndex((nextImageIndex + 1) % backgroundImages.length);
-        setIsTransitioning(false);
-      }, 1500); // Much shorter to allow proper transition
-
-    }, 10000); // Change image every 10 seconds (even slower)
-
-    return () => clearInterval(interval);
-  }, [nextImageIndex, backgroundImages.length]);
-
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+ 
   return (
     <div id="hero" className="relative min-h-screen bg-gray-800 overflow-hidden">
-        {/* Animated Background Carousel */}
-        <div className="absolute inset-0">
-          {/* Current Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
-            style={{
-              backgroundImage: `url(${backgroundImages[currentImageIndex]})`,
-              transition: 'transform 3s ease-out',
-              transform: isTransitioning ? 'translateX(100%)' : 'translateX(0%)',
-              zIndex: 2
-            }}
-          />
-
-          {/* Next Image (sliding in from left) */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
-            style={{
-              backgroundImage: `url(${backgroundImages[nextImageIndex]})`,
-              transition: 'transform 3s ease-out',
-              transform: isTransitioning ? 'translateX(0%)' : 'translateX(-100%)',
-              zIndex: 1
-            }}
-          />
-
-          {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-black opacity-30"></div>
+        {/* Animated Background Carousel as background */}
+        <div className="absolute inset-0 z-10 opacity-50">
+          <Slider />
         </div>
         
         {/* Floating Elements */}
@@ -73,30 +43,49 @@ const HeroSection = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 flex items-center min-h-screen">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
             {/* Left Content */}
-            <div className="text-white space-y-6">
+            <motion.div 
+              className="text-white space-y-6"
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
+            >
               <div className="space-y-4">
-                <p className="text-pink-400 text-lg font-medium tracking-wide">{t('hero.subtitle')}</p>
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                <motion.p 
+                  className="text-pink-400 text-lg font-medium tracking-wide"
+                  variants={fadeInLeft}
+                >
+                  {t('hero.subtitle')}
+                </motion.p>
+                <motion.h1 
+                  className="text-4xl md:text-6xl font-bold leading-tight"
+                  variants={fadeInUp}
+                >
                   {t('hero.title')}
                   <br />
                   <span className="text-pink-500">
                     {t('hero.titleHighlight')}
                   </span>
-                </h1>
-                <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
+                </motion.h1>
+                <motion.p 
+                  className="text-white text-lg leading-relaxed max-w-lg"
+                  variants={fadeInUp}
+                >
                   {t('hero.description')}
-                </p>
+                </motion.p>
               </div>
               
-              <div className="pt-4">
+              <motion.div 
+                className="pt-4"
+                variants={fadeInUp}
+              >
                 <Link
                   to="/contact"
                   className="inline-block bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center"
                 >
                   {t('hero.getStarted')}
                 </Link>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Right Content - Image Placeholder */}
             

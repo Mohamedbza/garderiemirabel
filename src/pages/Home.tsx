@@ -1,13 +1,21 @@
+import { motion } from 'framer-motion';
 import HeroSection from '../sections/HeroSection';
 import AboutUs from '../sections/AboutUs';
-import Services from '../sections/Services';
-import PlacesAvailable from '../sections/PlacesAvailable';
+import Services from '../sections/Services'; 
 import Testimonials from '../sections/testimonials';
 import FAQ from './FAQ';
+import { pageVariants, pageTransition } from '../utils/animations';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <motion.div 
+      className="min-h-screen bg-white"
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       {/* Hero Section */}
       <HeroSection />
 
@@ -15,15 +23,13 @@ const Home = () => {
       <AboutUs />
 
       {/* Services Preview */}
-      <Services />
-
-      {/* Places Available */}
-      <PlacesAvailable />
+      <Services /> 
 
       {/* Testimonials */}
       <Testimonials />
+      
       <FAQ />
-    </div>
+    </motion.div>
   );
 };
 
