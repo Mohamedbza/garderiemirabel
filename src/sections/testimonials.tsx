@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react"
 
 export default function Testimonials() {
   const { t } = useTranslation()
@@ -10,21 +10,45 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "Gregory",
+      name: "Alexandre Béliveau",
       text: t('testimonials.items.gregory'),
-      avatar: "/parent-father-smiling.jpg",
+      starsOnly: false,
     },
     {
       id: 2,
-      name: "Sarah",
+      name: "Mary Fortin",
       text: t('testimonials.items.sarah'),
-      avatar: "/parent-mother-happy.jpg",
+      starsOnly: false,
     },
     {
       id: 3,
-      name: "Mme. Belba",
+      name: "Cecilia Moreno",
       text: t('testimonials.items.belba'),
-      avatar: "/parent-woman-professional.jpg",
+      starsOnly: false,
+    },
+    {
+      id: 4,
+      name: "Chrystel Cadieux-Lévesque",
+      text: t('testimonials.items.chrystel'),
+      starsOnly: false,
+    },
+    {
+      id: 5,
+      name: "Guillaume Limoges",
+      text: t('testimonials.items.guillaume'),
+      starsOnly: true,
+    },
+    {
+      id: 6,
+      name: "Jessica Scourneaux",
+      text: t('testimonials.items.jessica'),
+      starsOnly: true,
+    },
+    {
+      id: 7,
+      name: "Famille Locas",
+      text: t('testimonials.items.famille'),
+      starsOnly: true,
     },
   ]
 
@@ -129,22 +153,27 @@ export default function Testimonials() {
                 <Quote className="w-8 h-8 text-white" />
               </div>
 
+              {/* Star rating */}
+              <div className="flex justify-center mb-6">
+                {[...Array(5)].map((_, index) => (
+                  <Star
+                    key={index}
+                    className="w-6 h-6 fill-yellow-400 text-yellow-400"
+                  />
+                ))}
+              </div>
+
               {/* Testimonial text */}
-              <blockquote className="text-gray-700 text-lg md:text-xl leading-relaxed mb-8 italic">
-                "{testimonials[currentIndex].text}"
-              </blockquote>
+              {!testimonials[currentIndex].starsOnly && (
+                <blockquote className="text-gray-700 text-lg md:text-xl leading-relaxed mb-8 italic">
+                  "{testimonials[currentIndex].text}"
+                </blockquote>
+              )}
 
               {/* Author info */}
-              <div className="flex items-center justify-center space-x-4">
-                <img
-                  src={testimonials[currentIndex].avatar || "/placeholder.svg"}
-                  alt={testimonials[currentIndex].name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-purple-200"
-                />
-                <div>
-                  <p className="font-semibold text-gray-800">{testimonials[currentIndex].name}</p>
-                  <p className="text-sm text-gray-500">{t('testimonials.parent')}</p>
-                </div>
+              <div className="text-center">
+                <p className="font-semibold text-gray-800">{testimonials[currentIndex].name}</p>
+                <p className="text-sm text-gray-500">{t('testimonials.parent')}</p>
               </div>
             </div>
           </div>

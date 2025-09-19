@@ -252,7 +252,7 @@
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Information",
     "address": "13950, Rue de la Chapelle, Mirabel, Qc. J7J 2C8",
-    "email": "info@garderiemirabel.ca",
+    "email": "garderie.mirabel1@bellnet.ca",
     "hours": "Opening Hours",
     "weekdays": "Monday - Friday",
     "weekdaysHours": "6:30 AM - 6:00 PM",
@@ -634,8 +634,8 @@
     },
     "items": {
       "1": {
-        "title": "Morning Circle Time",
-        "description": "Children gathering for their daily circle time activities and storytelling."
+        "title": "Kids Entertainer & Animator",
+        "description": "Professional entertainers and animators creating magical moments and engaging activities for children."
       },
       "2": {
         "title": "Reading Together",

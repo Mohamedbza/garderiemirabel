@@ -205,9 +205,13 @@
     "description": "Découvrez ce que nos parents pensent de notre garderie et des services que nous offrons à leurs enfants.",
     "parent": "Parent",
     "items": {
-      "gregory": "Une garderie magnifique parfaite pour mes enfants! Je la recommande à tout le monde",
-      "sarah": "Une garderie très sécuritaire pour mon enfant, il s'amuse toujours là bas. Une équipe de confiance!",
-      "belba": "Mon fils a fréquenté la garderie l'académie de Saint Michel pendant 4 ans jusqu'à son départ à la maternelle cette année. On était très satisfait du travail colossal que les éducatrices ont fait et de la bonne ambiance existante entre les parents et le personnel"
+      "gregory": "Mon fils à commencé la garderie depuis 3 semaines et il adore. L'adaptation s'est très bien passée et l'éducatrice au poupon Nancy est merveilleuse, quand nous allons porter notre fils nous sommes en confiance !",
+      "sarah": "Super staff :)",
+      "belba": "J'adore cette garderie! Mes trois enfants vont là! Les éducatrices sont en or et je leur fais confiance.",
+      "chrystel": "Des éducatrices en or! Ma fille a passé une année épanouissante grâce à leur écoute et leur patience. Elles respectent les besoins de l'enfant sans pression pour les parents, ce qui nous apporte une vraie tranquillité d'esprit. Leur approche, proche de celle de la maison, facilite énormément notre quotidien. Merci à toute l'équipe pour le sentiment de sécurité et de confiance que vous nous offrez.",
+      "guillaume": "",
+      "jessica": "",
+      "famille": ""
     }
   },
   "contact": {
@@ -252,7 +256,7 @@
     "quickLinks": "Liens rapides",
     "contactInfo": "Informations de contact",
     "address": "13950, Rue de la Chapelle, Mirabel, Qc. J7J 2C8",
-    "email": "info@garderiemirabel.ca",
+    "email": "garderie.mirabel1@bellnet.ca",
     "hours": "Heures d'ouverture",
     "weekdays": "Lundi - Vendredi",
     "weekdaysHours": "6h30 - 18h00",
@@ -518,7 +522,7 @@
       },
       "3": {
         "question": "Offrez-vous des places subventionnées?",
-        "answer": "Oui, nous participons aux programmes de subvention gouvernementale. Nous pouvons vous aider à déterminer votre admissibilité et vous assister dans le processus de demande. Contactez notre administration pour plus de détails."
+        "answer": "Nous sommes une garderie privée en cours de processus pour obtenir des places subventionnées. En attendant, nous offrons une possibilité de retour anticipé qui minimise le paiement des parents. Contactez-nous pour plus de détails sur nos options de financement."
       },
       "4": {
         "question": "Quelles mesures de sécurité avez-vous en place?",
@@ -634,8 +638,8 @@
     },
     "items": {
       "1": {
-        "title": "Temps de Cercle Matinal",
-        "description": "Les enfants se rassemblent pour leurs activités quotidiennes de cercle et de narration."
+        "title": "Animateur et Divertisseur pour Enfants",
+        "description": "Animateurs professionnels créant des moments magiques et des activités captivantes pour les enfants."
       },
       "2": {
         "title": "Lecture Ensemble",

@@ -25,17 +25,17 @@ const Gallery = () => {
   const galleryItems = [
     {
       id: 1,
-      category: "activities",
+      category: "events",
       type: "image",
       featured: true,
-      image: "/gallery/morning-circle-time-kindergarten-children.jpg",
+      image: "/gallery/i.jpg",
     },
     {
       id: 2,
       category: "learning",
       type: "image",
       featured: false,
-      image: "/gallery/learning-activities-classroom.jpg",
+      image: "/gallery/r.jpg",
     },
     { id: 3, category: "arts", type: "video", featured: true, image: "/gallery/art-workshop-children-painting.jpg" },
     {
@@ -43,7 +43,7 @@ const Gallery = () => {
       category: "outdoor",
       type: "image",
       featured: false,
-      image: "/gallery/playground-adventures-children.jpg",
+      image: "/gallery/c.jpg",
     },
     {
       id: 5,
@@ -52,11 +52,11 @@ const Gallery = () => {
       featured: true,
       image: "/gallery/holiday-celebration-kindergarten.jpg",
     },
-    { id: 6, category: "activities", type: "image", featured: false, image: "/gallery/music-and-movement-class.jpg" },
-    { id: 7, category: "learning", type: "video", featured: false, image: "/gallery/reading-corner-story-time.jpg" },
-    { id: 8, category: "arts", type: "image", featured: false, image: "/gallery/dramatic-play-dress-up.jpg" },
-    { id: 9, category: "outdoor", type: "image", featured: true, image: "/gallery/outdoor-nature-exploration.jpg" },
-    { id: 10, category: "events", type: "image", featured: false, image: "/gallery/lunch-time-social-eating.jpg" },
+    { id: 6, category: "activities", type: "image", featured: false, image: "/gallery/x.jpg" },
+    { id: 7, category: "learning", type: "image", featured: false, image: "/gallery/special.jpg" },
+    { id: 8, category: "arts", type: "image", featured: false, image: "/gallery/d.jpg" },
+    { id: 9, category: "outdoor", type: "image", featured: true, image: "/gallery/z4.jpg" },
+    { id: 10, category: "events", type: "image", featured: false, image: "/gallery/k.jpg" },
     {
       id: 11,
       category: "activities",
@@ -69,91 +69,70 @@ const Gallery = () => {
       category: "learning",
       type: "image",
       featured: false,
-      image: "/gallery/science-discovery-activities.jpg",
+      image: "/gallery/x4.jpg",
     },
     {
       id: 13,
       category: "learning",
       type: "image",
       featured: false,
-      image: "/gallery/medium-shot-kids-teacher-table.jpg",
+      image: "/gallery/a.jpg",
     },
     {
       id: 14,
       category: "arts",
       type: "image",
       featured: false,
-      image: "/gallery/adorable-caucasian-girl-sitting-table-drawing-paper-classroom.jpg",
+      image: "/gallery/ez.jpg",
     },
     {
       id: 15,
-      category: "arts",
+      category: "learning",
       type: "image",
       featured: false,
-      image: "/images/Installations/art-workshop-studio-CyfT9aw2tkzlTDDr0XZNqJQtLrEWqi.png",
+      image: "/gallery/h.jpg",
     },
     {
       id: 16,
-      category: "learning",
+      category: "activities",
       type: "image",
       featured: false,
-      image: "/images/Installations/bright-classroom-interior-oUcoI9euLMkthuiM1uTGF62GQf8lpj.png",
+      image: "/gallery/16.jpg",
     },
     {
       id: 17,
-      category: "learning",
+      category: "outdoor",
       type: "image",
       featured: false,
-      image: "/images/Installations/cozy-reading-corner-5gOpOYTDWdqSbrq7IwaCpMrUWNji5V.png",
+      image: "/gallery/17.jpg",
     },
     {
       id: 18,
       category: "activities",
       type: "image",
       featured: false,
-      image: "/images/Installations/modern-kitchen-facility-3ByESqrkd7LPMGx0fGhNwNBGpoyQfN.png",
+      image: "/gallery/x4.jpg",
     },
     {
       id: 19,
-      category: "outdoor",
-      type: "image",
-      featured: false,
-      image: "/images/Installations/outdoor-playground-equipment-SwR3ZlEafz47Msnq8iuuY8Eob8huDr.png",
-    },
-    {
-      id: 20,
-      category: "activities",
-      type: "image",
-      featured: false,
-      image: "/images/Installations/quiet-rest-area-ips9Z81lNHBkdJlIXh2MZVf88FWfCz.png",
-    },
-    {
-      id: 21,
       category: "activities",
       type: "image",
       featured: false,
       image: "/acd-ch.png",
     },
     {
-      id: 22,
+      id: 20,
       category: "learning",
       type: "image",
       featured: false,
       image: "/gallery/1month-IMG_0183_wide.jpg",
     },
     {
-      id: 23,
+      id: 21,
       category: "activities",
       type: "image",
       featured: false,
       image: "/gallery/little-girl-spotted-shirt-sits-pink-pillows.jpg",
-    },
-    {
-      id: 24,
-      category: "learning",
-      type: "image",
-      featured: true,
-      image: "/gallery/babies-playin.jpg",
     },
   ]
 
@@ -190,16 +169,13 @@ const Gallery = () => {
     12: { title: t("gallery.items.12.title"), description: t("gallery.items.12.description") },
     13: { title: t("gallery.items.13.title"), description: t("gallery.items.13.description") },
     14: { title: t("gallery.items.14.title"), description: t("gallery.items.14.description") },
-    15: { title: t("gallery.items.15.title"), description: t("gallery.items.15.description") },
-    16: { title: t("gallery.items.16.title"), description: t("gallery.items.16.description") },
-    17: { title: t("gallery.items.17.title"), description: t("gallery.items.17.description") },
-    18: { title: t("gallery.items.18.title"), description: t("gallery.items.18.description") },
-    19: { title: t("gallery.items.19.title"), description: t("gallery.items.19.description") },
-    20: { title: t("gallery.items.20.title"), description: t("gallery.items.20.description") },
-    21: { title: t("gallery.items.21.title"), description: t("gallery.items.21.description") },
-    22: { title: t("gallery.items.22.title"), description: t("gallery.items.22.description") },
-    23: { title: t("gallery.items.23.title"), description: t("gallery.items.23.description") },
-    24: { title: t("gallery.items.24.title"), description: t("gallery.items.24.description") },
+    15: { title: t("gallery.items.17.title"), description: t("gallery.items.17.description") },
+    16: { title: t("gallery.items.18.title"), description: t("gallery.items.18.description") },
+    17: { title: t("gallery.items.19.title"), description: t("gallery.items.19.description") },
+    18: { title: t("gallery.items.20.title"), description: t("gallery.items.20.description") },
+    19: { title: t("gallery.items.21.title"), description: t("gallery.items.21.description") },
+    20: { title: t("gallery.items.22.title"), description: t("gallery.items.22.description") },
+    21: { title: t("gallery.items.23.title"), description: t("gallery.items.23.description") },
   }
 
   const allItems = galleryItems
@@ -688,34 +664,18 @@ const Gallery = () => {
           {/* Content Container */}
           <div className="flex items-center justify-center min-h-screen p-8">
             <div className="relative max-w-4xl max-h-full">
-              <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
-                <div className="h-96 relative overflow-hidden cursor-pointer" onClick={goToNextImage}>
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <div className="cursor-pointer" onClick={goToNextImage}>
                   <img
                     src={allItems.find((item) => item.id === selectedImage)?.image || "/placeholder.svg"}
                     alt={galleryTitles[selectedImage as keyof typeof galleryTitles]?.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain max-h-[80vh]"
                   />
-
-                  {/* Click indicator */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black/10">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
-                      <ChevronRight size={20} className="text-gray-800" />
-                    </div>
-                  </div>
                 </div>
 
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-2xl font-bold text-gray-800">
-                      {galleryTitles[selectedImage as keyof typeof galleryTitles]?.title}
-                    </h3>
-                    <div className="text-sm text-gray-500">
-                      {allItems.findIndex(item => item.id === selectedImage) + 1} / {allItems.length}
-                    </div>
-                  </div>
-                  <p className="text-gray-600">
-                    {galleryTitles[selectedImage as keyof typeof galleryTitles]?.description}
-                  </p>
+                {/* Image counter only */}
+                <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm">
+                  {allItems.findIndex(item => item.id === selectedImage) + 1} / {allItems.length}
                 </div>
               </div>
             </div>

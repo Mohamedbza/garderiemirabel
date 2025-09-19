@@ -196,10 +196,10 @@ const Programmes = () => {
 {t('programs.specialDescription')}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {specialPrograms.map((program, index) => (
-              <div 
+              <div
                 key={index}
                 className="flex items-center gap-4 p-6 bg-white rounded-2xl hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
@@ -217,6 +217,23 @@ const Programmes = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Media Gallery */}
+        <div className="mt-8 space-y-6 max-w-2xl mx-auto">
+          {/* First Image */}
+          <img
+            src="/special.jpg"
+            alt="Special Program Activity 1"
+            className="w-full rounded-2xl"
+          />
+
+          {/* Second Image */}
+          <img
+            src="/k.jpg"
+            alt="Special Program Activity 2"
+            className="w-full rounded-2xl"
+          />
         </div>
 
         {/* Call to Action */}

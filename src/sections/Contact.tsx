@@ -14,10 +14,54 @@ export default function Contact() {
     startDate: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
+    setIsSubmitting(true)
+
+    // Create email content
+    const emailSubject = `Nouvelle demande d'inscription - ${formData.childName}`
+    const emailBody = `Nouvelle demande d'inscription à la Garderie Mirabel
+
+INFORMATIONS DE L'ENFANT:
+- Nom de l'enfant: ${formData.childName}
+- Date de naissance: ${formData.birthDate}
+- Date de début souhaitée: ${formData.startDate}
+
+INFORMATIONS DU PARENT:
+- Nom du parent: ${formData.parentName}
+- Téléphone: ${formData.parentPhone}
+- Email: ${formData.parentEmail}
+
+MESSAGE ADDITIONNEL:
+${formData.message || 'Aucun message additionnel'}
+
+---
+Cette demande a été soumise via le site web de la Garderie Mirabel.`
+
+    // Create mailto link
+    const mailtoLink = `mailto:garderie.mirabel1@bellnet.ca?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`
+
+    // Open email client
+    window.location.href = mailtoLink
+
+    setSubmitStatus('success')
+    setIsSubmitting(false)
+
+    // Reset form after a short delay
+    setTimeout(() => {
+      setFormData({
+        childName: "",
+        parentName: "",
+        birthDate: "",
+        parentPhone: "",
+        parentEmail: "",
+        startDate: "",
+        message: "",
+      })
+    }, 2000)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -79,7 +123,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">{t('contact.email.title')}</h4>
-                  <p className="text-gray-600">info@garderiemirabel.ca</p>
+                  <p className="text-gray-600">garderie.mirabel1@bellnet.ca</p>
                   <p className="text-sm text-gray-500">{t('contact.email.response')}</p>
                 </div>
               </div>
@@ -243,12 +287,30 @@ export default function Contact() {
                 </div>
               </div>
 
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-xl">
+                  ✅ Votre demande d'inscription a été envoyée avec succès! Nous vous contacterons bientôt.
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-xl">
+                  ❌ Une erreur s'est produite lors de l'envoi. Veuillez réessayer ou nous contacter directement.
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className={`w-full font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform shadow-lg flex items-center justify-center gap-2 ${
+                  isSubmitting
+                    ? 'bg-gray-400 cursor-not-allowed'
+                    : 'bg-pink-500 hover:bg-pink-600 hover:scale-105 hover:shadow-xl'
+                } text-white`}
               >
-                <Send className="w-5 h-5" />
-                {t('contact.form.submit')}
+                <Send className={`w-5 h-5 ${isSubmitting ? 'animate-spin' : ''}`} />
+                {isSubmitting ? 'Envoi en cours...' : t('contact.form.submit')}
               </button>
             </form>
           </div>
