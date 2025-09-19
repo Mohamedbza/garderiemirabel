@@ -1,4 +1,4 @@
-import { Heart, Users, Award, Star } from 'lucide-react';
+import { Users, Award } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const OurStory = () => {
@@ -56,7 +56,7 @@ const OurStory = () => {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="../public/notrehistoire.png"
+                src="/notrehistoire.png"
                 alt="Construit par amour"
                 className="w-full h-96 object-cover"
               />

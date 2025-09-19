@@ -132,7 +132,7 @@ const Gallery = () => {
       category: "activities",
       type: "image",
       featured: false,
-      image: "../public/acd-ch.png",
+      image: "/acd-ch.png",
     },
     {
       id: 22,

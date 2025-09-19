@@ -1,6 +1,5 @@
-import { Calendar, User, ArrowRight, Heart, BookOpen, Star } from "lucide-react"
+import { Calendar, User, Heart, BookOpen, Star } from "lucide-react"
 import { useTranslation } from "react-i18next"
-import { Link } from "react-router-dom"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { pageVariants, pageTransition } from '../utils/animations'
@@ -9,9 +8,6 @@ const Blogs = () => {
   const { t } = useTranslation()
   const [selectedCategory, setSelectedCategory] = useState("all")
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
 
   const renderTextWithLinks = (text: string) => {
     // Handle bracketed links first
@@ -19,7 +15,7 @@ const Blogs = () => {
     const governmentUrl = "https://www.finances.gouv.qc.ca/ministere/outils_services/outils_calcul/cout_garde_quotidien/outil_garde.asp"
 
     // Replace bracketed text with clickable links
-    const textWithBracketLinks = text.replace(bracketRegex, (match, linkText) => {
+    const textWithBracketLinks = text.replace(bracketRegex, (_, linkText) => {
       return `SPECIAL_LINK_${linkText}_SPECIAL_LINK`
     })
 
