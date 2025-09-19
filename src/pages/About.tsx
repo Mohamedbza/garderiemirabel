@@ -3,7 +3,6 @@ import AboutUs from '../sections/AboutUs';
 import OurStory from '../sections/OurStory';
 import OurTeam from '../sections/OurTeam';
 import OurPhilosophy from '../sections/OurPhilosophy';
-import FacilityTour from '../sections/FacilityTour';
 import { pageVariants, pageTransition } from '../utils/animations';
 
 const About = () => {
@@ -20,7 +19,6 @@ const About = () => {
       <OurStory />
       <OurTeam />
       <OurPhilosophy />
-      <FacilityTour />
     </motion.div>
   );
 };

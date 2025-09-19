@@ -68,9 +68,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">{t('contact.phone.title')}</h4>
-                  <p className="text-gray-600">(438) 778-3839</p>
-                  <p className="text-gray-600">(514) 303-4443</p>
-                  <p className="text-sm text-gray-500">{t('contact.phone.hours')}</p>
+                  <p className="text-gray-600">450-438-9696</p>
                 </div>
               </div>
 
@@ -81,7 +79,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">{t('contact.email.title')}</h4>
-                  <p className="text-gray-600">academiestmichelinc@gmail.com</p>
+                  <p className="text-gray-600">info@garderiemirabel.ca</p>
                   <p className="text-sm text-gray-500">{t('contact.email.response')}</p>
                 </div>
               </div>
@@ -94,9 +92,9 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">{t('contact.address.title')}</h4>
                   <p className="text-gray-600">
-                    7960 Boulevard St-Michel, Montréal, QC,
+                    13950, Rue de la Chapelle, Mirabel, Qc.
                     <br />
-                    Canada H1Z 3E1
+                    J7J 2C8
                   </p>
                 </div>
               </div>

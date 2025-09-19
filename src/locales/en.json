@@ -46,6 +46,39 @@
       }
     }
   },
+  "whyChooseUs": {
+    "sectionLabel": "Why Choose Us",
+    "title": "The Best Care for",
+    "titleHighlight": "Your Little Ones",
+    "titleEnd": "Every Day",
+    "description": "Discover what makes our daycare special and why families trust us with their most precious gifts.",
+    "features": {
+      "birthToPreschool": {
+        "title": "From Birth to Preschool",
+        "description": "We welcome children from 0 months to 5 years, with care adapted to each stage."
+      },
+      "learningThroughPlay": {
+        "title": "Learning Through Play",
+        "description": "Programs that stimulate curiosity, creativity, and the joy of learning."
+      },
+      "healthyMeals": {
+        "title": "Healthy Meals, Made with Love",
+        "description": "Our dedicated chef prepares fresh meals on-site every day, with high-quality ingredients meeting health and safety standards."
+      },
+      "experiencedEducators": {
+        "title": "Experienced, Caring Educators",
+        "description": "A passionate team that supports each child with patience, attention, and love."
+      },
+      "safeEnvironment": {
+        "title": "Safe & Family-Like Environment",
+        "description": "A warm and secure atmosphere where children feel at home and parents feel confident."
+      },
+      "sportActivities": {
+        "title": "Physical & Sports Activities",
+        "description": "Dynamic activities that promote health, coordination, and teamwork."
+      }
+    }
+  },
   "services": {
     "sectionLabel": "Services",
     "title": "Our Amazing",
@@ -225,6 +258,13 @@
     "weekdaysHours": "6:30 AM - 6:00 PM",
     "weekends": "Saturday - Sunday",
     "weekendsHours": "Closed",
+    "usefulLinks": "Useful Links",
+    "links": {
+      "costCalculator": "Daycare Cost Calculator",
+      "familyAllowances": "Quebec Family Allowances",
+      "naitreEtGrandir": "Naître et grandir",
+      "vaccinationSchedule": "Vaccination Schedule"
+    },
     "allRightsReserved": "All rights reserved.",
     "madeWith": "Made with",
     "forChildren": "for children"
@@ -524,7 +564,6 @@
     "subtitle": "Discover helpful tips, educational insights, and stories from our daycare community to support your child's development journey.",
     "featured": "Featured Articles",
     "latestPosts": "Latest Posts",
-    "readMore": "Read More",
     "categories": {
       "all": "All Articles",
       "development": "Child Development",
@@ -534,41 +573,41 @@
       "parenting": "Parenting Advice"
     },
     "posts": {
-      "1": {
-        "title": "The Importance of Play-Based Learning in Early Childhood",
-        "excerpt": "Discover how play-based learning shapes your child's cognitive, social, and emotional development during their crucial early years.",
-        "date": "March 15, 2024",
-        "author": "Marie-Claire Dubois"
-      },
-      "2": {
-        "title": "Creative Art Projects That Boost Fine Motor Skills",
-        "excerpt": "Fun and engaging art activities that help develop your child's fine motor skills while fostering creativity and self-expression.",
-        "date": "March 10, 2024",
-        "author": "Sophie Martin"
-      },
       "3": {
         "title": "Healthy Snacks That Kids Actually Love",
-        "excerpt": "Nutritious and delicious snack ideas that will keep your little ones happy and energized throughout their day at daycare.",
+        "excerpt": "Balanced nutrition is essential for children's optimal development. Our chef daily prepares fresh, colorful, and nutritious snacks that appeal to little palates. From fruits cut into fun shapes to vegetables served with tasty dips, we make healthy eating attractive. Our menus respect all food allergies and prioritize quality local ingredients. These healthy eating habits, developed from a young age, will accompany children throughout their growth and contribute to their overall well-being and lifelong health habits.",
         "date": "March 8, 2024",
         "author": "Julie Tremblay"
       },
       "4": {
         "title": "Creating Safe Spaces for Exploration and Learning",
-        "excerpt": "Learn how we design our environments to encourage curiosity while maintaining the highest safety standards for your children.",
+        "excerpt": "Safety is our absolute priority at Garderie Mirabel. We have designed every space to encourage children's natural exploration while maintaining a perfectly secure environment. Our facilities include advanced surveillance systems, soft-surface play areas, and strict safety protocols. Every corner is designed to minimize risks while maximizing learning opportunities. This approach allows children to develop their confidence and autonomy in a protected setting that also reassures parents about their children's well-being.",
         "date": "March 5, 2024",
         "author": "Marie-Claire Dubois"
       },
       "5": {
         "title": "Building Independence in Young Children",
-        "excerpt": "Practical strategies to help your child develop confidence and independence in age-appropriate ways.",
+        "excerpt": "Encouraging autonomy in young children is a delicate art that requires patience and expertise. Our educators support each child in developing their independence through activities adapted to their age and pace. Whether learning to put away toys, choosing activities, or resolving small conflicts with peers, we guide children toward greater autonomy. This caring approach strengthens their self-esteem and prepares them to face future challenges with confidence. Independence acquired at a young age forms a solid foundation for their personal development.",
         "date": "March 1, 2024",
         "author": "Sophie Martin"
       },
       "6": {
-        "title": "The Role of Music in Early Brain Development",
-        "excerpt": "Explore how music and movement activities contribute to language development, memory, and cognitive growth in young children.",
-        "date": "February 28, 2024",
-        "author": "David Chen"
+        "title": "Calculate the Cost of a Daycare Space in 2025",
+        "excerpt": "Wondering how much a daycare space costs for your child in 2025? The Quebec Ministry of Finance provides an official simulator that allows you to quickly and easily estimate the cost of a space according to your family situation. This practical tool takes into account various factors (income, number of children, type of daycare service, etc.) and gives you a personalized estimate. 👉 Access the simulator from the [Quebec Ministry of Finance]. At Garderie Mirabel, we know it's important for parents to have a clear vision of the costs related to their children's care. This useful link is here to help you better plan your family budget.",
+        "date": "January 15, 2025",
+        "author": "Marie-Claire Dubois"
+      },
+      "7": {
+        "title": "Complete Guide to Family Allowances in Quebec",
+        "excerpt": "Did you know that the Quebec government offers several financial assistance programs to support families? Family allowances can significantly reduce your costs related to childcare and healthcare. The Quebec Child Assistance Program pays up to $2,817 per year per child depending on your family situation. Additionally, the tax credit for childcare expenses can cover up to 75% of your daycare fees. 👉 Discover all available programs on [Retraite Québec] and calculate your benefits. At Garderie Mirabel, we encourage parents to explore these resources to lighten the financial burden and allow more families to access quality childcare services.",
+        "date": "January 10, 2025",
+        "author": "Marie-Claire Dubois"
+      },
+      "8": {
+        "title": "Essential Resources for New Parents in Quebec",
+        "excerpt": "Becoming a parent in Quebec comes with many important administrative steps. Registering your child with RAMQ must be done within 30 days of birth to ensure complete health coverage. The [Naître et grandir] website offers expert advice on child development, nutrition, and daily care, specifically adapted to the Quebec context. For emergencies, keep the Quebec Poison Control Center number handy: 1 800 463-5060. We also recommend familiarizing yourself with Quebec's vaccination schedule available on [Quebec.ca]. At Garderie Mirabel, we work in partnership with these official resources to provide the best care for your children.",
+        "date": "January 5, 2025",
+        "author": "Julie Tremblay"
       }
     },
     "newsletter": {
@@ -649,6 +688,46 @@
       "14": {
         "title": "Creative Drawing",
         "description": "Young artist concentrating on her artistic creation in the classroom."
+      },
+      "15": {
+        "title": "Art Workshop Studio",
+        "description": "Creative space with art materials for children's artistic expression."
+      },
+      "16": {
+        "title": "Bright Classroom Interior",
+        "description": "Colorful and well-lit learning environment for educational activities."
+      },
+      "17": {
+        "title": "Cozy Reading Corner",
+        "description": "Peaceful reading space with age-appropriate books for children."
+      },
+      "18": {
+        "title": "Modern Kitchen Facility",
+        "description": "Equipped kitchen where we prepare fresh and nutritious meals daily."
+      },
+      "19": {
+        "title": "Outdoor Playground Equipment",
+        "description": "Safe playground equipment for physical development and fun."
+      },
+      "20": {
+        "title": "Quiet Rest Area",
+        "description": "Calm space for nap time and peaceful moments for children."
+      },
+      "21": {
+        "title": "Children Playing Together",
+        "description": "Moments of play and social interaction between children in our caring environment."
+      },
+      "22": {
+        "title": "Baby Exploring Toys",
+        "description": "Toddler discovering the world through age-appropriate sensory toys."
+      },
+      "23": {
+        "title": "Baby Playing with Blocks",
+        "description": "Developing fine motor skills with colorful and safe building blocks."
+      },
+      "24": {
+        "title": "Baby Sensory Play",
+        "description": "Sensory and cognitive stimulation with activities designed for toddlers."
       }
     },
     "cta": {

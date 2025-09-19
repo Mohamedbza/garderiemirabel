@@ -85,6 +85,76 @@ const Gallery = () => {
       featured: false,
       image: "/gallery/adorable-caucasian-girl-sitting-table-drawing-paper-classroom.jpg",
     },
+    {
+      id: 15,
+      category: "arts",
+      type: "image",
+      featured: false,
+      image: "/images/Installations/art-workshop-studio-CyfT9aw2tkzlTDDr0XZNqJQtLrEWqi.png",
+    },
+    {
+      id: 16,
+      category: "learning",
+      type: "image",
+      featured: false,
+      image: "/images/Installations/bright-classroom-interior-oUcoI9euLMkthuiM1uTGF62GQf8lpj.png",
+    },
+    {
+      id: 17,
+      category: "learning",
+      type: "image",
+      featured: false,
+      image: "/images/Installations/cozy-reading-corner-5gOpOYTDWdqSbrq7IwaCpMrUWNji5V.png",
+    },
+    {
+      id: 18,
+      category: "activities",
+      type: "image",
+      featured: false,
+      image: "/images/Installations/modern-kitchen-facility-3ByESqrkd7LPMGx0fGhNwNBGpoyQfN.png",
+    },
+    {
+      id: 19,
+      category: "outdoor",
+      type: "image",
+      featured: false,
+      image: "/images/Installations/outdoor-playground-equipment-SwR3ZlEafz47Msnq8iuuY8Eob8huDr.png",
+    },
+    {
+      id: 20,
+      category: "activities",
+      type: "image",
+      featured: false,
+      image: "/images/Installations/quiet-rest-area-ips9Z81lNHBkdJlIXh2MZVf88FWfCz.png",
+    },
+    {
+      id: 21,
+      category: "activities",
+      type: "image",
+      featured: false,
+      image: "../public/acd-ch.png",
+    },
+    {
+      id: 22,
+      category: "learning",
+      type: "image",
+      featured: false,
+      image: "/gallery/1month-IMG_0183_wide.jpg",
+    },
+    {
+      id: 23,
+      category: "activities",
+      type: "image",
+      featured: false,
+      image: "/gallery/little-girl-spotted-shirt-sits-pink-pillows.jpg",
+    },
+    {
+      id: 24,
+      category: "learning",
+      type: "image",
+      featured: true,
+      image: "/gallery/babies-playin.jpg",
+    },
   ]
 
   const galleryTitles = {
@@ -120,6 +190,16 @@ const Gallery = () => {
     12: { title: t("gallery.items.12.title"), description: t("gallery.items.12.description") },
     13: { title: t("gallery.items.13.title"), description: t("gallery.items.13.description") },
     14: { title: t("gallery.items.14.title"), description: t("gallery.items.14.description") },
+    15: { title: t("gallery.items.15.title"), description: t("gallery.items.15.description") },
+    16: { title: t("gallery.items.16.title"), description: t("gallery.items.16.description") },
+    17: { title: t("gallery.items.17.title"), description: t("gallery.items.17.description") },
+    18: { title: t("gallery.items.18.title"), description: t("gallery.items.18.description") },
+    19: { title: t("gallery.items.19.title"), description: t("gallery.items.19.description") },
+    20: { title: t("gallery.items.20.title"), description: t("gallery.items.20.description") },
+    21: { title: t("gallery.items.21.title"), description: t("gallery.items.21.description") },
+    22: { title: t("gallery.items.22.title"), description: t("gallery.items.22.description") },
+    23: { title: t("gallery.items.23.title"), description: t("gallery.items.23.description") },
+    24: { title: t("gallery.items.24.title"), description: t("gallery.items.24.description") },
   }
 
   const allItems = galleryItems
@@ -444,9 +524,9 @@ const Gallery = () => {
               })}
             </div>
 
-            {/* Fourth Row - Final Balance */}
+            {/* Fourth Row - Installation Images */}
             <div className="flex justify-center items-start gap-8">
-              {allItems.filter((item) => !item.featured).slice(10).map((item, index) => {
+              {allItems.filter((item) => !item.featured && item.id <= 21).slice(10).map((item, index) => {
                 const fourthRowShapes = [
                   { shape: "rounded-full", width: "w-52", height: "h-52" },     // Circle left
                   { shape: "rounded-[3rem]", width: "w-48", height: "h-56" },   // Medium
@@ -454,6 +534,66 @@ const Gallery = () => {
                   { shape: "rounded-full", width: "w-44", height: "h-44" },     // Small circle right
                 ];
                 const pattern = fourthRowShapes[index % fourthRowShapes.length];
+                const { shape, width, height } = pattern;
+
+                return (
+                  <div
+                    key={item.id}
+                    className={`group relative overflow-hidden cursor-pointer ${shape} ${width} ${height} bg-gradient-to-br from-gray-50 to-gray-100 backdrop-blur-md border border-gray-200 shadow-xl hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-700 hover:scale-[1.05] hover:border-pink-400/50 hover:bg-gray-100`}
+                    onClick={() => openLightbox(item.id)}
+                  >
+                    {/* Video Play Button */}
+                    {item.type === "video" && (
+                      <div className="absolute top-3 right-3 z-10">
+                        <div className="bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-lg">
+                          <Play size={14} className="text-gray-800" />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Image Display */}
+                    <img
+                      src={item.image || "/placeholder.svg"}
+                      alt={galleryTitles[item.id as keyof typeof galleryTitles]?.title}
+                      className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${shape}`}
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = "/placeholder.svg";
+                      }}
+                      loading="lazy"
+                    />
+
+                    {/* Subtle Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ${shape}`}></div>
+
+                    {/* Enhanced Hover Content */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-105">
+                      <div className="text-white text-center p-3 backdrop-blur-sm bg-black/20 rounded-2xl border border-white/20">
+                        <Camera size={28} className="mx-auto mb-2 drop-shadow-2xl" />
+                        <p className="text-xs font-medium drop-shadow-lg tracking-wide">
+                          {galleryTitles[item.id as keyof typeof galleryTitles]?.title}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Floating Decorative Elements */}
+                    <div className="absolute top-3 left-3 w-1.5 h-1.5 bg-pink-400/70 rounded-full animate-pulse shadow-lg"></div>
+                    <div className="absolute bottom-3 right-3 w-1 h-1 bg-blue-400/70 rounded-full animate-pulse delay-1000 shadow-lg"></div>
+                    <div className="absolute top-1/3 right-4 w-0.5 h-0.5 bg-white/60 rounded-full animate-pulse delay-500"></div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Fifth Row - Baby Pictures */}
+            <div className="flex justify-center items-center mb-12 gap-10 mt-12">
+              {allItems.filter((item) => item.id >= 22 && item.id <= 24).map((item, index) => {
+                const babyRowShapes = [
+                  { shape: "rounded-[4rem]", width: "w-80", height: "h-80" },   // Large left
+                  { shape: "rounded-[3rem]", width: "w-72", height: "h-72" },   // Large center
+                  { shape: "rounded-[4rem]", width: "w-80", height: "h-80" },   // Large right
+                ];
+                const pattern = babyRowShapes[index];
                 const { shape, width, height } = pattern;
 
                 return (

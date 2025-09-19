@@ -13,20 +13,136 @@ const Blogs = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
+  const renderTextWithLinks = (text: string) => {
+    // Handle bracketed links first
+    const bracketRegex = /\[([^\]]+)\]/g
+    const governmentUrl = "https://www.finances.gouv.qc.ca/ministere/outils_services/outils_calcul/cout_garde_quotidien/outil_garde.asp"
+
+    // Replace bracketed text with clickable links
+    const textWithBracketLinks = text.replace(bracketRegex, (match, linkText) => {
+      return `SPECIAL_LINK_${linkText}_SPECIAL_LINK`
+    })
+
+    // Then handle regular URLs
+    const urlRegex = /(https?:\/\/[^\s]+)/g
+    const parts = textWithBracketLinks.split(/SPECIAL_LINK_([^_]+)_SPECIAL_LINK/)
+
+    return parts.map((part, index) => {
+      // Check if it's a bracketed link text
+      if (part === "Ministère des Finances du Québec" || part === "Quebec Ministry of Finance") {
+        return (
+          <a
+            key={index}
+            href={governmentUrl}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-pink-500 hover:text-pink-600 underline font-medium"
+            onClick={(e) => {
+              e.preventDefault()
+              window.open(governmentUrl, '_blank', 'noopener,noreferrer')
+            }}
+          >
+            {part}
+          </a>
+        )
+      }
+      // Retraite Québec link
+      else if (part === "Retraite Québec") {
+        return (
+          <a
+            key={index}
+            href="https://www.rrq.gouv.qc.ca/fr/enfants/naissance_adoption/soutien_enfants/Pages/soutien_enfants.aspx"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-pink-500 hover:text-pink-600 underline font-medium"
+            onClick={(e) => {
+              e.preventDefault()
+              window.open("https://www.rrq.gouv.qc.ca/fr/enfants/naissance_adoption/soutien_enfants/Pages/soutien_enfants.aspx", '_blank', 'noopener,noreferrer')
+            }}
+          >
+            {part}
+          </a>
+        )
+      }
+      // Naître et grandir link
+      else if (part === "Naître et grandir") {
+        return (
+          <a
+            key={index}
+            href="https://naitreetgrandir.com"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-pink-500 hover:text-pink-600 underline font-medium"
+            onClick={(e) => {
+              e.preventDefault()
+              window.open("https://naitreetgrandir.com", '_blank', 'noopener,noreferrer')
+            }}
+          >
+            {part}
+          </a>
+        )
+      }
+      // Quebec.ca link
+      else if (part === "Québec.ca" || part === "Quebec.ca") {
+        return (
+          <a
+            key={index}
+            href="https://www.quebec.ca/sante/conseils-et-prevention/vaccination-et-maladies-infectieuses/vaccination/calendrier-de-vaccination"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-pink-500 hover:text-pink-600 underline font-medium"
+            onClick={(e) => {
+              e.preventDefault()
+              window.open("https://www.quebec.ca/sante/conseils-et-prevention/vaccination-et-maladies-infectieuses/vaccination/calendrier-de-vaccination", '_blank', 'noopener,noreferrer')
+            }}
+          >
+            {part}
+          </a>
+        )
+      }
+      // Handle regular URLs
+      else if (urlRegex.test(part)) {
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="text-pink-500 hover:text-pink-600 underline font-medium"
+            onClick={(e) => {
+              e.preventDefault()
+              window.open(part, '_blank', 'noopener,noreferrer')
+            }}
+          >
+            {part}
+          </a>
+        )
+      }
+      return part
+    })
+  }
+
   const blogPosts = [
     {
-      id: 1,
+      id: 6,
       category: "development",
-      featured: true,
-      heroImage:
-        "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2086&q=80",
-    },
-    {
-      id: 2,
-      category: "activities",
       featured: false,
       heroImage:
-        "https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    },
+    {
+      id: 7,
+      category: "parenting",
+      featured: true,
+      heroImage:
+        "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    },
+    {
+      id: 8,
+      category: "parenting",
+      featured: false,
+      heroImage:
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
       id: 3,
@@ -38,7 +154,7 @@ const Blogs = () => {
     {
       id: 4,
       category: "safety",
-      featured: true,
+      featured: false,
       heroImage:
         "https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
@@ -48,13 +164,6 @@ const Blogs = () => {
       featured: false,
       heroImage:
         "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    },
-    {
-      id: 6,
-      category: "development",
-      featured: false,
-      heroImage:
-        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
   ]
 
@@ -171,22 +280,14 @@ const Blogs = () => {
                       </div>
                     </div>
 
-                    <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-pink-500 transition-colors line-clamp-2">
+                    <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-pink-500 transition-colors">
                       {t(`blogs.posts.${post.id}.title`)}
                     </h3>
 
-                    <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
-                      {t(`blogs.posts.${post.id}.excerpt`)}
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {renderTextWithLinks(t(`blogs.posts.${post.id}.excerpt`))}
                     </p>
 
-                    <Link
-                      to={`/blog/${post.id}`}
-                      onClick={scrollToTop}
-                      className="inline-flex items-center space-x-2 bg-pink-500 text-white px-4 py-2 rounded-full font-medium text-sm hover:shadow-md hover:bg-pink-600 group-hover:translate-x-1 transition-all"
-                    >
-                      <span>{t("blogs.readMore")}</span>
-                      <ArrowRight size={14} />
-                    </Link>
                   </div>
                 </article>
               ))

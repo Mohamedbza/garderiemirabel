@@ -1,26 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { FaGamepad, FaAppleAlt, FaShieldAlt } from "react-icons/fa";
 
 const AboutUs = () => {
   const { t } = useTranslation();
-
-  const features = [
-    {
-      icon: <FaGamepad className="w-6 h-6" />,
-      title: t('about.features.sportActivities.title'),
-      description: t('about.features.sportActivities.description')
-    },
-    {
-      icon: <FaShieldAlt className="w-6 h-6" />,
-      title: t('about.features.highlySecured.title'),
-      description: t('about.features.highlySecured.description')
-    },
-    {
-      icon: <FaAppleAlt className="w-6 h-6" />,
-      title: t('about.features.outdoorGames.title'),
-      description: t('about.features.outdoorGames.description')
-    },
-  ];
 
   return (
     <div id="about" className="relative min-h-screen  bg-white overflow-hidden">
@@ -76,27 +57,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* 🔹 BOTTOM: Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-white bg-opacity-70 backdrop-blur-sm hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="flex-shrink-0 w-14 h-14 bg-pink-500 rounded-xl flex items-center justify-center text-white shadow-lg">
-                {feature.icon}
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-gray-800 font-semibold text-lg">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Bottom decorative wave */}

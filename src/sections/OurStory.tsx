@@ -54,21 +54,14 @@ const OurStory = () => {
 
           {/* Image/Visual Content */}
           <div className="relative">
-            <div className="bg-pink-200 rounded-2xl p-8 h-96 flex items-center justify-center">
-              <div className="text-center">
-                <Heart size={64} className="text-pink-500 mx-auto mb-4" />
-                <h4 className="text-xl font-semibold text-gray-800 mb-2">{t('ourStory.visual.title')}</h4>
-                <p className="text-gray-600">{t('ourStory.visual.description')}</p>
-              </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="../public/notrehistoire.png"
+                alt="Construit par amour"
+                className="w-full h-96 object-cover"
+              />
             </div>
 
-            {/* Floating badges */}
-            <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg">
-              <Star className="text-yellow-500" size={24} />
-            </div>
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-full p-3 shadow-lg">
-              <Heart className="text-red-500" size={24} />
-            </div>
           </div>
         </div>
       </div>

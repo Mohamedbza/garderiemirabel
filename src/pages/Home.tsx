@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import HeroSection from '../sections/HeroSection';
-import AboutUs from '../sections/AboutUs';
+import WhyChooseUs from '../sections/WhyChooseUs';
 import Services from '../sections/Services'; 
 import Testimonials from '../sections/testimonials';
 import FAQ from './FAQ';
@@ -19,8 +19,8 @@ const Home = () => {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* About Us Preview */}
-      <AboutUs />
+      {/* Why Choose Us */}
+      <WhyChooseUs />
 
       {/* Services Preview */}
       <Services /> 

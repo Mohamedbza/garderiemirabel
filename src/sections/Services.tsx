@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import MiniCounter from "../components/MiniCounter"
 
 const Services = () => {
   const { t } = useTranslation()
@@ -12,41 +11,25 @@ const Services = () => {
       id: 1,
       image: "/children-playing-educational-games.jpg",
       title: t('services.items.educational.title'),
-      content: t('services.items.educational.content'),
-      stats: [
-        { number: 66, label: t('places.ageGroups.toddlers') },
-        { number: 15, label: t('places.ageGroups.teachers') },
-      ]
+      content: t('services.items.educational.content')
     },
     {
       id: 2,
       image: "/children-doing-arts-and-crafts.jpg",
       title: t('services.items.arts.title'),
-      content: t('services.items.arts.content'),
-      stats: [
-        { number: 80, label: t('services.stats.creativeProjects') },
-        { number: 5, label: t('services.stats.artSpecialists') },
-      ]
+      content: t('services.items.arts.content')
     },
     {
       id: 3,
       image: "/images/kidsport.jpg",
       title: t('services.items.physical.title'),
-      content: t('services.items.physical.content'),
-      stats: [
-        { number: 14, label: t('places.ageGroups.infants') },
-        { number: 3, label: t('services.stats.outdoorAreas') },
-      ]
+      content: t('services.items.physical.content')
     },
     {
       id: 4,
       image: "/children-doing-science-experiments.jpg",
       title: t('services.items.science.title'),
-      content: t('services.items.science.content'),
-      stats: [
-        { number: 25, label: t('services.stats.experiments') },
-        { number: 12, label: t('services.stats.learningTools') },
-      ]
+      content: t('services.items.science.content')
     },
   ]
 
@@ -134,21 +117,6 @@ const Services = () => {
                     <p className="text-gray-600 text-lg leading-relaxed">{services[currentIndex].content}</p>
                   </div>
 
-                  {/* Statistics */}
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-semibold text-gray-800 mb-3">{t('places.sectionLabel')}</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {services[currentIndex].stats.map((stat, index) => (
-                        <div key={index} className="bg-gray-50 rounded-lg p-3">
-                          <MiniCounter 
-                            number={stat.number} 
-                            label={stat.label}
-                            duration={1500 + index * 200}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
 
                   {/* Service number indicator */}
                   <div className="flex items-center gap-3">

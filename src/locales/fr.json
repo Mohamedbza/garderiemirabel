@@ -46,6 +46,39 @@
       }
     }
   },
+  "whyChooseUs": {
+    "sectionLabel": "Pourquoi nous choisir",
+    "title": "Les meilleurs soins pour",
+    "titleHighlight": "Vos petits",
+    "titleEnd": "Chaque jour",
+    "description": "Découvrez ce qui rend notre garderie spéciale et pourquoi les familles nous font confiance avec leurs trésors les plus précieux.",
+    "features": {
+      "birthToPreschool": {
+        "title": "De la naissance au préscolaire",
+        "description": "Nous accueillons les enfants de 0 mois à 5 ans, avec des soins adaptés à chaque étape."
+      },
+      "learningThroughPlay": {
+        "title": "Apprentissage par le jeu",
+        "description": "Des programmes qui stimulent la curiosité, la créativité et le plaisir d'apprendre."
+      },
+      "healthyMeals": {
+        "title": "Repas sains, préparés avec amour",
+        "description": "Notre chef dévoué prépare des repas frais sur place chaque jour, avec des ingrédients de haute qualité répondant aux normes de santé et de sécurité."
+      },
+      "experiencedEducators": {
+        "title": "Éducateurs expérimentés et attentionnés",
+        "description": "Une équipe passionnée qui accompagne chaque enfant avec patience, attention et amour."
+      },
+      "safeEnvironment": {
+        "title": "Environnement sûr et familial",
+        "description": "Une atmosphère chaleureuse et sécurisée, où les enfants se sentent chez eux et les parents en confiance."
+      },
+      "sportActivities": {
+        "title": "Activités physiques et sportives",
+        "description": "Des activités dynamiques qui favorisent la santé, la coordination et l'esprit d'équipe."
+      }
+    }
+  },
   "services": {
     "sectionLabel": "Services",
     "title": "Nos incroyables",
@@ -225,6 +258,13 @@
     "weekdaysHours": "6h30 - 18h00",
     "weekends": "Samedi - Dimanche",
     "weekendsHours": "Fermé",
+    "usefulLinks": "Liens utiles",
+    "links": {
+      "costCalculator": "Calculateur de coût de garde",
+      "familyAllowances": "Allocations familiales Québec",
+      "naitreEtGrandir": "Naître et grandir",
+      "vaccinationSchedule": "Calendrier de vaccination"
+    },
     "allRightsReserved": "Tous droits réservés.",
     "madeWith": "Fait avec",
     "forChildren": "pour les enfants"
@@ -524,7 +564,6 @@
     "subtitle": "Découvrez des conseils utiles, des perspectives éducatives et des histoires de notre communauté de garderie pour soutenir le parcours de développement de votre enfant.",
     "featured": "Articles en Vedette",
     "latestPosts": "Derniers Articles",
-    "readMore": "Lire la Suite",
     "categories": {
       "all": "Tous les Articles",
       "development": "Développement de l'Enfant",
@@ -534,41 +573,41 @@
       "parenting": "Conseils Parentaux"
     },
     "posts": {
-      "1": {
-        "title": "L'Importance de l'Apprentissage par le Jeu dans la Petite Enfance",
-        "excerpt": "Découvrez comment l'apprentissage par le jeu façonne le développement cognitif, social et émotionnel de votre enfant pendant ses années cruciales.",
-        "date": "15 mars 2024",
-        "author": "Marie-Claire Dubois"
-      },
-      "2": {
-        "title": "Projets d'Art Créatifs qui Stimulent la Motricité Fine",
-        "excerpt": "Activités artistiques amusantes et engageantes qui aident à développer la motricité fine de votre enfant tout en favorisant la créativité.",
-        "date": "10 mars 2024",
-        "author": "Sophie Martin"
-      },
       "3": {
         "title": "Collations Santé que les Enfants Adorent Vraiment",
-        "excerpt": "Idées de collations nutritives et délicieuses qui garderont vos petits heureux et énergisés pendant leur journée à la garderie.",
+        "excerpt": "Une nutrition équilibrée est essentielle au développement optimal des enfants. Notre chef prépare quotidiennement des collations fraîches, colorées et nutritives qui plaisent aux petits palais. Des fruits coupés en formes amusantes aux légumes servis avec des trempettes savoureuses, nous rendons la saine alimentation attrayante. Nos menus respectent toutes les allergies alimentaires et privilégient les ingrédients locaux de qualité. Ces habitudes alimentaires saines, développées dès le jeune âge, accompagneront les enfants tout au long de leur croissance et contribueront à leur bien-être général.",
         "date": "8 mars 2024",
         "author": "Julie Tremblay"
       },
       "4": {
         "title": "Créer des Espaces Sécuritaires pour l'Exploration et l'Apprentissage",
-        "excerpt": "Apprenez comment nous concevons nos environnements pour encourager la curiosité tout en maintenant les plus hauts standards de sécurité.",
+        "excerpt": "La sécurité est notre priorité absolue à la Garderie Mirabel. Nous avons conçu chaque espace pour encourager l'exploration naturelle des enfants tout en maintenant un environnement parfaitement sécurisé. Nos installations incluent des systèmes de surveillance avancés, des aires de jeu aux surfaces souples, et des protocoles stricts de sécurité. Chaque coin et recoin est pensé pour minimiser les risques tout en maximisant les opportunités d'apprentissage. Cette approche permet aux enfants de développer leur confiance et leur autonomie dans un cadre protégé qui rassure également les parents.",
         "date": "5 mars 2024",
         "author": "Marie-Claire Dubois"
       },
       "5": {
         "title": "Développer l'Indépendance chez les Jeunes Enfants",
-        "excerpt": "Stratégies pratiques pour aider votre enfant à développer confiance et indépendance de manière appropriée à son âge.",
+        "excerpt": "Encourager l'autonomie chez les jeunes enfants est un art délicat qui demande patience et expertise. Nos éducateurs accompagnent chaque enfant dans le développement de son indépendance à travers des activités adaptées à son âge et à son rythme. Qu'il s'agisse d'apprendre à ranger ses jouets, de choisir ses activités, ou de résoudre de petits conflits avec ses pairs, nous guidons les enfants vers plus d'autonomie. Cette approche bienveillante renforce leur estime de soi et les prépare à affronter les défis futurs avec confiance. L'indépendance acquise en bas âge constitue une base solide pour leur développement personnel.",
         "date": "1er mars 2024",
         "author": "Sophie Martin"
       },
       "6": {
-        "title": "Le Rôle de la Musique dans le Développement Précoce du Cerveau",
-        "excerpt": "Explorez comment les activités musicales et de mouvement contribuent au développement du langage, de la mémoire et de la croissance cognitive.",
-        "date": "28 février 2024",
-        "author": "David Chen"
+        "title": "Calculez le coût d'une place en service de garde en 2025",
+        "excerpt": "Vous vous demandez combien coûte une place en service de garde pour votre enfant en 2025 ? Le Ministère des Finances du Québec met à votre disposition un simulateur officiel qui vous permet d'estimer rapidement et facilement le coût d'une place selon votre situation familiale. Cet outil pratique tient compte de différents facteurs (revenus, nombre d'enfants, type de service de garde, etc.) et vous donne une estimation personnalisée. 👉 Accédez au simulateur du [Ministère des Finances du Québec]. Chez Garderie Mirabel, nous savons qu'il est important pour les parents d'avoir une vision claire des coûts liés à la garde de leurs enfants. Ce lien utile est là pour vous aider à mieux planifier votre budget familial.",
+        "date": "15 janvier 2025",
+        "author": "Marie-Claire Dubois"
+      },
+      "7": {
+        "title": "Guide Complet des Allocations Familiales au Québec",
+        "excerpt": "Saviez-vous que le gouvernement du Québec offre plusieurs programmes d'aide financière pour soutenir les familles ? Les allocations familiales peuvent considérablement réduire vos coûts liés à la garde d'enfants et aux soins de santé. Le programme Soutien aux enfants du Québec verse jusqu'à 2 817 $ par année par enfant selon votre situation familiale. De plus, le crédit d'impôt pour frais de garde d'enfants peut couvrir jusqu'à 75 % de vos frais de garderie. 👉 Découvrez tous les programmes disponibles sur [Retraite Québec] et calculez vos prestations. À la Garderie Mirabel, nous encourageons les parents à explorer ces ressources pour alléger le fardeau financier et permettre à plus de familles d'accéder à des services de garde de qualité.",
+        "date": "10 janvier 2025",
+        "author": "Marie-Claire Dubois"
+      },
+      "8": {
+        "title": "Ressources Essentielles pour Nouveaux Parents au Québec",
+        "excerpt": "Devenir parent au Québec s'accompagne de nombreuses démarches administratives importantes. L'inscription de votre enfant à la RAMQ doit se faire dans les 30 jours suivant la naissance pour garantir une couverture santé complète. Le site [Naître et grandir] offre des conseils d'experts sur le développement de l'enfant, l'alimentation et les soins quotidiens, spécifiquement adaptés au contexte québécois. Pour les urgences, gardez à portée de main le numéro du Centre antipoison du Québec : 1 800 463-5060. Nous recommandons aussi de vous familiariser avec le calendrier de vaccination du Québec disponible sur [Québec.ca]. À la Garderie Mirabel, nous travaillons en partenariat avec ces ressources officielles pour offrir les meilleurs soins à vos enfants.",
+        "date": "5 janvier 2025",
+        "author": "Julie Tremblay"
       }
     },
     "newsletter": {
@@ -649,6 +688,46 @@
       "14": {
         "title": "Dessin Créatif",
         "description": "Jeune artiste concentrée sur sa création artistique en classe."
+      },
+      "15": {
+        "title": "Atelier d'Art",
+        "description": "Espace créatif avec matériel d'art pour l'expression artistique des enfants."
+      },
+      "16": {
+        "title": "Salle de Classe Lumineuse",
+        "description": "Environnement d'apprentissage coloré et bien éclairé pour les activités éducatives."
+      },
+      "17": {
+        "title": "Coin Lecture Confortable",
+        "description": "Espace paisible de lecture avec livres adaptés à l'âge des enfants."
+      },
+      "18": {
+        "title": "Cuisine Moderne",
+        "description": "Cuisine équipée où nous préparons des repas frais et nutritifs chaque jour."
+      },
+      "19": {
+        "title": "Aire de Jeux Extérieure",
+        "description": "Équipement de jeu sécuritaire pour le développement physique et le plaisir."
+      },
+      "20": {
+        "title": "Zone de Repos Tranquille",
+        "description": "Espace calme pour la sieste et les moments de détente des enfants."
+      },
+      "21": {
+        "title": "Enfants Jouant Ensemble",
+        "description": "Moments de jeu et d'interaction sociale entre enfants dans notre environnement bienveillant."
+      },
+      "22": {
+        "title": "Bébé Explorant des Jouets",
+        "description": "Tout-petit découvrant le monde à travers des jouets sensoriels adaptés à son âge."
+      },
+      "23": {
+        "title": "Bébé Jouant avec des Blocs",
+        "description": "Développement de la motricité fine avec des blocs colorés et sécuritaires."
+      },
+      "24": {
+        "title": "Jeu Sensoriel pour Bébé",
+        "description": "Stimulation sensorielle et cognitive avec des activités adaptées aux tout-petits."
       }
     },
     "cta": {
