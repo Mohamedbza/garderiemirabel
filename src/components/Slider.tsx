@@ -25,7 +25,7 @@ const Slider: React.FC<SliderProps> = ({
   const defaultSliderItems: SliderItem[] = [
     {
       id: 1,
-      photo: '/images/mm.jpg', 
+      photo: '/gallery/a1.jpg', 
     },
     {
       id: 2,

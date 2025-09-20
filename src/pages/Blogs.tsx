@@ -164,8 +164,7 @@ const Blogs = () => {
   ]
 
   const categories = [
-    { key: "all", icon: BookOpen, color: "bg-pink-500" },
-    { key: "activities", icon: Heart, color: "bg-blue-500" },
+    { key: "all", icon: BookOpen, color: "bg-pink-500" }, 
     { key: "nutrition", icon: Star, color: "bg-pink-500" },
     { key: "safety", icon: Star, color: "bg-blue-500" },
     { key: "parenting", icon: Heart, color: "bg-pink-500" },

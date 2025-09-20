@@ -17,51 +17,44 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus('idle')
 
-    // Create email content
-    const emailSubject = `Nouvelle demande d'inscription - ${formData.childName}`
-    const emailBody = `Nouvelle demande d'inscription à la Garderie Mirabel
-
-INFORMATIONS DE L'ENFANT:
-- Nom de l'enfant: ${formData.childName}
-- Date de naissance: ${formData.birthDate}
-- Date de début souhaitée: ${formData.startDate}
-
-INFORMATIONS DU PARENT:
-- Nom du parent: ${formData.parentName}
-- Téléphone: ${formData.parentPhone}
-- Email: ${formData.parentEmail}
-
-MESSAGE ADDITIONNEL:
-${formData.message || 'Aucun message additionnel'}
-
----
-Cette demande a été soumise via le site web de la Garderie Mirabel.`
-
-    // Create mailto link
-    const mailtoLink = `mailto:houssemsina123@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`
-
-    // Open email client
-    window.location.href = mailtoLink
-
-    setSubmitStatus('success')
-    setIsSubmitting(false)
-
-    // Reset form after a short delay
-    setTimeout(() => {
-      setFormData({
-        childName: "",
-        parentName: "",
-        birthDate: "",
-        parentPhone: "",
-        parentEmail: "",
-        startDate: "",
-        message: "",
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
-    }, 2000)
+
+      if (!res.ok) throw new Error('Request failed')
+
+      setSubmitStatus('success')
+    } catch (err) {
+      console.error(err)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+
+      // Reset form after a short delay on success
+      if (submitStatus === 'success') {
+        setTimeout(() => {
+          setFormData({
+            childName: '',
+            parentName: '',
+            birthDate: '',
+            parentPhone: '',
+            parentEmail: '',
+            startDate: '',
+            message: '',
+          })
+        }, 2000)
+      }
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

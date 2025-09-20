@@ -49,13 +49,13 @@ const Gallery = () => {
       category: "events",
       type: "image",
       featured: true,
-      image: "/gallery/k.jpg",
+      image: "/gallery/k.png",
     },
     { id: 6, category: "activities", type: "image", featured: false, image: "/gallery/x.jpg" },
     { id: 7, category: "learning", type: "image", featured: false, image: "/gallery/special.jpg" },
     { id: 8, category: "arts", type: "image", featured: false, image: "/gallery/d.jpg" },
     { id: 9, category: "outdoor", type: "image", featured: true, image: "/gallery/z4.jpg" },
-    { id: 10, category: "events", type: "image", featured: false, image: "/gallery/k.jpg" },
+    { id: 10, category: "events", type: "image", featured: false, image: "/gallery/k.png" },
   
     {
       id: 12,
@@ -106,6 +106,27 @@ const Gallery = () => {
       featured: false,
       image: "/gallery/x4.jpg",
     },
+    {
+      id: 22,
+      category: "activities",
+      type: "image",
+      featured: false,
+      image: "/gallery/a1.jpg",
+    },
+    {
+      id: 23,
+      category: "activities",
+      type: "image",
+      featured: false,
+      image: "/gallery/a2.jpg",
+    },
+    {
+      id: 24,
+      category: "activities",
+      type: "image",
+      featured: false,
+      image: "/gallery/a3.jpg",
+    },
   ]
 
   const galleryTitles = {
@@ -147,6 +168,9 @@ const Gallery = () => {
     18: { title: t("gallery.items.20.title"), description: t("gallery.items.20.description") },
     20: { title: t("gallery.items.22.title"), description: t("gallery.items.22.description") },
     21: { title: t("gallery.items.23.title"), description: t("gallery.items.23.description") },
+    22: { title: t("gallery.items.22.title"), description: t("gallery.items.22.description") },
+    23: { title: t("gallery.items.23.title"), description: t("gallery.items.23.description") },
+    24: { title: t("gallery.items.24.title"), description: t("gallery.items.24.description") },
   }
 
   const allItems = galleryItems
