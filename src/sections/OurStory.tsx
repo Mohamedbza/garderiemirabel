@@ -56,7 +56,7 @@ const OurStory = () => {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/ff.jpg"
+                src="/gallery/front.jpg"
                 alt="Construit par amour"
                 className="w-full h-96 object-cover"
               />
