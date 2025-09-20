@@ -264,12 +264,6 @@ const Blogs = () => {
                     {/* Decorative corner */}
                     <div className="absolute top-0 right-4 w-8 h-8 bg-pink-200/50 rounded-bl-full"></div>
 
-                    <div className="flex items-center space-x-4 text-gray-500 text-xs mb-3">
-                      <div className="flex items-center space-x-1">
-                        <User size={14} className="text-blue-500" />
-                        <span>{t(`blogs.posts.${post.id}.author`)}</span>
-                      </div>
-                    </div>
 
                     <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-pink-500 transition-colors">
                       {t(`blogs.posts.${post.id}.title`)}
