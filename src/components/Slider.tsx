@@ -25,15 +25,15 @@ const Slider: React.FC<SliderProps> = ({
   const defaultSliderItems: SliderItem[] = [
     {
       id: 1,
-      photo: '/images/slider/1.jpg', 
+      photo: '/images/mm.jpg', 
     },
     {
       id: 2,
-      photo: '/images/slider/2.jpg', 
+      photo: '/images/z4.jpg', 
     },
     {
       id: 3,
-      photo: '/images/slider/3.jpg', 
+      photo: '/gg.jpg', 
     } 
   ];
 
