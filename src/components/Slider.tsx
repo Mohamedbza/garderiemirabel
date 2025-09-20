@@ -29,7 +29,7 @@ const Slider: React.FC<SliderProps> = ({
     },
     {
       id: 2,
-      photo: '/images/z4.jpg', 
+      photo: '/z4.jpg', 
     },
     {
       id: 3,
