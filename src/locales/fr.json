@@ -99,9 +99,9 @@
         "title": "Activités physiques",
         "content": "Exercices physiques amusants et activités sportives qui favorisent un développement sain, la coordination, le travail d'équipe et les compétences sociales dans un environnement extérieur sûr."
       },
-      "science": {
-        "title": "Découverte scientifique",
-        "content": "Expériences scientifiques et activités de découverte adaptées à l'âge qui éveillent la curiosité, encouragent l'exploration et introduisent des concepts scientifiques de base par l'apprentissage pratique."
+      "entertainment": {
+        "title": "Animation et Divertissement",
+        "content": "Animateurs professionnels créant des moments magiques et des activités captivantes qui stimulent l'imagination des enfants, favorisent l'interaction sociale et créent des souvenirs joyeux grâce à des spectacles interactifs et des activités amusantes."
       }
     },
     "stats": {
@@ -626,6 +626,7 @@
     "titleHighlight": "Galerie",
     "subtitle": "Jetez un coup d'œil aux moments joyeux, activités créatives et précieux souvenirs que nous créons ensemble à Garderie Mirabel 1&2.",
     "featured": "Moments en Vedette",
+    "videos": "Vidéos",
     "allPhotos": "Toutes les Photos et Vidéos",
     "viewImage": "Voir l'Image",
     "categories": {
@@ -654,8 +655,8 @@
         "description": "Découverte de la nature dans notre jardin d'apprentissage extérieur."
       },
       "5": {
-        "title": "Célébration des Fêtes",
-        "description": "Moments spéciaux de nos célébrations saisonnières et événements."
+        "title": "Jouer dans la Neige",
+        "description": "Enfants s'amusant et jouant joyeusement dans la neige fraîche."
       },
       "6": {
         "title": "Construction et Création",
@@ -732,6 +733,10 @@
       "24": {
         "title": "Jeu Sensoriel pour Bébé",
         "description": "Stimulation sensorielle et cognitive avec des activités adaptées aux tout-petits."
+      },
+      "25": {
+        "title": "Vidéo des Programmes Spéciaux",
+        "description": "Regardez nos programmes spéciaux et activités en action à la garderie."
       }
     },
     "cta": {

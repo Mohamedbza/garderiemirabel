@@ -99,9 +99,9 @@
         "title": "Physical Activities",
         "content": "Fun physical exercises and sports activities that promote healthy development, coordination, teamwork, and social skills in a safe outdoor environment."
       },
-      "science": {
-        "title": "Science Discovery",
-        "content": "Age-appropriate science experiments and discovery activities that spark curiosity, encourage exploration, and introduce basic scientific concepts through hands-on learning."
+      "entertainment": {
+        "title": "Animation & Entertainment",
+        "content": "Professional entertainers and animators creating magical moments and engaging activities that captivate children's imagination, promote social interaction, and create joyful memories through interactive performances and fun activities."
       }
     },
     "stats": {
@@ -206,7 +206,7 @@
     "parent": "Parent",
     "items": {
       "gregory": "A beautiful daycare perfect for my children! I recommend it to everyone",
-      "sarah": "A very safe daycare for my child, he always has fun there. A trustworthy team!",
+      "sarah": "Super staff :)",
       "belba": "My son attended the Saint Michel Academy daycare for 4 years until he left for kindergarten this year. We were very satisfied with the colossal work that the educators did and the good atmosphere that exists between parents and staff"
     }
   },
@@ -622,6 +622,7 @@
     "titleHighlight": "Gallery",
     "subtitle": "Take a glimpse into the joyful moments, creative activities, and precious memories we create together at Garderie Mirabel 1&2.",
     "featured": "Featured Moments",
+    "videos": "Videos",
     "allPhotos": "All Photos & Videos",
     "viewImage": "View Image",
     "categories": {
@@ -650,8 +651,8 @@
         "description": "Discovering nature in our outdoor learning garden."
       },
       "5": {
-        "title": "Holiday Celebration",
-        "description": "Special moments from our seasonal celebrations and events."
+        "title": "Playing in the Snow",
+        "description": "Children having fun and playing joyfully in the fresh snow."
       },
       "6": {
         "title": "Building and Creating",
@@ -728,6 +729,10 @@
       "24": {
         "title": "Baby Sensory Play",
         "description": "Sensory and cognitive stimulation with activities designed for toddlers."
+      },
+      "25": {
+        "title": "Special Programs Video",
+        "description": "Watch our special programs and activities in action at the daycare."
       }
     },
     "cta": {

@@ -9,27 +9,9 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      id: 1,
-      name: "Alexandre Béliveau",
-      text: t('testimonials.items.gregory'),
-      starsOnly: false,
-    },
-    {
       id: 2,
       name: "Mary Fortin",
       text: t('testimonials.items.sarah'),
-      starsOnly: false,
-    },
-    {
-      id: 3,
-      name: "Cecilia Moreno",
-      text: t('testimonials.items.belba'),
-      starsOnly: false,
-    },
-    {
-      id: 4,
-      name: "Chrystel Cadieux-Lévesque",
-      text: t('testimonials.items.chrystel'),
       starsOnly: false,
     },
     {
@@ -42,12 +24,6 @@ export default function Testimonials() {
       id: 6,
       name: "Jessica Scourneaux",
       text: t('testimonials.items.jessica'),
-      starsOnly: true,
-    },
-    {
-      id: 7,
-      name: "Famille Locas",
-      text: t('testimonials.items.famille'),
       starsOnly: true,
     },
   ]

@@ -37,7 +37,6 @@ const Gallery = () => {
       featured: false,
       image: "/gallery/r.jpg",
     },
-    { id: 3, category: "arts", type: "video", featured: true, image: "/gallery/art-workshop-children-painting.jpg" },
     {
       id: 4,
       category: "outdoor",
@@ -50,20 +49,14 @@ const Gallery = () => {
       category: "events",
       type: "image",
       featured: true,
-      image: "/gallery/holiday-celebration-kindergarten.jpg",
+      image: "/gallery/k.jpg",
     },
     { id: 6, category: "activities", type: "image", featured: false, image: "/gallery/x.jpg" },
     { id: 7, category: "learning", type: "image", featured: false, image: "/gallery/special.jpg" },
     { id: 8, category: "arts", type: "image", featured: false, image: "/gallery/d.jpg" },
     { id: 9, category: "outdoor", type: "image", featured: true, image: "/gallery/z4.jpg" },
     { id: 10, category: "events", type: "image", featured: false, image: "/gallery/k.jpg" },
-    {
-      id: 11,
-      category: "activities",
-      type: "image",
-      featured: false,
-      image: "/gallery/building-blocks-construction.jpg",
-    },
+  
     {
       id: 12,
       category: "learning",
@@ -113,27 +106,6 @@ const Gallery = () => {
       featured: false,
       image: "/gallery/x4.jpg",
     },
-    {
-      id: 19,
-      category: "activities",
-      type: "image",
-      featured: false,
-      image: "/acd-ch.png",
-    },
-    {
-      id: 20,
-      category: "learning",
-      type: "image",
-      featured: false,
-      image: "/gallery/1month-IMG_0183_wide.jpg",
-    },
-    {
-      id: 21,
-      category: "activities",
-      type: "image",
-      featured: false,
-      image: "/gallery/little-girl-spotted-shirt-sits-pink-pillows.jpg",
-    },
   ]
 
   const galleryTitles = {
@@ -173,7 +145,6 @@ const Gallery = () => {
     16: { title: t("gallery.items.18.title"), description: t("gallery.items.18.description") },
     17: { title: t("gallery.items.19.title"), description: t("gallery.items.19.description") },
     18: { title: t("gallery.items.20.title"), description: t("gallery.items.20.description") },
-    19: { title: t("gallery.items.21.title"), description: t("gallery.items.21.description") },
     20: { title: t("gallery.items.22.title"), description: t("gallery.items.22.description") },
     21: { title: t("gallery.items.23.title"), description: t("gallery.items.23.description") },
   }
@@ -619,6 +590,23 @@ const Gallery = () => {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="relative py-10 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative aspect-video">
+              <video
+                controls
+                className="w-full h-full object-cover"
+              >
+                <source src="/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>

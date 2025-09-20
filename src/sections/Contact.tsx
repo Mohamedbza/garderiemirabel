@@ -42,7 +42,7 @@ ${formData.message || 'Aucun message additionnel'}
 Cette demande a été soumise via le site web de la Garderie Mirabel.`
 
     // Create mailto link
-    const mailtoLink = `mailto:garderie.mirabel1@bellnet.ca?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`
+    const mailtoLink = `mailto:houssemsina123@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`
 
     // Open email client
     window.location.href = mailtoLink

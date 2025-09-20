@@ -219,21 +219,19 @@ const Programmes = () => {
           </div>
         </div>
 
-        {/* Media Gallery */}
-        <div className="mt-8 space-y-6 max-w-2xl mx-auto">
-          {/* First Image */}
-          <img
-            src="/special.jpg"
-            alt="Special Program Activity 1"
-            className="w-full rounded-2xl"
-          />
-
-          {/* Second Image */}
-          <img
-            src="/k.jpg"
-            alt="Special Program Activity 2"
-            className="w-full rounded-2xl"
-          />
+        {/* Video Section */}
+        <div className="mt-8 max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative aspect-video">
+              <video
+                controls
+                className="w-full h-full object-cover"
+              >
+                <source src="/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
         </div>
 
         {/* Call to Action */}

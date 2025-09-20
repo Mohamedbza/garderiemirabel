@@ -121,7 +121,7 @@ const Blogs = () => {
   const blogPosts = [
     {
       id: 6,
-      category: "development",
+      category: "parenting",
       featured: false,
       heroImage:
         "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
@@ -165,7 +165,6 @@ const Blogs = () => {
 
   const categories = [
     { key: "all", icon: BookOpen, color: "bg-pink-500" },
-    { key: "development", icon: Star, color: "bg-pink-500" },
     { key: "activities", icon: Heart, color: "bg-blue-500" },
     { key: "nutrition", icon: Star, color: "bg-pink-500" },
     { key: "safety", icon: Star, color: "bg-blue-500" },
@@ -266,10 +265,6 @@ const Blogs = () => {
                     <div className="absolute top-0 right-4 w-8 h-8 bg-pink-200/50 rounded-bl-full"></div>
 
                     <div className="flex items-center space-x-4 text-gray-500 text-xs mb-3">
-                      <div className="flex items-center space-x-1">
-                        <Calendar size={14} className="text-pink-500" />
-                        <span>{t(`blogs.posts.${post.id}.date`)}</span>
-                      </div>
                       <div className="flex items-center space-x-1">
                         <User size={14} className="text-blue-500" />
                         <span>{t(`blogs.posts.${post.id}.author`)}</span>

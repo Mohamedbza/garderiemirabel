@@ -9,27 +9,21 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      image: "/children-playing-educational-games.jpg",
+      image: "/gg.jpg",
       title: t('services.items.educational.title'),
       content: t('services.items.educational.content')
     },
     {
       id: 2,
-      image: "/children-doing-arts-and-crafts.jpg",
-      title: t('services.items.arts.title'),
-      content: t('services.items.arts.content')
-    },
-    {
-      id: 3,
-      image: "/images/kidsport.jpg",
+      image: "/z4.jpg",
       title: t('services.items.physical.title'),
       content: t('services.items.physical.content')
     },
     {
-      id: 4,
-      image: "/children-doing-science-experiments.jpg",
-      title: t('services.items.science.title'),
-      content: t('services.items.science.content')
+      id: 3,
+      image: "/d.jpg",
+      title: t('services.items.entertainment.title'),
+      content: t('services.items.entertainment.content')
     },
   ]
 
